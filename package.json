@@ -1,0 +1,17 @@
+{
+  "name": "grupp-12",
+  "version": "1.0.0",
+  "description": "Grupparbete",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "cypress": "^9.1.0",
+    "parcel": "^2.0.1"
+  }
+}
