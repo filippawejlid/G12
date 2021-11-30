@@ -1,1 +1,1 @@
-{"mappings":";ACIA;EACC,qCAAA;A","sources":["src/sass/main.scss","src/sass/_font.scss"],"sourcesContent":["@import \"./font\";\n",null],"names":[],"version":3,"file":"index.612625cb.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":";ACIA;EACC,qCAAA;A","sources":["src/sass/main.scss","src/sass/_font.scss"],"sourcesContent":["@import \"./font\";\r\n",null],"names":[],"version":3,"file":"index.612625cb.css.map","sourceRoot":"/__parcel_source_root/"}
