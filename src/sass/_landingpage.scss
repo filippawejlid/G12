@@ -10,13 +10,28 @@
   .welcomeBox {
     border-radius: 10px;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: rgba(255, 255, 255, 0.767);
     padding: 20px;
+
+    @include tablets {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include desktop {
+      width: 40%;
+    }
 
     .welcomeBoxText {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include tablets {
+        width: 80%;
+      }
+
       h2 {
         margin: 0;
       }
