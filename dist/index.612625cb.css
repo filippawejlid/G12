@@ -115,7 +115,9 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-#productmaincontainer #wirelesscontainer {
+#productmaincontainer #wirelesscontainer,
+#productmaincontainer #powerfullcontainer,
+#productmaincontainer #robotcontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -74,7 +74,14 @@
     // }
   }
 
-  #wirelesscontainer {
+  h1 {
+    text-align: center;
+    width: 100vw;
+  }
+
+  #wirelesscontainer,
+  #powerfullcontainer,
+  #robotcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
