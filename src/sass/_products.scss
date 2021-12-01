@@ -10,6 +10,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px;
+    width: 90%;
     //border: 1px solid blue;
   }
 
@@ -57,26 +58,19 @@
       flex-direction: column;
       gap: 5px;
     }
-
-    // #btncategoryone,
-    // #btncategorytwo,
-    // #btncategorythree {
-    //   padding: 20px;
-    //   height: 100px;
-    //   width: 33%;
-    //   cursor: pointer;
-    //   border: none;
-    //   border-radius: 5px;
-    //   display: flex;
-    //   align-items: center;
-    //   flex-direction: column;
-    //   gap: 5px;
-    // }
   }
 
-  h1 {
+  #wireless,
+  #powerfull,
+  #robot {
     text-align: center;
+    margin-top: 200px;
     width: 100vw;
+    padding: 10px;
+    width: 80%;
+    background-color: #2595be;
+    border-radius: 2px;
+    color: white;
   }
 
   #wirelesscontainer,
@@ -85,13 +79,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
   }
   .productcontainer {
-    //border: 1px solid rgb(255, 0, 242);
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .imgcontainer {
