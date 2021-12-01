@@ -73,7 +73,7 @@
       .buttonContainer {
         display: flex;
         justify-content: flex-end;
-        width: 300px;
+        width: 450px;
         margin: 10px;
 
         .btn {
@@ -115,16 +115,11 @@
         div {
           @include tablets {
             margin: 0;
-            justify-content: start;
           }
         }
 
-        &:last-child {
-          justify-content: flex-end;
-        }
-
         input {
-          width: 150px;
+          width: 170px;
         }
       }
     }
