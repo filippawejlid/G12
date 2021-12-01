@@ -65,10 +65,105 @@ body {
 }
 #productmaincontainer {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: auto;
-  border: 1px solid red;
+}
+#productmaincontainer #productcontentcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+#productmaincontainer #categoryheader {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+#productmaincontainer #choosecategorybtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#productmaincontainer #choosecategorybtn a {
+  width: 33%;
+  text-decoration: none;
+}
+#productmaincontainer #choosecategorybtn a > #btncategoryone,
+#productmaincontainer #choosecategorybtn #btncategorytwo,
+#productmaincontainer #choosecategorybtn #btncategorythree {
+  padding: 20px;
+  height: 100px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+#productmaincontainer #choosecategorybtn #btncategoryone,
+#productmaincontainer #choosecategorybtn #btncategorytwo,
+#productmaincontainer #choosecategorybtn #btncategorythree {
+  padding: 20px;
+  height: 100px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+#productmaincontainer #wirelesscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+#productmaincontainer .productcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#productmaincontainer .imgcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#productmaincontainer .imgcontainer > img {
+  display: flex;
+  justify-content: center;
+}
+#productmaincontainer .vacuuminfo {
+  display: flex;
+}
+#productmaincontainer .productbtns {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 2px;
+}
+#productmaincontainer .productbtns > button {
+  padding: 20px;
+  width: 100%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#productmaincontainer .productbtns > button:nth-child(2) {
+  background-color: #2596be;
+  border: none;
+  color: white;
+  font-size: 0.7rem;
+}
+#productmaincontainer .productbtns > button:nth-child(1) {
+  background-color: #2595be86;
+  border: none;
+  font-size: 0.7rem;
+}
+#productmaincontainer .productbtns .fa-info-circle,
+#productmaincontainer .productbtns .fa-cart-plus {
+  font-size: 1.2rem;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=index.612625cb.css.map */
