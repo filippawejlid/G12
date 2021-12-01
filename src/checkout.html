@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="sass/main.scss" />
+    <script src="ts/main.ts"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="checkout">
+      <section id="cart">
+        <h2>Varukorg</h2>
+        <div class="productContainer">
+          <div id="imgContainer">
+            <img src="assets/dammsugare.jpg" alt="" id="productImg" />
+          </div>
+
+          <div class="info">
+            <h3>Produktnamn</h3>
+            <div id="amount">
+              <span>Antal: </span>
+              <span id="amountSpan">1</span>
+            </div>
+
+            <div id="price">
+              <span>Pris: </span>
+              <span id="priceSpan">6500kr</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="productContainer">
+          <div id="imgContainer">
+            <img src="assets/dammsugare.jpg" alt="" id="productImg" />
+          </div>
+
+          <div class="info">
+            <h3>Produktnamn</h3>
+
+            <div id="amount">
+              <span>Antal: </span>
+              <span>1</span>
+            </div>
+
+            <div id="price">
+              <span>Pris: </span>
+              <span>5000kr</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="total">
+          <span>Total summa: </span>
+          <span id="priceSpan">11500kr</span>
+        </div>
+      </section>
+
+      <section id="form">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <h2>Kontaktuppgifter</h2>
+            <div>
+              <label for="validationCustom01">Förnamn</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom01"
+                required
+              />
+            </div>
+            <div>
+              <label for="lname">Efternamn</label>
+              <input id="lname" type="text" class="form-control" required />
+            </div>
+            <div>
+              <label for="mail">Epost</label>
+              <input id="mail" type="email" class="form-control" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <h2>Betalinformation</h2>
+            <div>
+              <label for="account">Kontonummer</label>
+              <input id="account" type="number" class="form-control" required />
+            </div>
+            <div>
+              <label for="nameOnCard">Namn på kortet</label>
+              <input
+                id="nameOnCard"
+                type="number"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="last">
+              <div>
+                <label for="month">Månad/År</label>
+                <input id="month" type="month" class="form-control" required />
+              </div>
+
+              <div>
+                <label for="cvc">CVC</label>
+                <input
+                  id="cvc"
+                  type="number"
+                  pattern="[0-9]{3}"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class="btn" type="submit">Submit form</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

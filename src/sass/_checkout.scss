@@ -1,0 +1,132 @@
+#checkout {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  h2 {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  #cart {
+    @include desktop {
+      width: 40%;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .productContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      border-bottom: 1px solid darkgray;
+      padding: 5px;
+
+      @include tablets {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      #amount {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #price {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #total {
+        span {
+          @include tablets {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    #imgContainer {
+      @include tablets {
+        width: 40%;
+      }
+      #productImg {
+        width: 100%;
+      }
+    }
+  }
+
+  #form {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+        width: 300px;
+        margin: 10px;
+
+        .btn {
+          text-align: end;
+          @include button;
+        }
+      }
+    }
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include tablets {
+        width: 450px;
+      }
+
+      div {
+        @include tablets {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin: 10px;
+        }
+      }
+      input {
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+
+      .last {
+        width: 300px;
+        display: flex;
+
+        @include tablets {
+          width: 100%;
+        }
+
+        div {
+          @include tablets {
+            margin: 0;
+            justify-content: start;
+          }
+        }
+
+        &:last-child {
+          justify-content: flex-end;
+        }
+
+        input {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
