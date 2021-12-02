@@ -182,4 +182,15 @@ body {
   font-size: 1.2rem;
   margin-left: 10px;
 }
+.productinfocontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.productimghero,
+.productinfohero,
+.productinforight,
+.productimgleft {
+  border-top: 1px solid red;
+  width: 50%;
+}
 /*# sourceMappingURL=index.612625cb.css.map */
