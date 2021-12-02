@@ -37,7 +37,7 @@
       padding: 20px;
       @include flexcolcen;
 
-      border-bottom: 1px solid darkgray;
+      // border-bottom: 1px solid darkgray;
 
       @include tablets {
         width: 70%;
@@ -60,13 +60,12 @@
         display: flex;
         justify-content: space-between;
       }
-      #total {
-        span {
-          @include tablets {
-            font-size: 1.5rem;
-            font-weight: bold;
-          }
-        }
+    }
+
+    #total {
+      span {
+        font-size: 1.1rem;
+        font-weight: bold;
       }
     }
 
@@ -102,7 +101,17 @@
         width: 90%;
 
         @include tablets {
-          width: 80%;
+          width: 70%;
+        }
+      }
+
+      .btn {
+        background-color: #2595be;
+        color: white;
+        margin: 5px;
+
+        &:hover {
+          background-color: #1e7494fa;
         }
       }
     }
