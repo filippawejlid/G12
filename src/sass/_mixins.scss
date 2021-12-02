@@ -22,3 +22,9 @@
     background-color: #ddddddad;
   }
 }
+
+@mixin flexcolcen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
