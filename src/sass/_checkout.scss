@@ -119,7 +119,11 @@
         }
 
         input {
-          width: 170px;
+          width: 150px;
+
+          @include tablets {
+            width: 170px;
+          }
         }
       }
     }
