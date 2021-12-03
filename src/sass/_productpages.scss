@@ -7,7 +7,7 @@
 
 // HERO BILD
 .productimghero {
-  background-image: url(../img/Dysoncyclonev10_productpage.png);
+  background-image: url(../assets/Dysoncyclonev10_productpage.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,6 +68,11 @@
 
   h1 {
     margin-bottom: 10px;
+    color: #2596be;
+  }
+
+  h2 {
+    margin-top: 10px;
     color: #2596be;
   }
 }
