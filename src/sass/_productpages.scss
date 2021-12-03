@@ -1,12 +1,140 @@
-.productinfocontainer {
-  display: flex;
-  flex-wrap: wrap;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-.productimghero,
-.productinfohero,
-.productinforight,
-.productimgleft {
-  border-top: 1px solid red;
-  width: 50%;
+// HERO BILD
+.productimghero {
+  background-image: url(../img/Dysoncyclonev10_productpage.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 50vh;
+
+  .ppheroheader {
+    color: #2596be;
+    font-size: 0.8rem;
+    padding: 20px;
+    margin-top: 10%;
+  }
+}
+
+// OSLAGBAR PRESTANDA SEKTION
+
+.productinfohero {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  color: rgb(80, 78, 78);
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+
+  h1 {
+    margin-bottom: 10px;
+    color: #2596be;
+  }
+}
+
+// BILD TILL VÄNSTER OCH TEXT TILL HÖGER
+
+.continer {
+  display: flex;
+  margin: 10px;
+
+  .productimgleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .productinforight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(80, 78, 78);
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    padding: 5px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    color: #2596be;
+  }
+}
+
+// KNAPPAR LÄNGST NER
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  button {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .addtocartpp {
+    background-color: #2596be;
+    color: white;
+  }
+
+  .back {
+    background-color: #d1e7ff;
+    color: #165b74;
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: 768px) {
+  // HERO BILD
+  .ppheroheader {
+    font-size: 1.5rem !important;
+    margin-left: 20%;
+  }
+  // OSLAGBAR PRESTANDA SEKTION
+
+  .productinfohero {
+    width: 60%;
+    margin-left: 20%;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    div {
+      font-size: 1rem;
+    }
+  }
+
+  // BILD TILL VÄNSTER OCH TEXT TILL HÖGER
+
+  .productimgleft {
+    margin-left: 10%;
+  }
+
+  .productinforight {
+    margin-right: 20%;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    div {
+      font-size: 1rem;
+    }
+  }
 }
