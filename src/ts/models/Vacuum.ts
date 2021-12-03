@@ -1,17 +1,17 @@
-class Vacuum {
+export class Vacuum {
 
     productName: string;
+    img: string;
     price: number;
-    model: string;
-    id: number;
+    info: string;
     category: string;
 
-    constructor (name: string, price: number, model: string, Id: number, category: string) { 
+    constructor (name: string, img: string, price: number, info: string, category: string) { 
 
         this.productName = name;
+        this.img = img;
         this.price = price;
-        this.model = model;
-        this.id = Id;
+        this.info = info;
         this.category = category;
     }
 }
