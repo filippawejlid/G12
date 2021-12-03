@@ -182,40 +182,60 @@ body {
   font-size: 1.2rem;
   margin-left: 10px;
 }
+#checkout {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 1024px) {
   #checkout {
     display: flex;
     flex-direction: row-reverse;
+    align-items: flex-start;
     justify-content: space-evenly;
   }
 }
 #checkout h2 {
+  padding: 10px;
   margin-top: 30px;
-  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 0.2px solid rgba(169, 169, 169, 0.336);
+  border-top: 0.2px solid rgba(169, 169, 169, 0.336);
 }
 #checkout #cart {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 @media (min-width: 1024px) {
   #checkout #cart {
-    width: 40%;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 #checkout #cart .productContainer {
-  width: 50%;
+  width: 40%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid darkgray;
-  padding: 5px;
+}
+@media (min-width: 768px) {
+  #checkout #cart .productContainer {
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 @media (min-width: 768px) {
   #checkout #cart .productContainer {
     width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
   }
 }
 #checkout #cart .productContainer #amount {
@@ -228,84 +248,55 @@ body {
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 768px) {
-  #checkout #cart .productContainer #total span {
-    font-size: 1.5rem;
-  }
+#checkout #cart #total span {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   #checkout #cart #imgContainer {
-    width: 40%;
+    width: 30%;
   }
 }
 #checkout #cart #imgContainer #productImg {
   width: 100%;
 }
+#checkout #form {
+  background-color: white;
+  width: 80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  #checkout #form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+}
 #checkout #form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#checkout #form form .buttonContainer {
-  display: flex;
-  justify-content: flex-end;
-  width: 450px;
-  margin: 10px;
-}
-#checkout #form form .buttonContainer .btn {
-  text-align: end;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #e6e6e64b;
-}
-#checkout #form form .buttonContainer .btn:hover {
-  background-color: #ddddddad;
-}
-#checkout #form .form-row {
+  width: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 768px) {
-  #checkout #form .form-row {
-    width: 450px;
-  }
+#checkout #form form .form-row {
+  width: 90%;
 }
 @media (min-width: 768px) {
-  #checkout #form .form-row div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
+  #checkout #form form .form-row {
+    width: 70%;
   }
 }
-#checkout #form .form-row input {
-  width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+#checkout #form form .btn {
+  background-color: #2595be;
+  color: white;
+  margin: 5px;
 }
-#checkout #form .form-row .last {
-  width: 300px;
-  display: flex;
-}
-@media (min-width: 768px) {
-  #checkout #form .form-row .last {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  #checkout #form .form-row .last div {
-    margin: 0;
-  }
-}
-#checkout #form .form-row .last input {
-  width: 150px;
-}
-@media (min-width: 768px) {
-  #checkout #form .form-row .last input {
-    width: 170px;
-  }
+#checkout #form form .btn:hover {
+  background-color: #1e7494fa;
 }
 #footer footer {
   position: relative;
@@ -368,7 +359,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin: 20px;
-  /* Twitter */
 }
 @media (min-width: 768px) {
   #footer footer .socialmedia {
@@ -378,7 +368,7 @@ body {
 #footer footer .socialmedia .fa {
   padding: 5px;
   font-size: 20px;
-  width: 25px;
+  width: 30px;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
@@ -400,7 +390,6 @@ body {
   color: #fff;
   background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 #footer footer .imgContainerFooter {
   position: absolute;
