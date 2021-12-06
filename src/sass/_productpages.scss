@@ -1,0 +1,12 @@
+.productinfocontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productimghero,
+.productinfohero,
+.productinforight,
+.productimgleft {
+  border-top: 1px solid red;
+  width: 50%;
+}
