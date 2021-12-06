@@ -1,6 +1,5 @@
 import { Vacuum } from "./models/Vacuum";
 
-
 let wireless: string = "wireless"
 let powerfull: string = "powerfull";
 let robot: string = "robot";
