@@ -1,1 +1,13 @@
-{"mappings":"AAAA,EAAiD,AAAjD,iDAAmD;AACjD,EAA2C,AAA7C,4CAA6C;AAC7C,EAAK,AAAL,GAAK;AAEL,GAAG,CAAC,OAAO,GAAsB,QAAQ,CAAC,cAAc,CACtD,CAAoB;AAGtB,OAAO,CAAC,gBAAgB,CAAC,CAAO,QAAE,QAAQ;AAE1C,GAAG,CAAC,WAAW,GAAa,CAAC,CAAC;SAErB,QAAQ,GAAG,CAAC;AAAA,CAAC","sources":["src/ts/main.ts"],"sourcesContent":["// 1. Hämta \"läs mer\" knappar - get element by id\n// 2. Lägg till eventlisteners till knapparna\n// 3.\n\nlet product: HTMLButtonElement = document.getElementById(\n  \"dysoncyclonev10btn\"\n) as HTMLButtonElement;\n\nproduct.addEventListener(\"click\", readmore);\n\nlet productinfo: string[] = [];\n\nfunction readmore() {}\n"],"names":[],"version":3,"file":"index.a7a236c3.js.map","sourceRoot":"/__parcel_source_root/"}
+{
+	"mappings": "AAAA,EAAiD,AAAjD,iDAAmD;AACjD,EAA2C,AAA7C,4CAA6C;AAC7C,EAAK,AAAL,GAAK;AAEL,GAAG,CAAC,OAAO,GAAsB,QAAQ,CAAC,cAAc,CACtD,CAAoB;AAGtB,OAAO,CAAC,gBAAgB,CAAC,CAAO,QAAE,QAAQ;AAE1C,GAAG,CAAC,WAAW,GAAa,CAAC,CAAC;SAErB,QAAQ,GAAG,CAAC;AAAA,CAAC",
+	"sources": [
+		"src/ts/main.ts"
+	],
+	"sourcesContent": [
+		"// 1. Hämta \"läs mer\" knappar - get element by id\n// 2. Lägg till eventlisteners till knapparna\n// 3.\n\nlet product: HTMLButtonElement = document.getElementById(\n  \"dysoncyclonev10btn\"\n) as HTMLButtonElement;\n\nproduct.addEventListener(\"click\", readmore);\n\nlet productinfo: string[] = [];\n\nfunction readmore() {}\n"
+	],
+	"names": [],
+	"version": 3,
+	"file": "index.a7a236c3.js.map",
+	"sourceRoot": "/__parcel_source_root/"
+}
