@@ -182,17 +182,124 @@ body {
   font-size: 1.2rem;
   margin-left: 10px;
 }
-.productinfocontainer {
-  display: flex;
-  flex-wrap: wrap;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
-.productimghero,
-.productinfohero,
-.productinforight,
-.productimgleft {
-  border-top: 1px solid red;
+.productimghero {
+  background-image: url(Dysoncyclonev10_productpage.0b231c45.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 50vh;
+}
+.productimghero .ppheroheader {
+  color: #2596be;
+  font-size: 0.8rem;
+  padding: 20px;
+  margin-top: 10%;
+}
+<<<<<<< HEAD
+=======
+.productinfohero {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  color: #504e4e;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
+.productinfohero h1 {
+  margin-bottom: 10px;
+  color: #2596be;
+}
+.continer {
+  display: flex;
+  margin: 10px;
+}
+.continer .productimgleft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
 }
+.continer .productinforight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #504e4e;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  padding: 5px;
+}
+.continer h1 {
+  margin-bottom: 10px;
+  color: #2596be;
+}
+.continer h2 {
+  margin-top: 10px;
+  color: #2596be;
+}
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.btncontainer button {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.btncontainer .addtocartpp {
+  background-color: #2596be;
+  color: white;
+}
+.btncontainer .back {
+  background-color: #d1e7ff;
+  color: #165b74;
+}
+@media screen and (min-width: 768px) {
+  .ppheroheader {
+    font-size: 1.5rem !important;
+    margin-left: 20%;
+  }
+
+  .productinfohero {
+    width: 60%;
+    margin-left: 20%;
+  }
+  .productinfohero h1 {
+    font-size: 2rem;
+  }
+  .productinfohero div {
+    font-size: 1rem;
+  }
+
+  .productimgleft {
+    margin-left: 10%;
+  }
+
+  .productinforight {
+    margin-right: 20%;
+  }
+  .productinforight h1 {
+    font-size: 2rem;
+  }
+  .productinforight div {
+    font-size: 1rem;
+  }
+}
+>>>>>>> feature-branch/productinfotypescript
 #footer footer {
   position: relative;
   display: flex;
