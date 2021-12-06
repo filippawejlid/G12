@@ -1,5 +1,5 @@
 import { Vacuum } from "./models/Vacuum";
-import {
+import { 
     w1,
     w2,
     w3,
@@ -11,8 +11,7 @@ import {
     r1,
     r2,
     r3,
-    r4,
-  } from "./models/Vacuumobjects";
+    r4 } from "./models/Vacuumobjects";
 window.onload = function () {
 
 	// cartClick();
