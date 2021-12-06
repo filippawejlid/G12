@@ -1,6 +1,8 @@
+import { Vacuum } from "./models/Vacuum";
 window.onload = function () {
 	// cartClick();
 	clicker();
+    document.getElementById("myModal").addEventListener("click", displayCart)
 };
 
 // function cartClick() {
@@ -49,7 +51,6 @@ function clicker() {
 		}
 	};
 }
-import { Vacuum } from "./models/Vacuum";
 
 window.onload = () => {
 	let w1 = new Vacuum(
@@ -84,3 +85,60 @@ window.onload = () => {
 // let r2 = new Vacuum("Dyson 360 Heurist™ robot 2", 3999);
 // let r3 = new Vacuum("Dyson 360 Heurist™ robot 3", 4190);
 // let r4 = new Vacuum("Dyson 360 Heurist™ robot 4", 4999);
+
+let cartItems: object[] = [];
+function addToCart(clicked) {
+
+    for (let i = 0; i < cartItems.length; i++) {
+
+        if (clicked == cartItems[i]) {
+
+            
+
+        }
+        
+    }
+
+}
+
+function displayCart() {
+    
+    for (let i = 0; i < cartItems.length; i++) {
+
+        let modal:HTMLDivElement = document.getElementById("myModal") as HTMLDivElement;
+        
+        let productContainer:HTMLDivElement = document.createElement("div");
+        modal.appendChild(productContainer);
+
+        let imgContainer:HTMLDivElement = document.createElement("div");
+        let img:HTMLImageElement = document.createElement("img");
+        productContainer.appendChild(imgContainer);
+        imgContainer.appendChild(img);
+
+        let info:HTMLDivElement = document.createElement("div");
+        productContainer.appendChild(info);
+
+        let productName:HTMLHeadingElement = document.createElement("h3");
+        info.appendChild(productName);
+
+        let amountDiv:HTMLDivElement = document.createElement("div");
+        info.appendChild(amountDiv);
+        let span:HTMLSpanElement = document.createElement("span");
+        amountDiv.appendChild(span);
+        let amountspan:HTMLSpanElement = document.createElement("span");
+        amountDiv.appendChild(amountspan);
+
+        let priceDiv:HTMLDivElement = document.createElement("div");
+        info.appendChild(priceDiv);
+        let span2:HTMLSpanElement = document.createElement("span");
+        priceDiv.appendChild(span2);
+        let priceSpan:HTMLSpanElement = document.createElement("span");
+        priceDiv.appendChild(priceSpan);
+
+
+        // img.src = cartItems[i].imgsmall;
+        // productName.innerHTML = cartItems[i].name;
+        // amountspan.innerHTML = 
+    }
+
+}
