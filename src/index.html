@@ -17,25 +17,51 @@
     <section id="navet">
      
       <header class="header">
-         <div class="basketcnt">
-           <a href="#hiddendiv" class="hiddenlink" id="cartLink">
-           <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
-           </a>
-          </div>
-          <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label class="menu-icon" for="menu-btn">
-            <span class="nav-icon"></span>
-          </label>
-          <ul class="menu">
-            <li><a href="#hem" class="hem">Hem</a></li>
-            <li><a href="#produkter">Produkter</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-          
-          
-        </header>
-        <!-- <img src="/src/assets/logo-test.png" alt="logofornow" class="logo"/> -->
-        <div id="cartDiv" class="hddnCrt">HEJ</div>
+        <div class="basketcnt">
+            <button id="btnCart" type="button" class="btnCartFa">
+              <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+            </button> 
+        </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+              <span class="nav-icon"></span>
+            </label>
+            <ul class="menu">
+              <li><a href="#hem" class="hem">Hem</a></li>
+              <li><a href="#produkter">Produkter</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            
+            
+          </header>
+          <!-- <img src="/src/assets/logo-test.png" alt="logofornow" class="logo"/> -->
+            <div id="myModal" class="modal">
+                <div class="modcnt">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                      <div class="theFrame">
+                          <div class="prodFrame1">
+
+                            <img src="/src/assets/Robot Dyson 360 Heurist™ robot 1.png" alt="Dyson 360" class="dyson360">
+                            
+                            <span>HEJ HEJ</span>
+                            
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>npm 
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                          </div>
+                          <div class="prodFrame2">
+                            <span>HEJ HEJ</span>
+                          </div>
+                      </div>
+                      <div class="btnsDiv">
+                        <button id="btnHandla" class="btHandla">Fortsätt Handla</button>
+                        <button id="btnKassa" class="btKassa">Till Kassa</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
       
     </section>
 

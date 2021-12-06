@@ -1,10 +1,14 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 @import "./mixins";
 @import "./font";
 @import "./landingpage";
 @import "./products";
+@import "./navbar";
+@import "./cart";
