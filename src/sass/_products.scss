@@ -81,18 +81,21 @@
     justify-content: center;
     gap: 40px;
   }
+
+  // PRODUKTER
+
   .productcontainer {
     padding: 10px;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    width: auto;
   }
 
   .imgcontainer {
-    //border: 1px solid green;
+    border: 1px solid green;
     display: flex;
     justify-content: center;
-    width: 100%;
 
     > img {
       display: flex;
