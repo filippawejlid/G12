@@ -204,8 +204,6 @@ body {
   padding: 20px;
   margin-top: 10%;
 }
-<<<<<<< HEAD
-=======
 .productinfohero {
   height: 30vh;
   display: flex;
@@ -299,7 +297,6 @@ body {
     font-size: 1rem;
   }
 }
->>>>>>> feature-branch/productinfotypescript
 #footer footer {
   position: relative;
   display: flex;
@@ -346,8 +343,8 @@ body {
 }
 @media (min-width: 768px) {
   #footer footer .footerInfo .about,
-#footer footer .footerInfo .contact,
-#footer footer .footerInfo .services {
+  #footer footer .footerInfo .contact,
+  #footer footer .footerInfo .services {
     width: 25%;
   }
 }
@@ -391,7 +388,14 @@ body {
 #footer footer .socialmedia .fa-instagram {
   color: #fff;
   background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 #footer footer .imgContainerFooter {
   position: absolute;
