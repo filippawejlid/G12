@@ -1,17 +1,33 @@
 export class Vacuum {
+  productName: string;
+  price: number;
+  imghero: string;
+  imgsmall: string;
+  discriptionlandpage: string;
+  discriptioninfopage1: string;
+  discriptioninfopage2: string;
+  id: number;
+  category: string;
 
-    productName: string;
-    img: string;
-    price: number;
-    info: string;
-    category: string;
-
-    constructor (name: string, img: string, price: number, info: string, category: string) { 
-
-        this.productName = name;
-        this.img = img;
-        this.price = price;
-        this.info = info;
-        this.category = category;
-    }
+  constructor(
+    name: string,
+    price: number,
+    imghero: string,
+    imgsmall: string,
+    discriptionlandpage: string,
+    discriptioninfopage1: string,
+    discriptioninfopage2: string,
+    id: number,
+    category: string
+  ) {
+    this.productName = name;
+    this.price = price;
+    this.imghero = imghero;
+    this.imgsmall = imgsmall;
+    this.discriptionlandpage = discriptionlandpage;
+    this.discriptioninfopage1 = discriptioninfopage1;
+    this.discriptioninfopage2 = discriptioninfopage2;
+    this.id = id;
+    this.category = category;
+  }
 }
