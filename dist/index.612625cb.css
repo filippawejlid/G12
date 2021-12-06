@@ -408,5 +408,134 @@ body {
 .modal .btKassa:hover {
 	cursor: pointer;
 	background-color: #207ea0;
+	font-size: 1.2rem;
+	margin-left: 10px;
+}
+.productinfocontainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+.productimghero,
+.productinfohero,
+.productinforight,
+.productimgleft {
+	border-top: 1px solid red;
+	width: 50%;
+}
+#footer footer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+}
+#footer footer p {
+	color: white;
+}
+#footer footer .footerInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 50px;
+}
+@media (min-width: 768px) {
+	#footer footer .footerInfo {
+		flex-direction: row;
+		margin: 70px;
+	}
+}
+@media (min-width: 1024px) {
+	#footer footer .footerInfo {
+		margin: 100px;
+	}
+}
+#footer footer .footerInfo .about,
+#footer footer .footerInfo .contact,
+#footer footer .footerInfo .services {
+	margin: 10px;
+}
+#footer footer .footerInfo .about a,
+#footer footer .footerInfo .contact a,
+#footer footer .footerInfo .services a {
+	text-decoration: none;
+	color: white;
+	opacity: 0.9;
+}
+#footer footer .footerInfo .about a:hover,
+#footer footer .footerInfo .contact a:hover,
+#footer footer .footerInfo .services a:hover {
+	opacity: 0.7;
+}
+@media (min-width: 768px) {
+	#footer footer .footerInfo .about,
+	#footer footer .footerInfo .contact,
+	#footer footer .footerInfo .services {
+		width: 25%;
+	}
+}
+#footer footer .footerInfo .about :first-child,
+#footer footer .footerInfo .contact :first-child,
+#footer footer .footerInfo .services :first-child {
+	font-size: larger;
+}
+#footer footer .socialmedia {
+	width: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px;
+}
+@media (min-width: 768px) {
+	#footer footer .socialmedia {
+		margin-bottom: 40px;
+	}
+}
+#footer footer .socialmedia .fa {
+	padding: 5px;
+	font-size: 20px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	opacity: 0.6;
+}
+#footer footer .socialmedia .fa:hover {
+	opacity: 0.8;
+	transition: 0.2s;
+}
+#footer footer .socialmedia .fa-facebook {
+	background: #3b5998;
+	color: white;
+}
+#footer footer .socialmedia .fa-twitter {
+	background: #55acee;
+	color: white;
+}
+#footer footer .socialmedia .fa-instagram {
+	color: #fff;
+	background: #d6249f;
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+}
+#footer footer .imgContainerFooter {
+	position: absolute;
+	width: 30%;
+	bottom: 200px;
+	right: 0;
+}
+@media (min-width: 768px) {
+	#footer footer .imgContainerFooter {
+		width: 15%;
+		bottom: 0;
+	}
+}
+#footer footer .imgContainerFooter img {
+	width: 100%;
+	opacity: 0.7;
 }
 /*# sourceMappingURL=index.612625cb.css.map */
