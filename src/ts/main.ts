@@ -13,41 +13,31 @@ import {
   r3,
   r4,
 } from "./models/Vacuumobjects";
-// <div id="wirelesscontainer">
-//  <div class="productcontainer">
-//               <div class="imgcontainer">
-//                   <img />
-//               </div>
-//               <div class="productInfoContainer">
-//                 <h2 class="vacuumheader"></h2>
-//                 <div class="vacuuminfo">
-//                   <span></span>
-
-//                 </div>
-//                  <h2 class="price"></h2>
-//                 <div class="productbtns">
-//                   <button class="readmore" id="dysoncyclonev10btn" data.value="dysoncyclonev10btn" >Läs mer <i class="fas fa-info-circle"></i></button>
-//                   <button class="addtocart">Lägg till i varukorg <i class="fas fa-cart-plus"></i></button>
-//                 </div>
-//               </div>
-//   </div>
-// </div>
 
 let productInfo: Vacuum[] = [w1, w2, w3, w4, p1, p2, p3, p4, r1, r2, r3, r4];
+
 window.onload = function () {
   // FUNCTION FOR ALL THE PRODUCTS ON THE FRONT PAGE
+
   products();
 
   // cartClick();
   clicker();
 };
 
+let wirelessContainer: HTMLDivElement = document.getElementById(
+  "wirelesscontainer"
+) as HTMLDivElement;
+
+let powerfullContainer: HTMLDivElement = document.getElementById(
+  "powerfullcontainer"
+) as HTMLDivElement;
+let robotContainer: HTMLDivElement = document.getElementById(
+  "robotcontainer"
+) as HTMLDivElement;
+
 function products() {
   for (let i = 0; i < productInfo.length; i++) {
-    let wirelessContainer: HTMLDivElement = document.getElementById(
-      "wirelesscontainer"
-    ) as HTMLDivElement;
-
     // productcontainer div som ska ligga innanför wirelesscontainer
     let productContainer = document.createElement("div");
     productContainer.className = "productcontainer";
@@ -88,8 +78,15 @@ function products() {
     //<span></span> innanför vacuuminfo
     let vacuumInfoSpan = document.createElement("span");
 
+    if (productInfo[i].category == "wireless") {
+      wirelessContainer.appendChild(productContainer);
+    } else if (productInfo[i].category == "powerfull") {
+      powerfullContainer.appendChild(productContainer);
+    } else if (productInfo[i].category == "robot") {
+      robotContainer.appendChild(productContainer);
+    }
+
     // appendChild
-    wirelessContainer.appendChild(productContainer);
     productContainer.appendChild(imgContainer);
     productContainer.appendChild(productInfoContainer);
     productInfoContainer.appendChild(vacuumHeader);
@@ -101,20 +98,6 @@ function products() {
     vacuumInfo.appendChild(vacuumInfoSpan);
   }
 }
-
-// function cartClick() {
-// 	let cartLink: HTMLLinkElement = document.getElementById(
-// 		"cartLink"
-// 	) as HTMLLinkElement;
-// 	cartLink.addEventListener("click", function () {
-// 		// document.getElementById("cartDiv").className = "hddnCrt";
-// 		// document.getElementById("cartDiv").className += "showDiv";
-
-// 		document.getElementById("cartDiv").className = document
-// 			.getElementById("cartDiv")
-// 			.className.replace(/(?:^|\s)hddnCrt(?!\S)/g, "showDiv");
-// 	});
-// }
 
 function clicker() {
   var modal: HTMLDivElement = document.getElementById(

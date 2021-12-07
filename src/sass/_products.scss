@@ -85,11 +85,11 @@
   // PRODUKTER
 
   .productcontainer {
-    padding: 10px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 50px;
-    width: auto;
+    justify-content: space-between;
   }
 
   .imgcontainer {
@@ -101,6 +101,10 @@
       display: flex;
       justify-content: center;
     }
+  }
+  .vacuumheader {
+    font-size: 1rem;
+    align-self: baseline;
   }
   .vacuuminfo {
     display: flex;

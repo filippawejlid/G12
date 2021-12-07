@@ -139,11 +139,11 @@ body {
   gap: 40px;
 }
 #productmaincontainer .productcontainer {
-  padding: 10px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 50px;
-  width: auto;
+  justify-content: space-between;
 }
 #productmaincontainer .imgcontainer {
   border: 1px solid green;
@@ -153,6 +153,10 @@ body {
 #productmaincontainer .imgcontainer > img {
   display: flex;
   justify-content: center;
+}
+#productmaincontainer .vacuumheader {
+  font-size: 1rem;
+  align-self: baseline;
 }
 #productmaincontainer .vacuuminfo {
   display: flex;
@@ -164,10 +168,11 @@ body {
   gap: 2px;
 }
 #productmaincontainer .productbtns > button {
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   border-radius: 2px;
   cursor: pointer;
+  text-justify: center;
 }
 #productmaincontainer .productbtns > button:nth-child(2) {
   background-color: #2596be;
