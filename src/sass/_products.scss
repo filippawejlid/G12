@@ -81,23 +81,30 @@
     justify-content: center;
     gap: 40px;
   }
+
+  // PRODUKTER
+
   .productcontainer {
-    padding: 10px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 50px;
+    justify-content: space-between;
   }
 
   .imgcontainer {
-    //border: 1px solid green;
+    border: 1px solid green;
     display: flex;
     justify-content: center;
-    width: 100%;
 
     > img {
       display: flex;
       justify-content: center;
     }
+  }
+  .vacuumheader {
+    font-size: 1rem;
+    align-self: baseline;
   }
   .vacuuminfo {
     display: flex;
