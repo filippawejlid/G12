@@ -77,7 +77,7 @@
               >
               <input
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationTooltip01"
                 required
               />
@@ -88,7 +88,7 @@
               >
               <input
                 type="text"
-                class="form-control is-valid"
+                class="form-control"
                 id="validationTooltip02"
                 required
               />
@@ -111,6 +111,7 @@
                 >Kontonummer</label
               >
               <input
+                placeholder="XXXX XXXX XXXX XXXX"
                 type="text"
                 class="form-control"
                 id="validationTooltip03"
@@ -146,7 +147,8 @@
                 type="number"
                 class="form-control"
                 id="validationTooltip05"
-                pattern="[0-9]{3}"
+                maxlength="3"
+                pattern="{3}"
                 required
               />
             </div>
