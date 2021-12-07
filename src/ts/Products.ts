@@ -1,3 +1,4 @@
+import { addToCart } from "./addToCart";
 import { Vacuum } from "./models/Vacuum";
 import {
 	w1,
@@ -79,6 +80,7 @@ export function products() {
 		let addToCartBtn = document.createElement("button");
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
+		addToCartBtn.addEventListener("click", ()=> {addToCart(i)})
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");
