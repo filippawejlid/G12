@@ -55,10 +55,6 @@
 		transition: background 0.2s ease-out;
 	}
 
-	.menu-icon:hover {
-		background: #a02f20;
-	}
-
 	.header .menu-icon .nav-icon:before {
 		background: #2595be;
 		content: "";
@@ -147,10 +143,24 @@
 		color: #207ea0;
 	}
 
-	@include tablets {
-	}
-
 	@include desktop {
+		li:hover {
+			text-decoration: underline;
+		}
+		.header li {
+			float: left;
+		}
+		.header li a {
+			padding: 20px 30px;
+		}
+		.header .menu {
+			clear: none;
+			float: right;
+			max-height: none;
+		}
+		.header .menu-icon {
+			display: none;
+		}
 	}
 }
 // QUERIES
