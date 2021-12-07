@@ -172,17 +172,16 @@ body {
   width: 100%;
   border-radius: 2px;
   cursor: pointer;
+  font-size: 1rem;
 }
 #productmaincontainer .productbtns > button:nth-child(2) {
   background-color: #2596be;
   border: none;
   color: white;
-  font-size: 0.7rem;
 }
 #productmaincontainer .productbtns > button:nth-child(1) {
   background-color: #2595be86;
   border: none;
-  font-size: 0.7rem;
 }
 #productmaincontainer .productbtns .fa-info-circle,
 #productmaincontainer .productbtns .fa-cart-plus {
@@ -350,8 +349,8 @@ body {
 }
 @media (min-width: 768px) {
   #footer footer .footerInfo .about,
-#footer footer .footerInfo .contact,
-#footer footer .footerInfo .services {
+  #footer footer .footerInfo .contact,
+  #footer footer .footerInfo .services {
     width: 25%;
   }
 }
@@ -395,7 +394,14 @@ body {
 #footer footer .socialmedia .fa-instagram {
   color: #fff;
   background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 #footer footer .imgContainerFooter {
   position: absolute;
@@ -710,7 +716,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 @media (min-width: 1060px) {
   #checkout #cart {
@@ -763,7 +770,8 @@ body {
 #checkout #form {
   background-color: white;
   width: 80%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   display: flex;
   flex-direction: column;
   align-items: center;
