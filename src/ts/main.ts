@@ -75,6 +75,8 @@ function products() {
 		let addToCartBtn = document.createElement("button");
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
+    productContainer.addEventListener("click", ()=>{addToCart(i)})
+
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");
