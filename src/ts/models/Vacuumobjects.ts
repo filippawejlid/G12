@@ -1,10 +1,12 @@
 import { Vacuum } from "./Vacuum";
 
+import * as img from "./../assets/*.png";
+
 export let w1 = new Vacuum(
   "Dyson Cyclone V10",
   5190,
   "<img src=/src/assets/Dysoncyclonev10_productpage.png alt='Bild på en dammsugaren'/>",
-  "Sladdlös Dyson Cyclone V10.fc437951.png",
+  "<img src=/src/assets/Sladdlös-Dyson-Cyclone-V10.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Cyclone V10</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
   "<h1>Oslagbar prestanda</h1> <div>Dyson Cyclone V10 Absolute kommer med upp till 60 minuters kraftfull bibehållen sugförmåga. Den 40% större behållaren betyder också färre avbrott. </div>",

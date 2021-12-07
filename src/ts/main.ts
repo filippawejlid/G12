@@ -13,6 +13,7 @@ import {
   r3,
   r4,
 } from "./models/Vacuumobjects";
+
 window.onload = function () {
   // cartClick();
   clicker();
