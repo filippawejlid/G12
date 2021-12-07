@@ -55,10 +55,6 @@
 		transition: background 0.2s ease-out;
 	}
 
-	.menu-icon:hover {
-		background: #a02f20;
-	}
-
 	.header .menu-icon .nav-icon:before {
 		background: #2595be;
 		content: "";
@@ -110,6 +106,12 @@
 		padding-top: 10px;
 	}
 
+	.logo {
+		height: 40px;
+		margin-top: 5px;
+		padding-left: 10px;
+	}
+
 	.basketcnt {
 		display: flex;
 		float: right;
@@ -147,10 +149,39 @@
 		color: #207ea0;
 	}
 
-	@include tablets {
-	}
-
 	@include desktop {
+		li:hover {
+			text-decoration: underline;
+		}
+		.header li {
+			float: left;
+		}
+		.header li a {
+			height: 45px;
+			margin: 0;
+			padding-top: 15px;
+			padding-right: 15px;
+		}
+
+		.hem {
+			padding-top: 15px;
+			margin: 0;
+			border-top: none;
+			padding-right: 15px;
+		}
+
+		.btnCartFa {
+			margin-left: 45px;
+		}
+
+		.header .menu {
+			clear: none;
+			float: right;
+			max-height: none;
+		}
+		.header .menu-icon {
+			display: none;
+		}
 	}
 }
 // QUERIES
