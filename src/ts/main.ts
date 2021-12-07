@@ -1,8 +1,8 @@
-import { displayCart } from "./displayCart";
 import { productinfo } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 import { form } from "./Form";
+import { displayCart } from "./displayCart";
 import { addToCart } from "./addToCart";
 import { Vacuum } from "./models/Vacuum";
 import {
@@ -31,3 +31,5 @@ window.onload = function () {
 
 	document.getElementById("btnCart").addEventListener("click", displayCart);
 };
+
+

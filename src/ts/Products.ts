@@ -46,6 +46,7 @@ export function products() {
 		// productcontainer div som ska ligga innanför wirelesscontainer
 		let productContainer = document.createElement("div");
 		productContainer.className = "productcontainer";
+		productContainer.id = "objectContainer" + i;  //Här har jag lagt till id ta ej bort
 
 		// imgcontainer div som ska ligga innanför productContainer
 		let imgContainer = document.createElement("div");
@@ -80,7 +81,7 @@ export function products() {
 		let addToCartBtn = document.createElement("button");
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
-		addToCartBtn.addEventListener("click", ()=> {addToCart(i)})
+		addToCartBtn.addEventListener("click", ()=> {addToCart(i)}) //Här har jag lagt till eventlistener ta ej bort
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");
