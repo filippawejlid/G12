@@ -29,14 +29,14 @@ export let productInfo: Vacuum[] = [
 	r4,
 ];
 
-let wirelessContainer: HTMLDivElement = document.getElementById(
+export let wirelessContainer: HTMLDivElement = document.getElementById(
 	"wirelesscontainer"
 ) as HTMLDivElement;
 
-let powerfullContainer: HTMLDivElement = document.getElementById(
+export let powerfullContainer: HTMLDivElement = document.getElementById(
 	"powerfullcontainer"
 ) as HTMLDivElement;
-let robotContainer: HTMLDivElement = document.getElementById(
+export let robotContainer: HTMLDivElement = document.getElementById(
 	"robotcontainer"
 ) as HTMLDivElement;
 

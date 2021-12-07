@@ -2,7 +2,7 @@ import { displayCart } from "./displayCart";
 import { productinfo } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
-import { form } from "./Form";
+// import { form } from "./Form";
 import { addToCart } from "./addToCart";
 import { Vacuum } from "./models/Vacuum";
 import {
@@ -25,7 +25,7 @@ window.onload = function () {
 	//addToCart();
 	clicker();
 	displayCart();
-	form();
+	// form();
 	productinfo();
 	products();
 

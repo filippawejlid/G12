@@ -14,7 +14,9 @@ export function clicker() {
 	)[0] as HTMLSpanElement;
 
 	// When the user clicks on the button, open the modal
-	btn.onclick = function () {
+	btn.onclick = function (event) {
+		event.preventDefault();
+		event.stopPropagation();
 		modal.style.display = "block";
 	};
 
@@ -25,8 +27,11 @@ export function clicker() {
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function (event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
+		if (modal.style.display === "block") {
+			let modalContent = modal.querySelector(".modal-content");
+			if (!modalContent.contains(event.target)) {
+				modal.style.display = "none";
+			}
 		}
 	};
 }
