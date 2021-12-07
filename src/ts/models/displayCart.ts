@@ -5,7 +5,7 @@ import { cartItems } from "./addToCart";
 export function displayCart() {
     for (let i = 0; i < cartItems.length; i++) {
       let modalContent: HTMLDivElement = document.getElementById(
-        "prodFrame2"
+        "prodFrame1"
       ) as HTMLDivElement;
   
       let productContainer: HTMLDivElement = document.createElement("div");

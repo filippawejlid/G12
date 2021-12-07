@@ -9,21 +9,28 @@ export function addToCart(clicked: number) {
       for (let i = 0; 0 == cartItems.length; i++) {
   
         cartItems.push(productInfo[clicked])
-        console.log(productInfo[clicked]);
+        console.log("hmmm");
+        
       }
     } else{
     
       for (let i = 0; i < cartItems.length; i++) {
       
         if (productInfo[clicked] === cartItems[i]) {
+
+          console.log(productInfo[clicked]);
+          console.log(cartItems[i]);
+          
         
-        productInfo[clicked].amount++;        
+        productInfo[clicked].amount++;     
+        console.log("Plussar på amount");
+   
   
       } 
       else {
         cartItems.push(productInfo[clicked])
-        console.log(productInfo[clicked]);
-  
+        console.log("Lägger till i lista");
+          
        }
       }
     }
