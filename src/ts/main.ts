@@ -16,7 +16,7 @@ window.onload = function () {
 
 	// cartClick();
 	clicker();
-    document.getElementById("myModal").addEventListener("click", displayCart)
+  document.getElementById("btnCart").addEventListener("click", displayCart)
 
 let productInfo: Vacuum[] = [w1, w2, w3, w4, p1, p2, p3, p4, r1, r2, r3, r4];
 window.onload = function () {
@@ -80,15 +80,18 @@ function clicker() {
 }
 
 
-let cartItems: object[] = [];
+let cartItems: object[] = [w1];
 function addToCart(clicked) {
 
     for (let i = 0; i < cartItems.length; i++) {
 
-        if (clicked == cartItems[i]) {
+        if (productInfo[clicked] == cartItems[i]) {
 
+            // cartItems[i].amount++;
             
-
+        }
+        else {
+          cartItems.push(productInfo[clicked])
         }
         
     }
@@ -96,7 +99,9 @@ function addToCart(clicked) {
 }
 
 function displayCart() {
-    
+
+  
+
     for (let i = 0; i < cartItems.length; i++) {
 
         let modal:HTMLDivElement = document.getElementById("myModal") as HTMLDivElement;
@@ -132,7 +137,9 @@ function displayCart() {
 
         // img.src = cartItems[i].imgsmall;
         // productName.innerHTML = cartItems[i].name;
-        // amountspan.innerHTML = 
+        // amountspan.innerHTML = cartItems[i].amount++;
+        // priceSpan.innerHTML = cartItems[i].price;
+
     }
 
 }
