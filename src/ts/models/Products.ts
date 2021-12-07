@@ -14,7 +14,20 @@ import {
   r4,
 } from "./Vacuumobjects";
 
-let productInfo: Vacuum[] = [w1, w2, w3, w4, p1, p2, p3, p4, r1, r2, r3, r4];
+export let productInfo: Vacuum[] = [
+  w1,
+  w2,
+  w3,
+  w4,
+  p1,
+  p2,
+  p3,
+  p4,
+  r1,
+  r2,
+  r3,
+  r4,
+];
 
 let wirelessContainer: HTMLDivElement = document.getElementById(
   "wirelesscontainer"
