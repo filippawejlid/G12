@@ -13,22 +13,17 @@ import {
   r3,
   r4,
 } from "./models/Vacuumobjects";
-window.onload = function () {
-  // cartClick();
-  clicker();
-  document.getElementById("btnCart").addEventListener("click", displayCart);
-
-  let productInfo: Vacuum[] = [w1, w2, w3, w4, p1, p2, p3, p4, r1, r2, r3, r4];
 
   window.onload = function () {
-    // FUNCTION FOR ALL THE PRODUCTS ON THE FRONT PAGE
-
+    
+    document.getElementById("btnCart").addEventListener("click", displayCart);
     products();
     form();
     // cartClick();
     clicker();
-  };
-
+  }
+  
+  let productInfo: Vacuum[] = [w1, w2, w3, w4, p1, p2, p3, p4, r1, r2, r3, r4];
   let wirelessContainer: HTMLDivElement = document.getElementById(
     "wirelesscontainer"
   ) as HTMLDivElement;
@@ -78,6 +73,8 @@ window.onload = function () {
       let addToCartBtn = document.createElement("button");
       addToCartBtn.className = "addtocart";
       addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
+      productContainer.addEventListener("click", ()=>{addToCart(i)})
+
 
       //<span></span> innanför vacuuminfo
       let vacuumInfoSpan = document.createElement("span");
@@ -136,78 +133,117 @@ window.onload = function () {
     };
   }
 
-  let cartItems: object[] = [w1];
-  function addToCart(clicked) {
-    for (let i = 0; i < cartItems.length; i++) {
-      if (productInfo[clicked] == cartItems[i]) {
-        // cartItems[i].amount++;
-      } else {
-        cartItems.push(productInfo[clicked]);
+  let cartItems: Vacuum[] = [];
+  function addToCart(clicked: number) {  
+
+    if (cartItems.length == 0) {
+      for (let i = 0; 0 == cartItems.length; i++) {
+
+        cartItems.push(productInfo[clicked])
+        console.log(productInfo[clicked]);
+      }
+    } else{
+    
+      for (let i = 0; i < cartItems.length; i++) {
+      
+        if (productInfo[clicked] === cartItems[i]) {
+        
+        productInfo[clicked].amount++;        
+
+      } 
+      else {
+        cartItems.push(productInfo[clicked])
+        console.log(productInfo[clicked]);
+
+       }
       }
     }
+
+    console.log(cartItems);
+    
   }
 
   function displayCart() {
     for (let i = 0; i < cartItems.length; i++) {
-      let modal: HTMLDivElement = document.getElementById(
-        "myModal"
+      let modalContent: HTMLDivElement = document.getElementById(
+        "prodFrame2"
       ) as HTMLDivElement;
 
       let productContainer: HTMLDivElement = document.createElement("div");
-      modal.appendChild(productContainer);
-
+      productContainer.className = "productContainer";
+      
       let imgContainer: HTMLDivElement = document.createElement("div");
+      imgContainer.className = "imgContainer";
       let img: HTMLImageElement = document.createElement("img");
+    
+      let info: HTMLDivElement = document.createElement("div");
+      info.className= "info";
+      
+      let productName: HTMLHeadingElement = document.createElement("h3");
+      
+      let amountDiv: HTMLDivElement = document.createElement("div");
+      amountDiv.id = "amount"
+      let span: HTMLSpanElement = document.createElement("span");
+      let amountspan: HTMLSpanElement = document.createElement("span");
+      
+      let priceDiv: HTMLDivElement = document.createElement("div");
+      priceDiv.id = "price"
+      let span2: HTMLSpanElement = document.createElement("span");
+      let priceSpan: HTMLSpanElement = document.createElement("span");
+
+      let totalDiv: HTMLDivElement = document.createElement("div");
+      totalDiv.id = "total"
+      let span3: HTMLSpanElement = document.createElement("span");
+      let totalSpan: HTMLSpanElement = document.createElement("span");
+      
+      modalContent.appendChild(productContainer);
       productContainer.appendChild(imgContainer);
+      productContainer.appendChild(info);
+      productContainer.appendChild(totalDiv);
+
       imgContainer.appendChild(img);
 
-      let info: HTMLDivElement = document.createElement("div");
-      productContainer.appendChild(info);
-
-      let productName: HTMLHeadingElement = document.createElement("h3");
       info.appendChild(productName);
-
-      let amountDiv: HTMLDivElement = document.createElement("div");
       info.appendChild(amountDiv);
-      let span: HTMLSpanElement = document.createElement("span");
-      amountDiv.appendChild(span);
-      let amountspan: HTMLSpanElement = document.createElement("span");
-      amountDiv.appendChild(amountspan);
-
-      let priceDiv: HTMLDivElement = document.createElement("div");
       info.appendChild(priceDiv);
-      let span2: HTMLSpanElement = document.createElement("span");
+
+      amountDiv.appendChild(span);
+      amountDiv.appendChild(amountspan);
+      
       priceDiv.appendChild(span2);
-      let priceSpan: HTMLSpanElement = document.createElement("span");
       priceDiv.appendChild(priceSpan);
 
-      // img.src = cartItems[i].imgsmall;
-      // productName.innerHTML = cartItems[i].name;
-      // amountspan.innerHTML = cartItems[i].amount++;
-      // priceSpan.innerHTML = cartItems[i].price;
+      totalDiv.appendChild(span3)
+      totalDiv.appendChild(totalSpan)
+
+      
+      img.src = cartItems[i].imgsmall;
+      productName.innerHTML = cartItems[i].productName;
+      amountspan.innerHTML = `${productInfo[i].amount.toString()} kr`;
+      priceSpan.innerHTML = `${productInfo[i].price.toString()} kr`;
+
     }
   }
-};
 
+  function form () {
 
-function form () {
-
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  ()
-}
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  }
