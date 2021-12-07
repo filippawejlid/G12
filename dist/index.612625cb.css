@@ -413,6 +413,10 @@ body {
   width: 100%;
   opacity: 0.7;
 }
+#navet {
+  position: fixed;
+  width: 100vw;
+}
 #navet a {
   color: #2595be;
   font-size: bolder;
