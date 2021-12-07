@@ -1,7 +1,5 @@
 import { Vacuum } from "./Vacuum";
 
-import * as img from "./../assets/*.png";
-
 export let w1 = new Vacuum(
   "Dyson Cyclone V10",
   5190,
