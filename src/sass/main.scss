@@ -1,9 +1,9 @@
 html,
 body {
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @import "./mixins";
@@ -14,3 +14,4 @@ body {
 @import "./footer";
 @import "./navbar";
 @import "./cart";
+@import "./checkout";
