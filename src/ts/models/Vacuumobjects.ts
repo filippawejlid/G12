@@ -14,7 +14,8 @@ export let w1 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   1,
-  "wireless"
+  "wireless",
+  1
 );
 export let w2 = new Vacuum(
   "Dyson Outsize",
@@ -28,7 +29,8 @@ export let w2 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   2,
-  "wireless"
+  "wireless",
+  1
 );
 
 export let w3 = new Vacuum(
@@ -43,7 +45,8 @@ export let w3 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   3,
-  "wireless"
+  "wireless",
+  1
 );
 
 export let w4 = new Vacuum(
@@ -58,7 +61,8 @@ export let w4 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   4,
-  "wireless"
+  "wireless",
+  1
 );
 
 export let p1 = new Vacuum(
@@ -73,7 +77,8 @@ export let p1 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   5,
-  "powerfull"
+  "powerfull",
+  1
 );
 
 export let p2 = new Vacuum(
@@ -88,7 +93,8 @@ export let p2 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   6,
-  "powerfull"
+  "powerfull",
+  1
 );
 
 export let p3 = new Vacuum(
@@ -103,7 +109,8 @@ export let p3 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   7,
-  "powerfull"
+  "powerfull",
+  1
 );
 
 export let p4 = new Vacuum(
@@ -118,7 +125,8 @@ export let p4 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   8,
-  "powerfull"
+  "powerfull",
+  1
 );
 
 export let r1 = new Vacuum(
@@ -133,7 +141,8 @@ export let r1 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   9,
-  "robot"
+  "robot",
+  1
 );
 export let r2 = new Vacuum(
   "Dyson 360 Heurist™ robot 2",
@@ -147,7 +156,8 @@ export let r2 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   10,
-  "robot"
+  "robot",
+  1
 );
 export let r3 = new Vacuum(
   "Dyson 360 Heurist™ robot 3",
@@ -161,7 +171,8 @@ export let r3 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   11,
-  "robot"
+  "robot",
+  1
 );
 export let r4 = new Vacuum(
   "Dyson 360 Heurist™ robot 4",
@@ -175,5 +186,6 @@ export let r4 = new Vacuum(
   " Läs mer <i class='fas fa-info-circle'></i>",
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   12,
-  "robot"
+  "robot",
+  1
 );
