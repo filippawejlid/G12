@@ -15,7 +15,6 @@ export class Vacuum {
   identification: string; //La till ta ej bort
   beenAdded: boolean;
 
-
   constructor(
     name: string,
     price: number,
@@ -30,10 +29,8 @@ export class Vacuum {
     id: number,
     category: string,
     amount: number,
-    identification: string, 
+    identification: string,
     beenAdded: boolean
-
-
   ) {
     this.productName = name;
     this.price = price;

@@ -65,11 +65,13 @@ body {
   color: white;
   cursor: pointer;
 }
+#showmodal {
+  display: none;
+}
 #productmaincontainer {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: auto;
 }
 #productmaincontainer #productcontentcontainer {
   display: flex;
@@ -188,6 +190,7 @@ body {
   font-size: 1.2rem;
   margin-left: 10px;
 }
+/* The Modal (background) */
 * {
   margin: 0;
   padding: 0;

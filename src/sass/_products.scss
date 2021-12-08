@@ -1,9 +1,11 @@
+#showmodal {
+  display: none;
+}
+
 #productmaincontainer {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: auto;
-  //border: 1px solid red;
 
   #productcontentcontainer {
     display: flex;
@@ -11,14 +13,12 @@
     flex-wrap: wrap;
     margin: 20px;
     width: 90%;
-    //border: 1px solid blue;
   }
 
   #categoryheader {
     letter-spacing: 1px;
     font-size: 1.1rem;
     text-align: center;
-    //border: 1px solid green;
   }
 
   #choosecategorybtn {
@@ -141,3 +141,4 @@
     }
   }
 }
+/* The Modal (background) */
