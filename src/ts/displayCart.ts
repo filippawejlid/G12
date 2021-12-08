@@ -1,12 +1,11 @@
 import { cartItems } from "./addToCart";
 import { productInfo } from "./Products";
 
-
 export function displayCart() {
     for (let i = 0; i < cartItems.length; i++) {
-      let modalContent: HTMLDivElement = document.getElementById(
-        "prodFrame1"
-      ) as HTMLDivElement;
+
+      let modal:HTMLDivElement = document.getElementById("modalContent") as HTMLDivElement;
+      // let checkout:HTMLDivElement = document.getElementById("cart") as HTMLDivElement;
   
       let productContainer: HTMLDivElement = document.createElement("div");
       productContainer.className = "productContainer";
@@ -35,31 +34,34 @@ export function displayCart() {
       let span3: HTMLSpanElement = document.createElement("span");
       let totalSpan: HTMLSpanElement = document.createElement("span");
       
-      modalContent.appendChild(productContainer);
+      modal.appendChild(productContainer);
       productContainer.appendChild(imgContainer);
       productContainer.appendChild(info);
       productContainer.appendChild(totalDiv);
-  
+      
       imgContainer.appendChild(img);
-  
+      
       info.appendChild(productName);
       info.appendChild(amountDiv);
       info.appendChild(priceDiv);
-  
+      
       amountDiv.appendChild(span);
       amountDiv.appendChild(amountspan);
       
       priceDiv.appendChild(span2);
       priceDiv.appendChild(priceSpan);
-  
+      
       totalDiv.appendChild(span3)
       totalDiv.appendChild(totalSpan)
-  
+      
       
       img.src = cartItems[i].imgsmall;
       productName.innerHTML = cartItems[i].productName;
       amountspan.innerHTML = `${productInfo[i].amount.toString()} kr`;
       priceSpan.innerHTML = `${productInfo[i].price.toString()} kr`;
-  
+      
+      console.log("HEJHALLÅ" + cartItems[i].productName);
+      
+      
     }
   }

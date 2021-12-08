@@ -22,14 +22,11 @@ import {
 
 window.onload = function () {
 	// cartClick();
-	//addToCart();
 	clicker();
-	displayCart();
 	form();
 	productinfo();
 	products();
 
-	document.getElementById("btnCart").addEventListener("click", displayCart);
 };
 
 
