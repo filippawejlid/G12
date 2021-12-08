@@ -1,5 +1,5 @@
 import { productinfo } from "./Productinfo";
-import { close } from "./Productinfo";
+//import { close } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 import { form } from "./Form";
@@ -24,7 +24,7 @@ import {
 window.onload = function () {
   // cartClick();
   //addToCart();
-  clicker();
+  //clicker();
   displayCart();
 
   //   form();
@@ -35,6 +35,7 @@ window.onload = function () {
 };
 
 window.onclick = function () {
-  productinfo();
+  //productinfo();
   close();
+  clicker();
 };

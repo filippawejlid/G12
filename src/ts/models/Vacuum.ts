@@ -5,7 +5,10 @@ export class Vacuum {
   imgsmall: string;
   discriptionlandpageh2: string;
   discriptionlandpagespan: string;
+  ppinfoheroheader: string;
+  h1nfopage1: string;
   discriptioninfopage1: string;
+  h1infopage2: string;
   discriptioninfopage2: string;
   readmorebtn: string;
   addtocartbtn: string;
@@ -22,7 +25,10 @@ export class Vacuum {
     imgsmall: string,
     discriptionlandpageh2: string,
     discriptionlandpagespan: string,
+    ppinfoheroheader: string,
+    h1nfopage1: string,
     discriptioninfopage1: string,
+    h1infopage2: string,
     discriptioninfopage2: string,
     readmorebtn: string,
     addtocartbtn: string,
@@ -38,7 +44,10 @@ export class Vacuum {
     this.imgsmall = imgsmall;
     this.discriptionlandpageh2 = discriptionlandpageh2;
     this.discriptionlandpagespan = discriptionlandpagespan;
+    this.ppinfoheroheader = ppinfoheroheader;
+    this.h1nfopage1 = h1nfopage1;
     this.discriptioninfopage1 = discriptioninfopage1;
+    this.h1infopage2 = h1infopage2;
     this.discriptioninfopage2 = discriptioninfopage2;
     this.readmorebtn = readmorebtn;
     this.addtocartbtn = addtocartbtn;

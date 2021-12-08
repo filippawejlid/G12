@@ -197,6 +197,12 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+#productcontentcontainer {
+  border: 1px solid red;
+}
+.productmodalcontainer {
+  border: 1px solid red;
+}
 .productimghero {
   background-image: url(Dysoncyclonev10_productpage.0b231c45.png);
   background-position: center;
@@ -271,7 +277,7 @@ body {
   background-color: #2596be;
   color: white;
 }
-.btncontainer .back {
+.btncontainer #back {
   background-color: #d1e7ff;
   color: #165b74;
 }

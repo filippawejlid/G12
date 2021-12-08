@@ -1,72 +1,83 @@
+import { addToCart } from "./addToCart";
+import { productInfo } from "./Products";
+
 // GETELEMENTBYID
-let showModalId: HTMLDivElement = document.getElementById(
-  "showmodal"
-) as HTMLDivElement;
 
-//let readmore:HTMLButtonElement = document.getElementById("readmorebtn")
+export function productinfo(i: number) {
+  // productinfocontainer diven ska appendas till den här
+  let productContentContainer: HTMLDivElement = document.getElementById(
+    "productcontentcontainer"
+  ) as HTMLDivElement;
 
-let readMoreBtnId: HTMLButtonElement = document.getElementById(
-  "readmore"
-) as HTMLButtonElement;
+  // ska skapa diven productinfocontainer
+  let productModalContainer = document.createElement("div");
+  productModalContainer.className = "productmodalcontainer";
+  productModalContainer.innerHTML = productInfo[i].ppinfoheroheader;
 
-let span: HTMLButtonElement = document.getElementById(
-  "close"
-) as HTMLButtonElement;
+  // diven för productinfoherocontainer
+  let productInfoHeroContainer = document.createElement("div");
+  productInfoHeroContainer.className = "productinfoherocontainer";
 
-// EVENTLISTENER
-readMoreBtnId.addEventListener("click", productinfo);
-span.addEventListener("click", close);
+  // diven som ska ha class productinfohero och appendas till productinfoherocontainer
+  let productInfoHero = document.createElement("div");
+  productInfoHero.className = "h1nfopage1";
+  productInfoHero.innerHTML = productInfo[i].h1nfopage1;
 
-export function productinfo() {
-  showModalId.style.display = "inherit";
+  // diven som ska innehålla discriptioninfopage1 och appendas till productInfoHeroContainer
+  let discriptionInfoPage1 = document.createElement("div");
+  discriptionInfoPage1.className = "discriptioninfopage1";
+  discriptionInfoPage1.innerHTML = productInfo[i].discriptioninfopage1;
+
+  // diven som ska bli en container för resterande information
+  let continer = document.createElement("div");
+  continer.className = "continar";
+
+  // div som ska vara container för den lilla bilden, ska ha class productimgleft och appendas till container
+  let productImgLeft = document.createElement("div");
+  productImgLeft.className = "productimgleft";
+  productImgLeft.innerHTML = productInfo[i].imgsmall;
+
+  // div som ska vara en container för h1infopage2 och discriptioninfopage2
+  let productInfoRight = document.createElement("div");
+  productInfoRight.className = "productinforight";
+  productInfoRight.innerHTML = productInfo[i].h1infopage2;
+
+  // diven som ska ha class discriptioninfopage2" och hålla discriptioninfopage2" och appendas till productinforight
+  let discriptionInfoPage2 = document.createElement("div");
+  discriptionInfoPage2.className = "discriptioninfopage2";
+  discriptionInfoPage2.innerHTML = productInfo[i].discriptioninfopage2;
+
+  // h2 för pris och ska appendas till discriptionInfoPage2
+  let price = document.createElement("h2");
+  price.className = "price";
+  price.innerHTML = `${productInfo[i].price.toString()}`;
+
+  // btncontainer div, class btncontainer, ska appendas till productmodalcontainer
+  let btnContainer = document.createElement("button");
+  btnContainer.className = "btncontainer";
+
+  let btnBack = document.createElement("button");
+  btnBack.id = "back";
+  btnBack.innerHTML = "Stäng";
+  btnBack.addEventListener("click", () => {
+    productModalContainer.style.display = "none";
+  });
+
+  let addToCart = document.createElement("button");
+  addToCart.className = "addtocart";
+  addToCart.innerHTML = "Lägg till i varukorgen";
+
+  // APPENDCHILD
+  productContentContainer.appendChild(productModalContainer);
+  productModalContainer.appendChild(productInfoHeroContainer);
+  productInfoHeroContainer.appendChild(productInfoHero);
+  productInfoHeroContainer.appendChild(discriptionInfoPage1);
+  productModalContainer.appendChild(continer);
+  continer.appendChild(productImgLeft);
+  continer.appendChild(productInfoRight);
+  productInfoRight.appendChild(discriptionInfoPage2);
+  discriptionInfoPage2.appendChild(price);
+  productModalContainer.appendChild(btnContainer);
+  btnContainer.appendChild(btnBack);
+  btnContainer.appendChild(addToCart);
 }
-
-export function close() {
-  showModalId.style.display = "none";
-}
-
-// <!-- Modal -->
-//
-//   <div id="showmodal">
-//   <div class="productinfocontainer">
-//     <div class="productimghero">
-//       <h1 class="ppheroheader">Dyson Cyclone V10 Absolute</h1>
-//     </div>
-//     <div class="productinfoherocontainer">
-//       <div class="productinfohero">
-//         <h1>Oslagbar prestanda</h1>
-//         <div
-//           >Dyson Cyclone V10 Absolute kommer med upp till 60 minuters
-//           kraftfull bibehållen sugförmåga. Den 40% större behållaren betyder
-//           också färre avbrott.
-//         </div>
-//       </div>
-//     </div>
-//     <div class="continer">
-//       <div class="productimgleft">
-//         <img
-//           src="/src/assets/Sladdlös-Dyson-Cyclone-V10.png"
-//           alt="Bild på en dammsugare"
-//           width="200"
-//           height="250"
-//         />
-//       </div>
-//       <div class="productinforight">
-//         <h1>Avancerad filtrering</h1>
-//         <div
-//           >Avancerad filtrering säkerställer att dammsugaren släpper ut
-//           renare luft och tömningssystemet "point and shoot" möjliggör en
-//           mer hygienisk metod för att tömma behållaren. Inkluderar åtta
-//           verktyg och tillbehör för grundlig rengöring var som helst i
-//           hemmet.
-
-//           <h2>Pris: 5 190 kr</h2>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="btncontainer">
-//     <button class="back">Se andra dammsugare</button>
-//     <button class="addtocartpp">Lägg till i varukorgen</button>
-//   </div>
-// </div>

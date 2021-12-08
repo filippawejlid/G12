@@ -5,6 +5,24 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#productcontentcontainer {
+  border: 1px solid red;
+}
+
+.productmodalcontainer {
+  border: 1px solid red;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%) scale(0);
+  // transition: 200ms ease-in-out;
+  // border: 1px solid black;
+  // border-radius: 5px;
+  //z-index: 10;
+  // background-color: white;
+  // max-width: 80%;
+}
+
 // HERO BILD
 .productimghero {
   background-image: url(../assets/Dysoncyclonev10_productpage.png);
@@ -96,7 +114,7 @@
     color: white;
   }
 
-  .back {
+  #back {
     background-color: #d1e7ff;
     color: #165b74;
   }
