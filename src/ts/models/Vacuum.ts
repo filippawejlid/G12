@@ -27,7 +27,6 @@ export class Vacuum {
     id: number,
     category: string,
     amount: number
-
   ) {
     this.productName = name;
     this.price = price;
