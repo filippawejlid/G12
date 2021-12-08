@@ -601,7 +601,6 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
   /* Modal Content/Box */
-  /* The Close Button */
 }
 .modal .modal-content {
   background-color: #fefefe;
@@ -611,13 +610,22 @@ body {
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+  /* The Close Button */
 }
-.modal .modcnt {
+@media (min-width: 768px) {
+  .modal .modal-content {
+    width: 60%;
+  }
+}
+.modal .modal-content #total {
+  text-align: center;
+}
+.modal .modal-content .modcnt {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.modal .close {
+.modal .modal-content .close {
   color: #6e6e6e;
   font-size: 32px;
   font-weight: bolder;
@@ -625,22 +633,28 @@ body {
   padding: 0;
   width: 20px;
 }
-.modal .theFrame {
+.modal .modal-content .theFrame {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80%;
   width: 100%;
-  border: 1px solid red;
 }
-.modal .prodFrame1,
-.modal .prodFrame2 {
-  display: flex;
-  justify-content: center;
-  width: 500px;
-  height: 300px;
-  border-color: 1px solid rgba(158, 157, 157, 0.726);
+.modal .modal-content .theFrame .productContainer {
+  padding: 0;
+  margin: 10px;
+  width: 80%;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .modal .modal-content .theFrame .productContainer {
+    width: 90%;
+    justify-content: flex-start;
+  }
+  .modal .modal-content .theFrame .productContainer .imgContainer {
+    margin-right: 10px;
+  }
 }
 .modal .close:hover,
 .modal .close:focus {
@@ -651,7 +665,6 @@ body {
 .modal .btnsDiv {
   display: flex;
   flex-direction: row;
-  float: right;
 }
 .modal .btHandla,
 .modal .btKassa {
@@ -706,62 +719,6 @@ body {
   border-bottom: 0.2px solid rgba(169, 169, 169, 0.336);
   border-top: 0.2px solid rgba(169, 169, 169, 0.336);
 }
-#checkout #cart {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-@media (min-width: 1060px) {
-  #checkout #cart {
-    width: 30%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-}
-#checkout #cart .productContainer {
-  width: 40%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  #checkout #cart .productContainer {
-    width: 70%;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-@media (min-width: 768px) {
-  #checkout #cart .productContainer {
-    width: 100%;
-  }
-}
-#checkout #cart .productContainer #amount {
-  width: 110px;
-  display: flex;
-  justify-content: space-between;
-}
-#checkout #cart .productContainer #price {
-  width: 110px;
-  display: flex;
-  justify-content: space-between;
-}
-#checkout #cart #total span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  #checkout #cart #imgContainer {
-    width: 30%;
-  }
-}
-#checkout #cart #imgContainer #productImg {
-  width: 100%;
-}
 #checkout #form {
   background-color: white;
   width: 80%;
@@ -799,5 +756,71 @@ body {
 }
 #checkout #form form .btn:hover {
   background-color: #1e7494fa;
+}
+#cart {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+@media (min-width: 1060px) {
+  #cart {
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.productContainer {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .productContainer {
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .productContainer {
+    width: 100%;
+  }
+}
+.productContainer #amount {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+.productContainer #price {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+#total span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #imgContainer {
+    width: 30%;
+  }
+}
+#imgContainer #productImg {
+  width: 100%;
+}
+.headingcart {
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 0.2px solid rgba(169, 169, 169, 0.336);
+  border-top: 0.2px solid rgba(169, 169, 169, 0.336);
+  margin-top: 0;
+  font-weight: 400;
 }
 /*# sourceMappingURL=index.612625cb.css.map */

@@ -1,3 +1,6 @@
+import { displayCart } from "./displayCart";
+
+
 export function clicker() {
 	var modal: HTMLDivElement = document.getElementById(
 		"myModal"
@@ -29,4 +32,11 @@ export function clicker() {
 			modal.style.display = "none";
 		}
 	};
+
+	//Filippa här, måste lägga eventlistener ta inte bort
+	btn.addEventListener("click", displayCart)
+
+
+	// let goToCheckout: HTMLButtonElement = document.getElementById("btnKassa") as HTMLButtonElement;
+    // goToCheckout.addEventListener("click", displayCart)
 }

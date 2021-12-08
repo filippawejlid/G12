@@ -22,17 +22,13 @@ import {
 } from "./models/Vacuumobjects";
 
 window.onload = function () {
-  // cartClick();
-  //addToCart();
-  clicker();
-  displayCart();
+	// cartClick();
+	clicker();
+	form();
+	products();
 
-  //   form();
-
-  products();
-
-  document.getElementById("btnCart").addEventListener("click", displayCart);
 };
+
 
 window.onclick = function () {
   productinfo();

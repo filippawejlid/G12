@@ -1,6 +1,5 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
-import { products } from "./Products"
 
 
 export let cartItems: Vacuum[] = [];
