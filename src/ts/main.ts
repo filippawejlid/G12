@@ -24,7 +24,7 @@ import {
 window.onload = function () {
   // cartClick();
   //addToCart();
-  //clicker();
+  clicker();
   displayCart();
 
   //   form();
@@ -37,5 +37,4 @@ window.onload = function () {
 window.onclick = function () {
   //productinfo();
   close();
-  clicker();
 };
