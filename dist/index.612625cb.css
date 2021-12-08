@@ -202,6 +202,13 @@ body {
 }
 .productmodalcontainer {
   border: 1px solid red;
+  z-index: 10;
+  width: 80%;
+}
+.productmodalcontainer h1 {
+  color: #2596be;
+  padding: 20px;
+  margin-top: 10%;
 }
 .productimghero {
   background-image: url(Dysoncyclonev10_productpage.0b231c45.png);
@@ -213,13 +220,7 @@ body {
   width: 100vw;
   height: 50vh;
 }
-.productimghero .ppheroheader {
-  color: #2596be;
-  font-size: 0.8rem;
-  padding: 20px;
-  margin-top: 10%;
-}
-.productinfohero {
+.h1nfopage1 {
   height: 30vh;
   display: flex;
   flex-direction: column;
@@ -230,7 +231,7 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.3px;
 }
-.productinfohero h1 {
+.h1nfopage1 h1 {
   margin-bottom: 10px;
   color: #2596be;
 }
@@ -253,7 +254,7 @@ body {
   letter-spacing: 0.3px;
   padding: 5px;
 }
-.continer h1 {
+.continer .productinforight h1 {
   margin-bottom: 10px;
   color: #2596be;
 }
@@ -266,6 +267,9 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
 }
 .btncontainer button {
   border: none;
@@ -273,11 +277,11 @@ body {
   margin: 5px;
   border-radius: 5px;
 }
-.btncontainer .addtocartpp {
+.btncontainer .addtocart {
   background-color: #2596be;
   color: white;
 }
-.btncontainer #back {
+.btncontainer .back {
   background-color: #d1e7ff;
   color: #165b74;
 }

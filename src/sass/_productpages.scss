@@ -18,9 +18,15 @@
   // transition: 200ms ease-in-out;
   // border: 1px solid black;
   // border-radius: 5px;
-  //z-index: 10;
+  z-index: 10;
   // background-color: white;
-  // max-width: 80%;
+  width: 80%;
+
+  h1 {
+    color: #2596be;
+    padding: 20px;
+    margin-top: 10%;
+  }
 }
 
 // HERO BILD
@@ -33,18 +39,17 @@
   justify-content: flex-start;
   width: 100vw;
   height: 50vh;
-
-  .ppheroheader {
-    color: #2596be;
-    font-size: 0.8rem;
-    padding: 20px;
-    margin-top: 10%;
-  }
 }
+
+// .h1nfopage1 {
+//   color: #2596be;
+//   padding: 20px;
+//   margin-top: 10%;
+// }
 
 // OSLAGBAR PRESTANDA SEKTION
 
-.productinfohero {
+.h1nfopage1 {
   height: 30vh;
   display: flex;
   flex-direction: column;
@@ -82,11 +87,11 @@
     font-size: 0.8rem;
     letter-spacing: 0.3px;
     padding: 5px;
-  }
 
-  h1 {
-    margin-bottom: 10px;
-    color: #2596be;
+    h1 {
+      margin-bottom: 10px;
+      color: #2596be;
+    }
   }
 
   h2 {
@@ -101,6 +106,9 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
 
   button {
     border: none;
@@ -109,12 +117,12 @@
     border-radius: 5px;
   }
 
-  .addtocartpp {
+  .addtocart {
     background-color: #2596be;
     color: white;
   }
 
-  #back {
+  .back {
     background-color: #d1e7ff;
     color: #165b74;
   }

@@ -17,6 +17,7 @@ export function productinfo(i: number) {
   // diven för productinfoherocontainer
   let productInfoHeroContainer = document.createElement("div");
   productInfoHeroContainer.className = "productinfoherocontainer";
+  productInfoHeroContainer.style.backgroundImage = productInfo[i].imghero;
 
   // diven som ska ha class productinfohero och appendas till productinfoherocontainer
   let productInfoHero = document.createElement("div");
@@ -50,14 +51,14 @@ export function productinfo(i: number) {
   // h2 för pris och ska appendas till discriptionInfoPage2
   let price = document.createElement("h2");
   price.className = "price";
-  price.innerHTML = `${productInfo[i].price.toString()}`;
+  price.innerHTML = `${productInfo[i].price.toString()} kr`;
 
   // btncontainer div, class btncontainer, ska appendas till productmodalcontainer
   let btnContainer = document.createElement("button");
   btnContainer.className = "btncontainer";
 
   let btnBack = document.createElement("button");
-  btnBack.id = "back";
+  btnBack.className = "back";
   btnBack.innerHTML = "Stäng";
   btnBack.addEventListener("click", () => {
     productModalContainer.style.display = "none";
@@ -80,4 +81,6 @@ export function productinfo(i: number) {
   productModalContainer.appendChild(btnContainer);
   btnContainer.appendChild(btnBack);
   btnContainer.appendChild(addToCart);
+
+  sessionStorage.setItem("productInfo[i]", JSON.stringify(productInfo[i]));
 }
