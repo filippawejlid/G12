@@ -1,12 +1,13 @@
 import { cartItems } from "./addToCart";
-import { productInfo } from "./Products";
 
-export function displayCart() {
-    for (let i = 0; i < cartItems.length; i++) {
+export function displayCart() { 
 
-      let modal:HTMLDivElement = document.getElementById("modalContent") as HTMLDivElement;
-      // let checkout:HTMLDivElement = document.getElementById("cart") as HTMLDivElement;
-  
+  let total: HTMLSpanElement = document.getElementById("totalSpan") as HTMLSpanElement;
+  total.innerHTML = " ";
+  let modal:HTMLDivElement = document.getElementById("displayCartModal") as HTMLDivElement;
+  modal.innerHTML = " "
+  for (let i = 0; i < cartItems.length; i++) {  
+      
       let productContainer: HTMLDivElement = document.createElement("div");
       productContainer.className = "productContainer";
       
@@ -21,23 +22,15 @@ export function displayCart() {
       
       let amountDiv: HTMLDivElement = document.createElement("div");
       amountDiv.id = "amount"
-      let span: HTMLSpanElement = document.createElement("span");
       let amountspan: HTMLSpanElement = document.createElement("span");
       
       let priceDiv: HTMLDivElement = document.createElement("div");
       priceDiv.id = "price"
-      let span2: HTMLSpanElement = document.createElement("span");
       let priceSpan: HTMLSpanElement = document.createElement("span");
-  
-      let totalDiv: HTMLDivElement = document.createElement("div");
-      totalDiv.id = "total"
-      let span3: HTMLSpanElement = document.createElement("span");
-      let totalSpan: HTMLSpanElement = document.createElement("span");
       
       modal.appendChild(productContainer);
       productContainer.appendChild(imgContainer);
       productContainer.appendChild(info);
-      productContainer.appendChild(totalDiv);
       
       imgContainer.appendChild(img);
       
@@ -45,23 +38,19 @@ export function displayCart() {
       info.appendChild(amountDiv);
       info.appendChild(priceDiv);
       
-      amountDiv.appendChild(span);
       amountDiv.appendChild(amountspan);
       
-      priceDiv.appendChild(span2);
       priceDiv.appendChild(priceSpan);
-      
-      totalDiv.appendChild(span3)
-      totalDiv.appendChild(totalSpan)
-      
       
       img.src = cartItems[i].imgsmall;
       productName.innerHTML = cartItems[i].productName;
-      amountspan.innerHTML = `${productInfo[i].amount.toString()} kr`;
-      priceSpan.innerHTML = `${productInfo[i].price.toString()} kr`;
+      amountspan.innerHTML = `Antal: ${cartItems[i].amount.toString()}`;
+      priceSpan.innerHTML = `${cartItems[i].price.toString()} kr`;
       
       console.log("HEJHALLÅ" + cartItems[i].productName);
       
       
+      // total.innerHTML = 
     }
+
   }

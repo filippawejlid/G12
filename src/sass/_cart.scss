@@ -22,39 +22,54 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
-  .modcnt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* The Close Button */
-  .close {
-    color: rgb(110, 110, 110);
-    font-size: 32px;
-    font-weight: bolder;
-    margin: 0;
-    padding: 0;
-    width: 20px;
-  }
 
-  .theFrame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-    border: 1px solid red;
-  }
+    @include tablets {
+      width: 60%;
+    }
 
-  .prodFrame1,
-  .prodFrame2 {
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    height: 300px;
-    border-color: 1px solid rgba(158, 157, 157, 0.726);
+    #total {
+      text-align: center;
+    }
+
+    .modcnt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* The Close Button */
+    .close {
+      color: rgb(110, 110, 110);
+      font-size: 32px;
+      font-weight: bolder;
+      margin: 0;
+      padding: 0;
+      width: 20px;
+    }
+
+    .theFrame {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80%;
+      width: 100%;
+
+      .productContainer {
+        padding: 0;
+        margin: 10px;
+        width: 80%;
+        align-items: flex-start;
+
+        @include tablets {
+          width: 90%;
+          justify-content: flex-start;
+
+          .imgContainer {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 
   .close:hover,
@@ -67,7 +82,7 @@
   .btnsDiv {
     display: flex;
     flex-direction: row;
-    float: right;
+    // float: right;
   }
 
   .btHandla,

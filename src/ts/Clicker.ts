@@ -1,5 +1,6 @@
 import { displayCart } from "./displayCart";
 
+
 export function clicker() {
 	var modal: HTMLDivElement = document.getElementById(
 		"myModal"
@@ -34,6 +35,7 @@ export function clicker() {
 
 	//Filippa här, måste lägga eventlistener ta inte bort
 	btn.addEventListener("click", displayCart)
+
 
 	// let goToCheckout: HTMLButtonElement = document.getElementById("btnKassa") as HTMLButtonElement;
     // goToCheckout.addEventListener("click", displayCart)
