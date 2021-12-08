@@ -3,6 +3,8 @@ let showModalId: HTMLDivElement = document.getElementById(
   "showmodal"
 ) as HTMLDivElement;
 
+//let readmore:HTMLButtonElement = document.getElementById("readmorebtn")
+
 let readMoreBtnId: HTMLButtonElement = document.getElementById(
   "readmore"
 ) as HTMLButtonElement;

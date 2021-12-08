@@ -75,7 +75,7 @@ export function products() {
     let readMoreBtn = document.createElement("button");
     readMoreBtn.className = "readmore";
     readMoreBtn.innerHTML = productInfo[i].readmorebtn;
-    readMoreBtn.setAttribute("id", "readmorebtnid" + i);
+    readMoreBtn.id = "readmorebtnid" + i;
 
     let addToCartBtn = document.createElement("button");
     addToCartBtn.className = "addtocart";

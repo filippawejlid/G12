@@ -65,6 +65,9 @@ body {
   color: white;
   cursor: pointer;
 }
+#showmodal {
+  display: none;
+}
 #productmaincontainer {
   display: flex;
   justify-content: center;
