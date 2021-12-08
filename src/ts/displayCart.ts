@@ -6,6 +6,7 @@ export function displayCart() {
   total.innerHTML = " ";
   let modal:HTMLDivElement = document.getElementById("displayCartModal") as HTMLDivElement;
   modal.innerHTML = " "
+  let sum: number = 0;
   for (let i = 0; i < cartItems.length; i++) {  
       
       let productContainer: HTMLDivElement = document.createElement("div");
@@ -49,8 +50,10 @@ export function displayCart() {
       
       console.log("HEJHALLÅ" + cartItems[i].productName);
       
+      // let addSum = sum + cartItems[i].price;
+      // total.innerHTML = addSum.toString();
+      // console.log("Addsum" + addSum);
       
-      // total.innerHTML = 
     }
 
   }
