@@ -14,8 +14,8 @@ let span: HTMLButtonElement = document.getElementById(
 ) as HTMLButtonElement;
 
 // EVENTLISTENER
-readMoreBtnId.addEventListener("click", productinfo);
-span.addEventListener("click", close);
+// readMoreBtnId.addEventListener("click", productinfo);
+// span.addEventListener("click", close);
 
 export function productinfo() {
   showModalId.style.display = "inherit";

@@ -3,8 +3,9 @@ import { close } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 import { form } from "./Form";
-import { displayCart } from "./displayCart";
+import { checkoutCart } from "./checkoutCart"
 import { addToCart } from "./addToCart";
+
 import { Vacuum } from "./models/Vacuum";
 import {
   w1,
@@ -26,6 +27,8 @@ window.onload = function () {
 	clicker();
 	form();
 	products();
+	let checkout:HTMLButtonElement = document.getElementById("btnKassa") as HTMLButtonElement;
+	checkout.addEventListener("click", checkoutCart);
 
 };
 
@@ -34,3 +37,4 @@ window.onclick = function () {
   productinfo();
   close();
 };
+

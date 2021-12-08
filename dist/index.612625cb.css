@@ -757,6 +757,12 @@ body {
 #checkout #form form .btn:hover {
   background-color: #1e7494fa;
 }
+#checkout #form form .back {
+  text-decoration: none;
+  color: #868282;
+  text-align: end;
+  font-size: smaller;
+}
 #cart {
   background-color: white;
   display: flex;
