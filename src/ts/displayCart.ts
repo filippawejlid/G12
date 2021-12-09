@@ -7,9 +7,11 @@ export function displayCart() {
   total.innerHTML = " ";
   let modal:HTMLDivElement = document.getElementById("displayCartModal") as HTMLDivElement;
   modal.innerHTML = " ";
-  let sum: number = 0;
+  let sumList: number[] = [];
   
   for (let i = 0; i < cartItems.length; i++) {  
+
+    //Skapa alla element som produktens info ska ligga i
     
     let productContainer: HTMLDivElement = document.createElement("div");
     productContainer.className = "productContainer";
@@ -49,13 +51,19 @@ export function displayCart() {
     productName.innerHTML = cartItems[i].productName;
     amountspan.innerHTML = `Antal: ${cartItems[i].amount.toString()}`;
     priceSpan.innerHTML = `${cartItems[i].price.toString()} kr`;
-    
-    console.log("HEJHALLÅ" + cartItems[i].productName);
-    
-    // let addSum = sum + cartItems[i].price;
-    // total.innerHTML = addSum.toString();
-    // console.log("Addsum" + addSum);
+        
+    sumList.push(cartItems[i].price*cartItems[i].amount)
     
   }
-  checkoutCart();
+
+  //Räkna ut total
+
+  let sum = sumList.reduce(function(a, b){
+      return a + b;
+  }, 0);
+
+  total.innerHTML = `${sum.toString()} kr`;
+
+    console.log(sum);
+    
   }

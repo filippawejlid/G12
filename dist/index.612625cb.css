@@ -665,6 +665,7 @@ body {
 .modal .btnsDiv {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .modal .btHandla,
 .modal .btKassa {

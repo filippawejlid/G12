@@ -1,14 +1,14 @@
 import { cartItems } from "./addToCart";
+import { form } from "./Form";
 
 export function checkoutCart(){
 
-let checkout: HTMLDivElement = document.getElementById("cart") as HTMLDivElement;
+let checkout = document.getElementById("checkoutCart");
 // checkout.innerHTML = " ";
 
 for (let i = 0; i < cartItems.length; i++) {
   let productContainer: HTMLDivElement = document.createElement("div");
   productContainer.className = "productContainer";
-  productContainer.id = "prodCon" + i;
   
   let imgContainer: HTMLDivElement = document.createElement("div");
   imgContainer.className = "imgContainer";
@@ -16,7 +16,7 @@ for (let i = 0; i < cartItems.length; i++) {
   
   let info: HTMLDivElement = document.createElement("div");
   info.className= "info";
-    
+  
   let productName: HTMLHeadingElement = document.createElement("h3");
     
   let amountDiv: HTMLDivElement = document.createElement("div");
