@@ -1,4 +1,5 @@
 import { addToCart } from "./addToCart";
+import { thankYou } from "./Thankyou";
 import { Vacuum } from "./models/Vacuum";
 import {
 	w1,
@@ -46,7 +47,7 @@ export function products() {
 		// productcontainer div som ska ligga innanför wirelesscontainer
 		let productContainer = document.createElement("div");
 		productContainer.className = "productcontainer";
-		productContainer.id = "objectContainer" + i;  //Här har jag lagt till id ta ej bort
+		productContainer.id = "objectContainer" + i; //Här har jag lagt till id ta ej bort
 
 		// imgcontainer div som ska ligga innanför productContainer
 		let imgContainer = document.createElement("div");
@@ -78,10 +79,19 @@ export function products() {
 		readMoreBtn.innerHTML = productInfo[i].readmorebtn;
 		readMoreBtn.setAttribute("id", "readmorebtnid");
 
-		let addToCartBtn = document.createElement("button");
+		let addToCartBtn: HTMLButtonElement = document.createElement(
+			"button"
+		) as HTMLButtonElement;
+		addToCartBtn.type = "button";
+		addToCartBtn.id = "addTwoCart";
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
-		addToCartBtn.addEventListener("click", ()=> {addToCart(i)}) //Här har jag lagt till eventlistener ta ej bort
+		addToCartBtn.addEventListener("click", () => {
+			addToCart(i);
+		}); //Här har jag lagt till eventlistener ta ej bort
+		addToCartBtn.addEventListener("click", () => {
+			thankYou();
+		});
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");

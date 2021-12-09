@@ -22,7 +22,6 @@ import {
 
 window.onload = function () {
 	// cartClick();
-	//addToCart();
 	clicker();
 	displayCart();
 	form();
@@ -31,5 +30,3 @@ window.onload = function () {
 
 	document.getElementById("btnCart").addEventListener("click", displayCart);
 };
-
-

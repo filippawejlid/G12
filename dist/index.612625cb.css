@@ -797,4 +797,47 @@ body {
 #checkout #form form .btn:hover {
   background-color: #1e7494fa;
 }
+/* The Modal (background) */
+.tyModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.116);
+  /* Fallback color */
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+.tyModal .thanksContent {
+  background-color: #fefefe;
+  margin: 22% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 33%;
+  /* Could be more or less, depending on screen size */
+}
+.tyModal .tySpanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.tyModal .fa-check {
+  display: flex;
+  color: #2fbd04;
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
 /*# sourceMappingURL=index.612625cb.css.map */
