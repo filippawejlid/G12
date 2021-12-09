@@ -41,6 +41,17 @@ describe ("webshop test", () => {
 
     });
 
+    //For unfinished functions
+
+    // it("it should add product to checkout cart", () => {
+        
+    //     cy.visit("http://localhost:1234/checkout.*.html");
+
+    //     cy.get(".button").click();
+
+    //     cy.get("#checkoutCart").should("contain", "div")
+    // });
+
     // it("it should open read more modal on click", () => {
         
     //     cy.visit("http://localhost:1234");
@@ -62,4 +73,37 @@ describe ("webshop test", () => {
 
     // });
 
+    // it("it should subtract from amount", () => {
+        
+    //     cy.visit("http://localhost:1234");
+
+    //     cy.get("#addtocart11").click();
+        
+    //     cy.get("#addtocart11").click();
+
+    //     cy.get("#btnCart").click();
+
+    //     cy.get("#amount0").should("have.html", "Antal: 2")
+
+    //     cy.get("#subtractbutton").click();
+
+    //     cy.get("#amount0").should("have.html", "1")
+        
+    // });
+
+    // it("it should add to amount", () => {
+        
+    //     cy.visit("http://localhost:1234");
+
+    //     cy.get("#addtocart11").click();
+        
+    //     cy.get("#btnCart").click();
+
+    //     cy.get("#amount0").should("have.html", "Antal: 1")
+
+    //     cy.get("#addbutton").click();
+
+    //     cy.get("#amount0").should("have.html", "2")
+        
+    // });
 })

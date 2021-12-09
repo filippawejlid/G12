@@ -26,11 +26,14 @@ export function displayCart() {
     let productName: HTMLHeadingElement = document.createElement("h3");
     
     let amountDiv: HTMLDivElement = document.createElement("div");
-    amountDiv.id = "amount"
+    amountDiv.className = "class";
     let amountspan: HTMLSpanElement = document.createElement("span");
+    amountspan.id = "amount" + i;
+
     
     let priceDiv: HTMLDivElement = document.createElement("div");
-    priceDiv.id = "price"
+    priceDiv.id = "price" + i;
+    priceDiv.className = "price";
     let priceSpan: HTMLSpanElement = document.createElement("span");
     
     modal.appendChild(productContainer);

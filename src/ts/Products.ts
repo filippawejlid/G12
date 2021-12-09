@@ -81,6 +81,7 @@ export function products() {
 
     let addToCartBtn = document.createElement("button");
     addToCartBtn.className = "addtocart";
+    addToCartBtn.id = "addtocart" + i;
     addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
     addToCartBtn.addEventListener("click", () => {
       addToCart(i);

@@ -89,13 +89,13 @@
     width: 100%;
   }
 
-  #amount {
+  .amount {
     width: 110px;
     display: flex;
     justify-content: space-between;
   }
 
-  #price {
+  .price {
     width: 110px;
     display: flex;
     justify-content: space-between;
@@ -109,11 +109,11 @@
   }
 }
 
-#imgContainer {
+.imgContainer {
   @include tablets {
     width: 30%;
   }
-  #productImg {
+  img {
     width: 100%;
   }
 }
