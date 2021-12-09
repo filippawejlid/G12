@@ -1,4 +1,5 @@
 import { cartItems } from "./addToCart";
+import { checkoutCart } from "./checkoutCart";
 
 export function displayCart() { 
 
@@ -56,4 +57,5 @@ export function displayCart() {
     // console.log("Addsum" + addSum);
     
   }
+  checkoutCart();
   }
