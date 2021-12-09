@@ -2,7 +2,6 @@ import { checkoutCart } from "./checkoutCart";
 import { displayCart } from "./displayCart";
 
 export function clicker() {
-
 	let modal: HTMLDivElement = document.getElementById(
 		"myModal"
 	) as HTMLDivElement;
@@ -27,18 +26,17 @@ export function clicker() {
 	continueShopping.addEventListener("click", closeModal);
 
 	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event: Event) {
+	window.onclick = function (event: Event) {
 		if (event.target == modal) {
-		  modal.style.display = "none";
+			modal.style.display = "none";
 		}
-	  }
-	  
-	function openModal () {
+	};
+
+	function openModal() {
 		modal.style.display = "block";
-		displayCart()
+		displayCart();
 	}
-	function closeModal () {
+	function closeModal() {
 		modal.style.display = "none";
 	}
-
 }

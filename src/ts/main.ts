@@ -3,24 +3,24 @@ import { close } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 import { form } from "./Form";
-import { checkoutCart } from "./checkoutCart"
-import "../checkout.html"
+import { checkoutCart } from "./checkoutCart";
+import "../checkout.html";
 import { addToCart } from "./addToCart";
 
 import { Vacuum } from "./models/Vacuum";
 import {
-  w1,
-  w2,
-  w3,
-  w4,
-  p1,
-  p2,
-  p3,
-  p4,
-  r1,
-  r2,
-  r3,
-  r4,
+	w1,
+	w2,
+	w3,
+	w4,
+	p1,
+	p2,
+	p3,
+	p4,
+	r1,
+	r2,
+	r3,
+	r4,
 } from "./models/Vacuumobjects";
 
 window.onload = function () {
@@ -28,17 +28,16 @@ window.onload = function () {
 	clicker();
 	form();
 	products();
-	let checkout:HTMLButtonElement = document.getElementById("btnKassa") as HTMLButtonElement;
+	let checkout: HTMLButtonElement = document.getElementById(
+		"btnKassa"
+	) as HTMLButtonElement;
 	checkout.addEventListener("click", checkoutCart);
 
-  // let page = window.open('checkout.html');
-  // page.addEventListener("load", checkoutCart)
-
+	// let page = window.open('checkout.html');
+	// page.addEventListener("load", checkoutCart)
 };
-
 
 window.onclick = function () {
-  productinfo();
-  close();
+	productinfo();
+	close();
 };
-
