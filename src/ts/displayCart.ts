@@ -68,6 +68,14 @@ export function displayCart() {
 		priceSpan.innerHTML = `${cartItems[i].price.toString()} kr`;
 
 		sumList.push(cartItems[i].price * cartItems[i].amount);
+
+		let spanCnt = document.getElementById("cCnt");
+
+		let spanCounter = document.createElement("span");
+		spanCounter.id = "counter";
+		sumList.push(cartItems[i].amount);
+		spanCnt.appendChild(spanCounter);
+		spanCounter.innerHTML = `${cartItems[i].price.toString()}`;
 	}
 
 	//Räkna ut total
@@ -78,5 +86,5 @@ export function displayCart() {
 
 	total.innerHTML = `${sum.toString()} kr`;
 
-	console.log(sum);
+	// console.log(sum);
 }

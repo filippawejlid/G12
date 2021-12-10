@@ -5,7 +5,6 @@ import { clicker } from "./Clicker";
 import { form } from "./Form";
 import { checkoutCart } from "./checkoutCart";
 import "../checkout.html";
-import { itemCount } from "./itemcounter";
 // import { minusItem } from "./minusitem";
 import { addToCart } from "./addToCart";
 
@@ -30,7 +29,6 @@ window.onload = function () {
 	clicker();
 	form();
 	products();
-	itemCount();
 
 	let checkout: HTMLButtonElement = document.getElementById(
 		"btnKassa"
