@@ -1,5 +1,7 @@
 import { addToCart } from "./addToCart";
 import { productInfo } from "./Products";
+import { cartItems } from "./addToCart";
+import { thankYou } from "./thankYou";
 
 let productInfoStorage = JSON.parse(sessionStorage.getItem("productInfo[i]"));
 
@@ -81,12 +83,13 @@ export function productinfo(i: number) {
     productModalContainer.style.display = "none";
   });
 
-  let addToCart = document.createElement("button");
-  addToCart.className = "addtocart";
-  addToCart.innerHTML = "Lägg till i varukorgen";
-  // addToCart.addEventListener("click", () => {
-  //   addToCart(i);
-  // }); //Här har jag lagt till eventlistener ta ej bort
+  let add = document.createElement("button");
+  add.className = "addtocart";
+  add.innerHTML = "Lägg till i varukorgen";
+  add.addEventListener("click", () => {
+    addToCart(i);
+    thankYou();
+  }); //Här har jag lagt till eventlistener ta ej bort
 
   // APPENDCHILD
   productContentContainer.appendChild(productModalContainer);
@@ -101,7 +104,7 @@ export function productinfo(i: number) {
   discriptionInfoPage2.appendChild(price);
   productModalContainer.appendChild(btnContainer);
   btnContainer.appendChild(btnBack);
-  btnContainer.appendChild(addToCart);
+  btnContainer.appendChild(add);
 
   sessionStorage.setItem("productInfo[i]", JSON.stringify(productInfo[i]));
 }
