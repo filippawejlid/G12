@@ -35,6 +35,5 @@ window.onload = function () {
 };
 
 window.onclick = function () {
-  //productinfo();
   close();
 };
