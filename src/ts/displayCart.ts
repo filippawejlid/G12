@@ -26,8 +26,7 @@ export function displayCart() {
     info.className = "info";
 
 		let adjustments: HTMLDivElement = document.createElement("div");
-
-
+		adjustments.className ="adjustments"
 		let trashCan: HTMLElement = document.createElement("i") as HTMLElement;
 		trashCan.id = "trasher";
 		trashCan.className = "fa fa-trash";
