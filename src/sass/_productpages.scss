@@ -5,6 +5,27 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.productmaincontainer {
+  position: relative;
+}
+.productmodalcontainer {
+  //border: 1px solid rgb(37, 37, 238);
+  align-self: center;
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  // border: 1px solid black;
+  z-index: 10;
+  box-shadow: 1px 1px 0.5px #2596be;
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  overflow: auto; /* Enable scroll if needed */
+  border-radius: 5px;
+}
+
 // HERO BILD
 .productimghero {
   background-image: url(../assets/Dysoncyclonev10_productpage.png);
@@ -13,68 +34,64 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
-  width: 100vw;
-  height: 50vh;
+  height: 50%;
+  border-radius: 5px;
 
-  .ppheroheader {
+  h1 {
     color: #2596be;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 20px;
     margin-top: 10%;
+    font-weight: 900;
   }
 }
 
 // OSLAGBAR PRESTANDA SEKTION
 
-.productinfohero {
-  height: 30vh;
+.h1nfopage1 {
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #2596be;
+}
+.discriptioninfopage1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px;
   color: rgb(80, 78, 78);
   font-size: 0.8rem;
   letter-spacing: 0.3px;
-
-  h1 {
-    margin-bottom: 10px;
-    color: #2596be;
-  }
 }
 
 // BILD TILL VÄNSTER OCH TEXT TILL HÖGER
-
-.continer {
+.container {
   display: flex;
-  margin: 10px;
+  margin: 20px;
+}
 
-  .productimgleft {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-  }
+h1 {
+  margin-bottom: 10px;
+  color: #2596be;
+  font-size: 1rem;
+}
 
-  .productinforight {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: rgb(80, 78, 78);
-    font-size: 0.8rem;
-    letter-spacing: 0.3px;
-    padding: 5px;
-  }
+.productimgleft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px solid green;
+}
 
-  h1 {
-    margin-bottom: 10px;
-    color: #2596be;
-  }
-
-  h2 {
-    margin-top: 10px;
-    color: #2596be;
-  }
+.productinforight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(80, 78, 78);
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  padding: 5px;
 }
 
 // KNAPPAR LÄNGST NER
@@ -89,9 +106,10 @@
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
+    cursor: pointer;
   }
 
-  .addtocartpp {
+  .addtocart {
     background-color: #2596be;
     color: white;
   }
@@ -106,40 +124,8 @@
 
 @media screen and (min-width: 768px) {
   // HERO BILD
-  .ppheroheader {
-    font-size: 1.5rem !important;
-    margin-left: 20%;
-  }
+
   // OSLAGBAR PRESTANDA SEKTION
 
-  .productinfohero {
-    width: 60%;
-    margin-left: 20%;
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    div {
-      font-size: 1rem;
-    }
-  }
-
   // BILD TILL VÄNSTER OCH TEXT TILL HÖGER
-
-  .productimgleft {
-    margin-left: 10%;
-  }
-
-  .productinforight {
-    margin-right: 20%;
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    div {
-      font-size: 1rem;
-    }
-  }
 }

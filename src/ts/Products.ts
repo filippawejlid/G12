@@ -14,7 +14,7 @@ import {
   r3,
   r4,
 } from "./models/Vacuumobjects";
-//import { readmore } from "./Productnfo";
+import { productinfo } from "./Productinfo";
 
 export let productInfo: Vacuum[] = [
   w1,
@@ -77,7 +77,9 @@ export function products() {
     let readMoreBtn = document.createElement("button");
     readMoreBtn.className = "readmore";
     readMoreBtn.innerHTML = productInfo[i].readmorebtn;
-    readMoreBtn.id = "readmorebtnid" + i;
+    readMoreBtn.addEventListener("click", () => {
+      productinfo(i);
+    });
 
     let addToCartBtn = document.createElement("button");
     addToCartBtn.className = "addtocart";
