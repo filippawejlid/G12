@@ -35,6 +35,10 @@ export function displayCart() {
       minusItem();
     });
 
+    let plus = document.createElement("div");
+    plus.className = "plus";
+    plus.innerHTML = "<i class='far fa-plus-square'></i>";
+
     let productName: HTMLHeadingElement = document.createElement("h3");
 
     let amountDiv: HTMLDivElement = document.createElement("div");
