@@ -1,5 +1,4 @@
 import { cartItems } from "./addToCart";
-import { checkoutCart } from "./checkoutCart";
 import { displayCart } from "./displayCart";
 
 export function clicker() {
@@ -31,13 +30,8 @@ export function clicker() {
 
   continueShopping.addEventListener("click", closeModal);
 
-  goToCart.addEventListener("click", ()=> {
-
-	checkoutCart();
-
-	localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-  });
+//   goToCart.addEventListener("click", ()=> {
+//   });
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event: Event) {
@@ -49,6 +43,8 @@ export function clicker() {
   function openModal() {
     modal.style.display = "block";
     displayCart();
+	// localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
   }
   function closeModal() {
     modal.style.display = "none";
