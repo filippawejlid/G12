@@ -5,6 +5,7 @@ export function displayCart() {
 	let total: HTMLSpanElement = document.getElementById(
 		"totalSpan"
 	) as HTMLSpanElement;
+	total.className = "totalSpans"
 	total.innerHTML = " ";
 	let modal: HTMLDivElement = document.getElementById(
 		"displayCartModal"
@@ -20,10 +21,12 @@ export function displayCart() {
 
 		let imgContainer: HTMLDivElement = document.createElement("div");
 		imgContainer.className = "imgContainer";
-		let img: HTMLImageElement = document.createElement("img");
 
 		let info: HTMLDivElement = document.createElement("div");
 		info.className = "info";
+
+		let adjustments: HTMLDivElement = document.createElement("div");
+
 
 		let trashCan: HTMLElement = document.createElement("i") as HTMLElement;
 		trashCan.id = "trasher";
@@ -49,9 +52,9 @@ export function displayCart() {
 		modal.appendChild(productContainer);
 		productContainer.appendChild(imgContainer);
 		productContainer.appendChild(info);
-		productContainer.appendChild(trashCan);
+		productContainer.appendChild(adjustments);
 
-		imgContainer.appendChild(img);
+		adjustments.appendChild(trashCan);
 
 		info.appendChild(productName);
 		info.appendChild(amountDiv);
@@ -61,7 +64,7 @@ export function displayCart() {
 
 		priceDiv.appendChild(priceSpan);
 
-		img.src = cartItems[i].imgsmall;
+		imgContainer.innerHTML = cartItems[i].imgsmall;
 		productName.innerHTML = cartItems[i].productName;
 		amountspan.innerHTML = `Antal: ${cartItems[i].amount.toString()}`;
 		priceSpan.innerHTML = `${cartItems[i].price.toString()} kr`;

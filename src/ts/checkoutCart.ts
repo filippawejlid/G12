@@ -2,10 +2,15 @@ import { cartItems } from "./addToCart";
 // import { cart } from "./checkout";
 import { Vacuum } from "./models/Vacuum";
 
+
 export function checkoutCart(){
 
-    // let cartUnfinished: string = localStorage.getItem("cartItems");
-    // let cart: Vacuum[] = JSON.parse(cartUnfinished); 
+    let total: HTMLSpanElement = document.getElementById(
+  		"totalSpanCheckout"
+  	) as HTMLSpanElement;
+    total.className = "totalSpans";
+  	total.innerHTML = " ";
+  	let sumList: number[] = [];
     let checkout: HTMLDivElement = document.getElementById("checkoutCart") as HTMLDivElement;
     checkout.innerHTML = " ";
     
@@ -15,7 +20,6 @@ export function checkoutCart(){
       
       let imgContainer: HTMLDivElement = document.createElement("div");
       imgContainer.className = "imgContainer";
-      let img: HTMLImageElement = document.createElement("img");
       
       let info: HTMLDivElement = document.createElement("div");
       info.className= "info";
@@ -34,9 +38,7 @@ export function checkoutCart(){
     
       productContainer.appendChild(imgContainer);
       productContainer.appendChild(info);
-        
-      imgContainer.appendChild(img);
-        
+                
       info.appendChild(productName);
       info.appendChild(amountDiv);
       info.appendChild(priceDiv);
@@ -47,12 +49,20 @@ export function checkoutCart(){
 
       
 
-      img.src = cartItems[i].imgsmall;
+      imgContainer.innerHTML = cartItems[i].imgsmall;
       productName.innerHTML = cartItems[i].productName;
       amountspan.innerHTML = `Antal: ${cartItems[i].amount.toString()}`;
       priceSpan.innerHTML = `${cartItems[i].price.toString()} kr`;
     
+      sumList.push(cartItems[i].price * cartItems[i].amount);
     }
-    
+  
+    //Räkna ut total
+  
+    let sum = sumList.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+  
+    total.innerHTML = `${sum.toString()} kr`;
     }
     
