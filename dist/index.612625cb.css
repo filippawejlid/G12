@@ -261,7 +261,6 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 50%;
-  border: 1px solid green;
 }
 .productinforight {
   display: flex;
