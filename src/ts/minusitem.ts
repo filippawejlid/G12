@@ -20,3 +20,11 @@ export function minusItem() {
 // 		}
 // 	}
 // }
+
+
+
+// if (cartItems[clicked].amount == 0) 
+//     så ska cartItems[clicked].beenAdded = false
+//     och productinfo[rätt objekt].beenAdded = false hmmmm??
+
+//Måste hämta span som antalet varor summan ligger i och ändra inner html till nya amountet

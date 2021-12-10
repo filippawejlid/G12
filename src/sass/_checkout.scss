@@ -73,20 +73,24 @@
   box-shadow: $boxShadow;
 }
 .productContainer {
-  width: 40%;
+  width: 100%;
   padding: 20px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
   @include flexcolcen;
 
   // border-bottom: 1px solid darkgray;
 
   @include tablets {
-    width: 70%;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
-  @include tablets {
-    width: 100%;
+  .info {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
   }
 
   .amount {
@@ -102,11 +106,10 @@
   }
 }
 
-#total {
-  span {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
+.totalSpans {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .imgContainer {

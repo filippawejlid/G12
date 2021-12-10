@@ -6,6 +6,7 @@ import { Vacuum } from "./models/Vacuum";
 
 window.onload = function () {
   
+  // localStorage.clear();
   checkoutCart();
   form();
 }
