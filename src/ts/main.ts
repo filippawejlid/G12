@@ -28,7 +28,6 @@ window.onload = function () {
 	// cartClick();
 	clicker();
 	products();
-
 	// minusItem();
 };
 

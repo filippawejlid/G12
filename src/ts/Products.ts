@@ -98,7 +98,6 @@ export function products() {
 		});
 		addToCartBtn.addEventListener("click", () => {
 			itemCount();
-			// console.log(itemCount);
 		});
 
 		//<span></span> innanför vacuuminfo
