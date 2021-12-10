@@ -3,7 +3,7 @@ import { Vacuum } from "./Vacuum";
 export let w1 = new Vacuum(
   "Dyson Cyclone V10",
   5190,
-  "<img src=/src/assets/Dysoncyclonev10_productpage.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Sladdlös-Dyson-Cyclone-V10.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Cyclone V10</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -23,7 +23,7 @@ export let w1 = new Vacuum(
 export let w2 = new Vacuum(
   "Dyson Outsize",
   8290,
-  "<img src=/src/assets/Sladdlös-Dyson-Outsize.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Sladdlös-Dyson-Outsize.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Outsize</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -44,7 +44,7 @@ export let w2 = new Vacuum(
 export let w3 = new Vacuum(
   "Dyson V12 detect slim Complete",
   7190,
-  "<img src=/src/assets/Sladdlös-Dyson-V12-detect-slim-Complete.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Sladdlös-Dyson-V12-detect-slim-Complete.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson V12 detect slim Complete</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -65,7 +65,7 @@ export let w3 = new Vacuum(
 export let w4 = new Vacuum(
   "Dyson V15 Detect Absolute",
   7190,
-  "<img src=/src/assets/Sladdlös-Dyson-V15-Detect-Absolute-logo.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Sladdlös-Dyson-V15-Detect-Absolute-logo.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson V15 Detect Absolute</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -86,7 +86,7 @@ export let w4 = new Vacuum(
 export let p1 = new Vacuum(
   "Dyson Big Ball Multi Floor",
   3190,
-  "<img src=/src/assets/Kraftfull-Dyson-Big-Ball-Multi-Floor-2.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Kraftfull-Dyson-Big-Ball-Multi-Floor-2.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Big Ball Multi Floor</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -107,7 +107,7 @@ export let p1 = new Vacuum(
 export let p2 = new Vacuum(
   "Dyson Cinetic Big Ball Absolute",
   4190,
-  "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Absolute-2.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Absolute-2.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Cinetic Big Ball Absolute</h2>",
   "<span> Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -128,7 +128,7 @@ export let p2 = new Vacuum(
 export let p3 = new Vacuum(
   "Dyson Cinetic Big Ball Animal Pro 1",
   4190,
-  "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Animal-Pro-1.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Animal-Pro-1.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Cinetic Big Ball Animal Pro 1</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -149,7 +149,7 @@ export let p3 = new Vacuum(
 export let p4 = new Vacuum(
   "Dyson Cinetic Big Ball Animal Pro 2",
   5190,
-  "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Animal-Pro-2.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Kraftfull-Dyson-Cinetic-Big-Ball-Animal-Pro-2.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson Cinetic Big Ball Animal Pro 2</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -170,7 +170,7 @@ export let p4 = new Vacuum(
 export let r1 = new Vacuum(
   "Dyson 360 Heurist™ robot 1",
   3199,
-  "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-1.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-1.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson 360 Heurist™ robot 1</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -190,7 +190,7 @@ export let r1 = new Vacuum(
 export let r2 = new Vacuum(
   "Dyson 360 Heurist™ robot 2",
   3999,
-  "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-2.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-2.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson 360 Heurist™ robot 2</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -210,7 +210,7 @@ export let r2 = new Vacuum(
 export let r3 = new Vacuum(
   "Dyson 360 Heurist™ robot 3",
   4199,
-  "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-3.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-3.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson 360 Heurist™ robot 3</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",
@@ -230,7 +230,7 @@ export let r3 = new Vacuum(
 export let r4 = new Vacuum(
   "Dyson 360 Heurist™ robot 4",
   4999,
-  "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-4.png alt='Bild på en dammsugaren'/>",
+  "url(../assets/Dysoncyclonev10_productpage.png)",
   "<img src=/src/assets/Robot-Dyson-360-Heurist™-robot-4.png alt='Bild på en dammsugaren' width='200' height='250'/>",
   "<h2>Dyson 360 Heurist™ robot 4</h2>",
   "<span>Byggt för djup rengöring, överallt. Upp till 60 minuter körtid.</span>",

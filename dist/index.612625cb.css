@@ -148,7 +148,6 @@ body {
   justify-content: space-between;
 }
 #productmaincontainer .imgcontainer {
-  border: 1px solid green;
   display: flex;
   justify-content: center;
 }
@@ -197,18 +196,24 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-#productcontentcontainer {
-  border: 1px solid red;
+.productmaincontainer {
+  position: relative;
 }
 .productmodalcontainer {
-  border: 1px solid red;
+  align-self: center;
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
   z-index: 10;
+  box-shadow: 1px 1px 0.5px #2596be;
+  background-color: white;
+  height: 80%;
   width: 80%;
-}
-.productmodalcontainer h1 {
-  color: #2596be;
-  padding: 20px;
-  margin-top: 10%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  border-radius: 5px;
 }
 .productimghero {
   background-image: url(Dysoncyclonev10_productpage.0b231c45.png);
@@ -217,35 +222,48 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
-  width: 100vw;
-  height: 50vh;
+  height: 50%;
+  border-radius: 5px;
+}
+.productimghero h1 {
+  color: #2596be;
+  font-size: 1rem;
+  padding: 20px;
+  margin-top: 10%;
+  font-weight: 900;
 }
 .h1nfopage1 {
-  height: 30vh;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #2596be;
+}
+.discriptioninfopage1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px;
   color: #504e4e;
   font-size: 0.8rem;
   letter-spacing: 0.3px;
 }
-.h1nfopage1 h1 {
+.container {
+  display: flex;
+  margin: 20px;
+}
+h1 {
   margin-bottom: 10px;
   color: #2596be;
+  font-size: 1rem;
 }
-.continer {
-  display: flex;
-  margin: 10px;
-}
-.continer .productimgleft {
+.productimgleft {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
+  border: 1px solid green;
 }
-.continer .productinforight {
+.productinforight {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,28 +272,18 @@ body {
   letter-spacing: 0.3px;
   padding: 5px;
 }
-.continer .productinforight h1 {
-  margin-bottom: 10px;
-  color: #2596be;
-}
-.continer h2 {
-  margin-top: 10px;
-  color: #2596be;
-}
 .btncontainer {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
-  border: none;
-  background-color: transparent;
-  width: 100%;
 }
 .btncontainer button {
   border: none;
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .btncontainer .addtocart {
   background-color: #2596be;
@@ -285,42 +293,12 @@ body {
   background-color: #d1e7ff;
   color: #165b74;
 }
-@media screen and (min-width: 768px) {
-  .ppheroheader {
-    font-size: 1.5rem !important;
-    margin-left: 20%;
-  }
-
-  .productinfohero {
-    width: 60%;
-    margin-left: 20%;
-  }
-  .productinfohero h1 {
-    font-size: 2rem;
-  }
-  .productinfohero div {
-    font-size: 1rem;
-  }
-
-  .productimgleft {
-    margin-left: 10%;
-  }
-
-  .productinforight {
-    margin-right: 20%;
-  }
-  .productinforight h1 {
-    font-size: 2rem;
-  }
-  .productinforight div {
-    font-size: 1rem;
-  }
-}
 #footer footer {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 0;
   background-color: black;
 }
 #footer footer p {

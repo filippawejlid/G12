@@ -1,6 +1,18 @@
 import { addToCart } from "./addToCart";
 import { productInfo } from "./Products";
 
+let productInfoStorage = JSON.parse(sessionStorage.getItem("productInfo[i]"));
+
+if (productInfoStorage != null) {
+  console.log(productInfoStorage.ppinfoheroheader);
+  console.log(productInfoStorage.imghero);
+  console.log(productInfoStorage.h1nfopage1);
+  console.log(productInfoStorage.discriptioninfopage1);
+  console.log(productInfoStorage.imgsmall);
+  console.log(productInfoStorage.h1infopage2);
+  console.log(`${productInfoStorage.price.toString()} kr`);
+}
+
 // GETELEMENTBYID
 
 export function productinfo(i: number) {
@@ -9,15 +21,20 @@ export function productinfo(i: number) {
     "productcontentcontainer"
   ) as HTMLDivElement;
 
-  // ska skapa diven productinfocontainer
+  // ska skapa diven productmodalcontainer
   let productModalContainer = document.createElement("div");
   productModalContainer.className = "productmodalcontainer";
-  productModalContainer.innerHTML = productInfo[i].ppinfoheroheader;
+
+  // div container för hero. Ska appendas till  productModalContainer
+
+  let productImgHero = document.createElement("div");
+  productImgHero.className = "productimghero";
+  productImgHero.innerHTML = productInfo[i].ppinfoheroheader;
+  //productInfoHeroContainer.style.backgroundImage = productInfo[i].imghero;
 
   // diven för productinfoherocontainer
   let productInfoHeroContainer = document.createElement("div");
   productInfoHeroContainer.className = "productinfoherocontainer";
-  productInfoHeroContainer.style.backgroundImage = productInfo[i].imghero;
 
   // diven som ska ha class productinfohero och appendas till productinfoherocontainer
   let productInfoHero = document.createElement("div");
@@ -31,7 +48,7 @@ export function productinfo(i: number) {
 
   // diven som ska bli en container för resterande information
   let continer = document.createElement("div");
-  continer.className = "continar";
+  continer.className = "container";
 
   // div som ska vara container för den lilla bilden, ska ha class productimgleft och appendas till container
   let productImgLeft = document.createElement("div");
@@ -54,7 +71,7 @@ export function productinfo(i: number) {
   price.innerHTML = `${productInfo[i].price.toString()} kr`;
 
   // btncontainer div, class btncontainer, ska appendas till productmodalcontainer
-  let btnContainer = document.createElement("button");
+  let btnContainer = document.createElement("div");
   btnContainer.className = "btncontainer";
 
   let btnBack = document.createElement("button");
@@ -67,9 +84,13 @@ export function productinfo(i: number) {
   let addToCart = document.createElement("button");
   addToCart.className = "addtocart";
   addToCart.innerHTML = "Lägg till i varukorgen";
+  // addToCart.addEventListener("click", () => {
+  //   addToCart(i);
+  // }); //Här har jag lagt till eventlistener ta ej bort
 
   // APPENDCHILD
   productContentContainer.appendChild(productModalContainer);
+  productModalContainer.appendChild(productImgHero);
   productModalContainer.appendChild(productInfoHeroContainer);
   productInfoHeroContainer.appendChild(productInfoHero);
   productInfoHeroContainer.appendChild(discriptionInfoPage1);
