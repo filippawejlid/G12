@@ -141,13 +141,6 @@
       font-size: 0.8rem;
     }
 
-    > button:hover {
-      box-shadow: 2px 2px 2px #2595be86;
-      border: 1px solid black;
-      text-transform: uppercase;
-      font-size: 0.1;
-    }
-
     > button:nth-child(2) {
       background-color: #2596be;
       border: none;
@@ -166,6 +159,11 @@
     .fa-cart-plus {
       font-size: 0.8rem;
       margin-left: 10px;
+    }
+
+    > button:hover {
+      box-shadow: 2px 2px 2px #2595be86;
+      border: 1px solid rgba(0, 0, 0, 0.418);
     }
   }
 }
