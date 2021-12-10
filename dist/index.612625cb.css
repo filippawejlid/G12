@@ -293,7 +293,11 @@ h1 {
   background-color: #d1e7ff;
   color: #165b74;
 }
+#footer {
+  z-index: -1;
+}
 #footer footer {
+  z-index: -1;
   position: relative;
   display: flex;
   align-items: center;
@@ -390,7 +394,7 @@ h1 {
 #footer footer .imgContainerFooter {
   position: absolute;
   width: 30%;
-  bottom: 200px;
+  bottom: 150px;
   right: 0;
 }
 @media (min-width: 768px) {
@@ -550,6 +554,9 @@ h1 {
     padding-top: 15px;
     padding-right: 15px;
   }
+  #navet .kontakt {
+    border-right: 3px solid rgba(158, 158, 158, 0.274);
+  }
   #navet .hem {
     padding-top: 15px;
     margin: 0;
@@ -557,7 +564,7 @@ h1 {
     padding-right: 15px;
   }
   #navet .btnCartFa {
-    margin-left: 45px;
+    margin-left: 5px;
   }
   #navet .header .menu {
     clear: none;
@@ -574,7 +581,7 @@ h1 {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 1000;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -720,7 +727,7 @@ h1 {
   #checkout #form {
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 50%;
+    width: 500px;
   }
 }
 #checkout #form form {
@@ -762,7 +769,7 @@ h1 {
 }
 @media (min-width: 1060px) {
   #cart {
-    width: 30%;
+    width: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -786,12 +793,12 @@ h1 {
     width: 100%;
   }
 }
-.productContainer #amount {
+.productContainer .amount {
   width: 110px;
   display: flex;
   justify-content: space-between;
 }
-.productContainer #price {
+.productContainer .price {
   width: 110px;
   display: flex;
   justify-content: space-between;
@@ -801,11 +808,11 @@ h1 {
   font-weight: bold;
 }
 @media (min-width: 768px) {
-  #imgContainer {
+  .imgContainer {
     width: 30%;
   }
 }
-#imgContainer #productImg {
+.imgContainer img {
   width: 100%;
 }
 .headingcart {
@@ -817,5 +824,66 @@ h1 {
   border-top: 0.2px solid rgba(169, 169, 169, 0.336);
   margin-top: 0;
   font-weight: 400;
+}
+/* The Modal (background) */
+.tyModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.116);
+  /* Fallback color */
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+.tyModal .thanksContent {
+  background-color: #fefefe;
+  margin: 22% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 33%;
+  /* Could be more or less, depending on screen size */
+}
+.tyModal .tySpanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.tyModal .fa-check {
+  display: flex;
+  color: #2fbd04;
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+.fa-trash {
+  font-size: 1rem;
+  color: #2595be;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.fa-trash .fa-trash:hover {
+  cursor: pointer;
+}
+.counter-container {
+  border: 1px solid red;
+  border-radius: 0.1rem;
+  position: relative;
+  margin-top: 5px;
+}
+.counter-container .counter {
+  padding-left: 20px;
 }
 /*# sourceMappingURL=index.612625cb.css.map */

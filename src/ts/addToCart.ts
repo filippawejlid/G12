@@ -3,6 +3,8 @@ import { productInfo } from "./Products";
 
 export let cartItems: Vacuum[] = [];
 
+localStorage.clear()
+
 export function addToCart(clicked: number) {
 	let productContainer = document.getElementById("objectContainer" + clicked);
 
@@ -11,12 +13,17 @@ export function addToCart(clicked: number) {
 		productInfo[clicked].beenAdded = true;
 		cartItems.push(productInfo[clicked]);
 
+		localStorage.setItem("cartItems", JSON.stringify(cartItems[0]));
+
+
 		console.log(
 			"La till " +
 				productInfo[clicked].productName +
 				productInfo[clicked].beenAdded
 		);
-	} else if (productInfo[clicked].beenAdded == true) {
+	} 
+	
+	else if (productInfo[clicked].beenAdded == true) {
 		for (let i = 0; i < cartItems.length; i++) {
 			if (productContainer.id === cartItems[i].identification) {
 				cartItems[i].amount++;
@@ -25,22 +32,14 @@ export function addToCart(clicked: number) {
 				break;
 			}
 		}
-	} else if (productInfo[clicked].beenAdded == false) {
+	} 
+	
+	else if (productInfo[clicked].beenAdded == false) {
+
 		productInfo[clicked].identification = "objectContainer" + clicked;
 		cartItems.push(productInfo[clicked]);
 		productInfo[clicked].beenAdded = true;
 
-		console.log(
-			"La till ny " +
-				productInfo[clicked].productName +
-				productInfo[clicked].beenAdded
-		);
-		console.log(cartItems.length);
 	}
 
-	for (let i = 0; i < cartItems.length; i++) {
-		console.log(
-			"Alla Objekt: " + cartItems[i].productName + " " + cartItems[i].amount
-		);
-	}
 }

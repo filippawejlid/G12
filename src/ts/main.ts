@@ -2,9 +2,6 @@ import { productinfo } from "./Productinfo";
 //import { close } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
-import { form } from "./Form";
-import { checkoutCart } from "./checkoutCart";
-import "../checkout.html";
 import { itemCount } from "./itemcounter";
 // import { minusItem } from "./minusitem";
 import { addToCart } from "./addToCart";
@@ -28,17 +25,8 @@ import {
 window.onload = function () {
 	// cartClick();
 	clicker();
-	form();
 	products();
 	itemCount();
-
-	let checkout: HTMLButtonElement = document.getElementById(
-		"btnKassa"
-	) as HTMLButtonElement;
-	checkout.addEventListener("click", checkoutCart);
-
-	// let page = window.open('checkout.html');
-	// page.addEventListener("load", checkoutCart)
 
 	// minusItem();
 };

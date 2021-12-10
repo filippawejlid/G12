@@ -1,5 +1,4 @@
 import { cartItems } from "./addToCart";
-import { checkoutCart } from "./checkoutCart";
 import { minusItem } from "./minusitem";
 
 export function displayCart() {
