@@ -1,10 +1,17 @@
-.fa-trash {
-  font-size: 1rem;
-  color: #2595be;
-  margin-left: 5px;
-  margin-top: 3px;
+.adjustments {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
 
-  .fa-trash:hover {
-    cursor: pointer;
+  .fa-trash {
+    font-size: 1rem;
+    color: #2595be;
+    margin-left: 5px;
+    margin-top: 3px;
+
+    .fa-trash:hover {
+      cursor: pointer;
+    }
   }
 }

@@ -187,12 +187,6 @@ body {
   cursor: pointer;
   font-size: 0.8rem;
 }
-#productmaincontainer .productbtns > button:hover {
-  box-shadow: 2px 2px 2px #2595be86;
-  border: 1px solid black;
-  text-transform: uppercase;
-  font-size: 0.1;
-}
 #productmaincontainer .productbtns > button:nth-child(2) {
   background-color: #2596be;
   border: none;
@@ -209,6 +203,10 @@ body {
 #productmaincontainer .productbtns .fa-cart-plus {
   font-size: 0.8rem;
   margin-left: 10px;
+}
+#productmaincontainer .productbtns > button:hover {
+  box-shadow: 2px 2px 2px #2595be86;
+  border: 1px solid rgba(0, 0, 0, 0.418);
 }
 /* The Modal (background) */
 * {
@@ -312,6 +310,10 @@ h1 {
 .btncontainer .back {
   background-color: #d1e7ff;
   color: #165b74;
+}
+.btncontainer > button:hover {
+  box-shadow: 2px 2px 2px #2595be86;
+  border: 1px solid rgba(0, 0, 0, 0.418);
 }
 #footer {
   z-index: -1;
@@ -831,7 +833,8 @@ h1 {
 }
 @media (min-width: 768px) {
   .imgContainer {
-    width: 30%;
+    width: 400px;
+    height: 400px;
   }
 }
 .imgContainer img {
@@ -853,7 +856,7 @@ h1 {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 10;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -890,13 +893,19 @@ h1 {
   font-size: 1.5rem;
   margin-left: 5px;
 }
-.fa-trash {
+.adjustments {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.adjustments .fa-trash {
   font-size: 1rem;
   color: #2595be;
   margin-left: 5px;
   margin-top: 3px;
 }
-.fa-trash .fa-trash:hover {
+.adjustments .fa-trash .fa-trash:hover {
   cursor: pointer;
 }
 .counter-container {
