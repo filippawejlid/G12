@@ -20,6 +20,7 @@ export function addToCart(clicked: number) {
     for (let i = 0; i < cartItems.length; i++) {
       if (productContainer.id === cartItems[i].identification) {
         cartItems[i].amount++;
+
         console.log("Plussa amount " + cartItems[i].amount);
         break;
       }

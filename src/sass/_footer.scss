@@ -1,5 +1,7 @@
 #footer {
+  z-index: -1;
   footer {
+    z-index: -1;
     position: relative;
     display: flex;
     align-items: center;
@@ -101,7 +103,7 @@
     .imgContainerFooter {
       position: absolute;
       width: 30%;
-      bottom: 200px;
+      bottom: 150px;
       right: 0;
 
       @include tablets {

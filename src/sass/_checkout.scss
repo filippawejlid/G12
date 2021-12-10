@@ -23,7 +23,7 @@
     @include desktop {
       margin-top: 50px;
       margin-bottom: 50px;
-      width: 50%;
+      width: 500px;
     }
 
     form {
@@ -48,6 +48,12 @@
           background-color: #1e7494fa;
         }
       }
+      .back {
+        text-decoration: none;
+        color: rgb(134, 130, 130);
+        text-align: end;
+        font-size: smaller;
+      }
     }
   }
 }
@@ -56,7 +62,7 @@
   background-color: white;
 
   @include desktop {
-    width: 30%;
+    width: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -83,13 +89,13 @@
     width: 100%;
   }
 
-  #amount {
+  .amount {
     width: 110px;
     display: flex;
     justify-content: space-between;
   }
 
-  #price {
+  .price {
     width: 110px;
     display: flex;
     justify-content: space-between;
@@ -103,11 +109,11 @@
   }
 }
 
-#imgContainer {
+.imgContainer {
   @include tablets {
     width: 30%;
   }
-  #productImg {
+  img {
     width: 100%;
   }
 }

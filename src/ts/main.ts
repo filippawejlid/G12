@@ -3,8 +3,10 @@ import { productinfo } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 import { form } from "./Form";
-import { displayCart } from "./displayCart";
+import { checkoutCart } from "./checkoutCart";
+import "../checkout.html";
 import { addToCart } from "./addToCart";
+
 import { Vacuum } from "./models/Vacuum";
 import {
   w1,
@@ -22,15 +24,20 @@ import {
 } from "./models/Vacuumobjects";
 
 window.onload = function () {
-	// cartClick();
-	clicker();
-	form();
-	products();
+  // cartClick();
+  clicker();
+  form();
+  products();
+  let checkout: HTMLButtonElement = document.getElementById(
+    "btnKassa"
+  ) as HTMLButtonElement;
+  checkout.addEventListener("click", checkoutCart);
 
+  // let page = window.open('checkout.html');
+  // page.addEventListener("load", checkoutCart)
 };
 
-
 window.onclick = function () {
-  //productinfo();
+  productinfo();
   close();
 };

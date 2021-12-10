@@ -1,4 +1,5 @@
 import { addToCart } from "./addToCart";
+import { thankYou } from "./Thankyou";
 import { Vacuum } from "./models/Vacuum";
 import {
   w1,
@@ -81,12 +82,19 @@ export function products() {
       productinfo(i);
     });
 
-    let addToCartBtn = document.createElement("button");
+    let addToCartBtn: HTMLButtonElement = document.createElement(
+      "button"
+    ) as HTMLButtonElement;
+    addToCartBtn.type = "button";
+    addToCartBtn.id = "addtocart" + i;
     addToCartBtn.className = "addtocart";
     addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
     addToCartBtn.addEventListener("click", () => {
       addToCart(i);
     }); //Här har jag lagt till eventlistener ta ej bort
+    addToCartBtn.addEventListener("click", () => {
+      thankYou();
+    });
 
     //<span></span> innanför vacuuminfo
     let vacuumInfoSpan = document.createElement("span");
