@@ -5,6 +5,8 @@ import { clicker } from "./Clicker";
 import { form } from "./Form";
 import { checkoutCart } from "./checkoutCart";
 import "../checkout.html";
+import { itemCount } from "./itemcounter";
+// import { minusItem } from "./minusitem";
 import { addToCart } from "./addToCart";
 
 import { Vacuum } from "./models/Vacuum";
@@ -28,6 +30,8 @@ window.onload = function () {
 	clicker();
 	form();
 	products();
+	itemCount();
+
 	let checkout: HTMLButtonElement = document.getElementById(
 		"btnKassa"
 	) as HTMLButtonElement;
@@ -35,6 +39,8 @@ window.onload = function () {
 
 	// let page = window.open('checkout.html');
 	// page.addEventListener("load", checkoutCart)
+
+	// minusItem();
 };
 
 window.onclick = function () {

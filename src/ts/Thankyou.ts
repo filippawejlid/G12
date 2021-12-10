@@ -39,13 +39,13 @@ export function thankYou() {
 	theCheck.ariaHidden = "true";
 	tySpan.appendChild(theCheck);
 
-	let addBtn: HTMLButtonElement = document.getElementById(
-		"addTwoCart"
-	) as HTMLButtonElement;
-	addBtn.onclick = function (event) {
-		event.preventDefault();
-		event.stopPropagation();
-	};
+	// let addBtn: HTMLButtonElement = document.getElementById(
+	// 	"addtocart"
+	// ) as HTMLButtonElement;
+	// addBtn.onclick = function (event) {
+	// 	event.preventDefault();
+	// 	event.stopPropagation();
+	// };
 
 	// theCross.addEventListener("click", function () {
 	// 	tyModal.style.display = "none";
