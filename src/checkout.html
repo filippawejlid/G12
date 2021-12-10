@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="sass/main.scss" />
-    <script type="module" src="ts/main.ts"></script>
+    <script type="module" src="ts/checkout.ts"></script>
     <title>Document</title>
   </head>
   <body>
@@ -103,11 +103,12 @@
             <div>
               <label class="form-label" for="validationTooltip05">CVC</label>
               <input
-                type="number"
+                type="text"
+                placeholder="XXX"
                 class="form-control"
                 id="validationTooltip05"
-                maxlength="3"
-                pattern="{3}"
+                pattern="[0-9]{3}"
+                max="3"
                 required
               />
             </div>

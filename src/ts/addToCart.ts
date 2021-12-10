@@ -1,22 +1,28 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
 
-export let cartItems: Vacuum[] = [];
+export let cartItems: Vacuum[] = JSON.parse(localStorage.getItem("cartItems")) || [];
+
 
 export function addToCart(clicked: number) {
+	localStorage.clear()
 	let productContainer = document.getElementById("objectContainer" + clicked);
 
 	if (cartItems.length == 0) {
 		productInfo[clicked].identification = "objectContainer" + clicked;
 		productInfo[clicked].beenAdded = true;
 		cartItems.push(productInfo[clicked]);
+		// localStorage.setItem("cartItems", JSON.stringify(cartItems[0]));
+
 
 		console.log(
 			"La till " +
 				productInfo[clicked].productName +
 				productInfo[clicked].beenAdded
 		);
-	} else if (productInfo[clicked].beenAdded == true) {
+	} 
+	
+	else if (productInfo[clicked].beenAdded == true) {
 		for (let i = 0; i < cartItems.length; i++) {
 			if (productContainer.id === cartItems[i].identification) {
 				cartItems[i].amount++;
@@ -25,22 +31,21 @@ export function addToCart(clicked: number) {
 				break;
 			}
 		}
-	} else if (productInfo[clicked].beenAdded == false) {
+	} 
+	
+	else if (productInfo[clicked].beenAdded == false) {
+
 		productInfo[clicked].identification = "objectContainer" + clicked;
 		cartItems.push(productInfo[clicked]);
+		// localStorage.setItem("cartItems", JSON.stringify(productInfo[clicked]));
 		productInfo[clicked].beenAdded = true;
 
-		console.log(
-			"La till ny " +
-				productInfo[clicked].productName +
-				productInfo[clicked].beenAdded
-		);
-		console.log(cartItems.length);
 	}
 
 	for (let i = 0; i < cartItems.length; i++) {
-		console.log(
-			"Alla Objekt: " + cartItems[i].productName + " " + cartItems[i].amount
-		);
+
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
 	}
+
 }
