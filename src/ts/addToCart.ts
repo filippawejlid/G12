@@ -1,19 +1,18 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
 
-export let cartItems: Vacuum[] = [];
+export let cartItems: Vacuum[] = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-localStorage.clear()
 
 export function addToCart(clicked: number) {
+	localStorage.clear()
 	let productContainer = document.getElementById("objectContainer" + clicked);
 
 	if (cartItems.length == 0) {
 		productInfo[clicked].identification = "objectContainer" + clicked;
 		productInfo[clicked].beenAdded = true;
 		cartItems.push(productInfo[clicked]);
-
-		localStorage.setItem("cartItems", JSON.stringify(cartItems[0]));
+		// localStorage.setItem("cartItems", JSON.stringify(cartItems[0]));
 
 
 		console.log(
@@ -38,7 +37,14 @@ export function addToCart(clicked: number) {
 
 		productInfo[clicked].identification = "objectContainer" + clicked;
 		cartItems.push(productInfo[clicked]);
+		// localStorage.setItem("cartItems", JSON.stringify(productInfo[clicked]));
 		productInfo[clicked].beenAdded = true;
+
+	}
+
+	for (let i = 0; i < cartItems.length; i++) {
+
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
 	}
 

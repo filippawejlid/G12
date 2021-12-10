@@ -1,9 +1,13 @@
 import { cartItems } from "./addToCart";
+// import { cart } from "./checkout";
+import { Vacuum } from "./models/Vacuum";
 
 export function checkoutCart(){
 
-    let checkout = document.getElementById("checkoutCart");
-    // checkout.innerHTML = " ";
+    // let cartUnfinished: string = localStorage.getItem("cartItems");
+    // let cart: Vacuum[] = JSON.parse(cartUnfinished); 
+    let checkout: HTMLDivElement = document.getElementById("checkoutCart") as HTMLDivElement;
+    checkout.innerHTML = " ";
     
     for (let i = 0; i < cartItems.length; i++) {
       let productContainer: HTMLDivElement = document.createElement("div");
@@ -40,12 +44,7 @@ export function checkoutCart(){
       amountDiv.appendChild(amountspan);
         
       priceDiv.appendChild(priceSpan);   
-        
 
-      let cartUnfinished = localStorage.getItem("cart");
-      let cart = JSON.parse(cartUnfinished);
-
-      console.log("Localstorage: " + cart);
       
 
       img.src = cartItems[i].imgsmall;
