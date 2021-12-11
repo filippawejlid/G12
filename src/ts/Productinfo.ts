@@ -3,18 +3,6 @@ import { productInfo } from "./Products";
 import { cartItems } from "./addToCart";
 import { thankYou } from "./thankYou";
 
-let productInfoStorage = JSON.parse(sessionStorage.getItem("productInfo[i]"));
-
-if (productInfoStorage != null) {
-  console.log(productInfoStorage.ppinfoheroheader);
-  console.log(productInfoStorage.imghero);
-  console.log(productInfoStorage.h1nfopage1);
-  console.log(productInfoStorage.discriptioninfopage1);
-  console.log(productInfoStorage.imgsmall);
-  console.log(productInfoStorage.h1infopage2);
-  console.log(`${productInfoStorage.price.toString()} kr`);
-}
-
 // GETELEMENTBYID
 
 export function productinfo(i: number) {
@@ -105,6 +93,4 @@ export function productinfo(i: number) {
   productModalContainer.appendChild(btnContainer);
   btnContainer.appendChild(btnBack);
   btnContainer.appendChild(add);
-
-  sessionStorage.setItem("productInfo[i]", JSON.stringify(productInfo[i]));
 }
