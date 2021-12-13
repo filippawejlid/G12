@@ -885,6 +885,8 @@ h1 {
   justify-content: center;
   align-items: center;
   font-weight: bolder;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .tyModal .fa-check {
   display: flex;
@@ -895,16 +897,35 @@ h1 {
 .adjustments {
   width: 100%;
   display: flex;
+<<<<<<< HEAD
   justify-content: flex-end;
   padding: 5px;
 }
 .adjustments .fa-trash {
   font-size: 1rem;
-  color: #2595be;
-  margin-left: 5px;
-  margin-top: 3px;
+=======
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  align-self: center;
 }
+.adjustments .fa-trash,
+.adjustments .fa-plus-square,
+.adjustments .fa-minus-square {
+  font-size: 1.5rem;
+>>>>>>> feature-branch/+-product2
+  color: #2595be;
+  margin: 15px;
+  margin-top: 3px;
+  order: 1;
+}
+<<<<<<< HEAD
 .adjustments .fa-trash .fa-trash:hover {
+=======
+.adjustments .fa-trash .fa-trash:hover,
+.adjustments .fa-plus-square .fa-trash:hover,
+.adjustments .fa-minus-square .fa-trash:hover {
+>>>>>>> feature-branch/+-product2
   cursor: pointer;
 }
 .counter-container {
