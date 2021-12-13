@@ -1,5 +1,6 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
+// import { minusItem } from "./minusitem";
 
 export let cartItems: Vacuum[] =
   JSON.parse(localStorage.getItem("cartItems")) || [];
