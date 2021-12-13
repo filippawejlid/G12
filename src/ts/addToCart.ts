@@ -1,10 +1,9 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
 
+localStorage.clear();
 export let cartItems: Vacuum[] =
 	JSON.parse(localStorage.getItem("cartItems")) || [];
-
-localStorage.clear();
 
 export function addToCart(clicked: number) {
 	let productContainer = document.getElementById("objectContainer" + clicked);
