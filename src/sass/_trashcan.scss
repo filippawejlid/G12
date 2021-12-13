@@ -1,16 +1,6 @@
 .adjustments {
   width: 100%;
   display: flex;
-<<<<<<< HEAD
-  justify-content: flex-end;
-  padding: 5px;
-
-  .fa-trash {
-    font-size: 1rem;
-    color: #2595be;
-    margin-left: 5px;
-    margin-top: 3px;
-=======
   justify-content: center;
   align-items: center;
   padding: 5px;
@@ -24,7 +14,6 @@
     margin: 15px;
     margin-top: 3px;
     order: 1;
->>>>>>> feature-branch/+-product2
 
     .fa-trash:hover {
       cursor: pointer;
