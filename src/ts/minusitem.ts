@@ -1,7 +1,7 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
-import { addToCart, cartItems } from "./addToCart";
-import { displayCart } from "./displayCart";
+// import { addToCart, cartItems } from "./addToCart";
+// import { displayCart } from "./displayCart";
 
 export function minusItem() {
   let trashBtn = document.getElementById("trasher");

@@ -1,8 +1,9 @@
-import { addToCart } from "./addToCart";
+// import { addToCart } from "./addToCart";
 import { productInfo } from "./Products";
-import { cartItems } from "./addToCart";
+// import { cartItems } from "./addToCart";
 import { thankYou } from "./thankYou";
 import { itemCount } from "./itemcounter";
+import { Cart } from "./models/Cart";
 
 let productInfoStorage = JSON.parse(sessionStorage.getItem("productInfo[i]"));
 
@@ -19,6 +20,8 @@ if (productInfoStorage != null) {
 // GETELEMENTBYID
 
 export function productinfo(i: number) {
+	let cart = new Cart();
+
 	// productinfocontainer diven ska appendas till den här
 	let productContentContainer: HTMLDivElement = document.getElementById(
 		"productcontentcontainer"
@@ -88,7 +91,7 @@ export function productinfo(i: number) {
 	add.className = "addtocart";
 	add.innerHTML = "Lägg till i varukorgen";
 	add.addEventListener("click", () => {
-		addToCart(i);
+		cart.addToCart(i);
 		thankYou();
 		itemCount();
 	}); //Här har jag lagt till eventlistener ta ej bort

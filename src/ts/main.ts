@@ -3,10 +3,8 @@ import { productinfo } from "./Productinfo";
 import { products } from "./Products";
 import { clicker } from "./Clicker";
 // import { form } from "./Form";
-import { checkoutCart } from "./checkoutCart";
-import "../checkout.html";
+// import { checkoutCart } from "./checkoutCart";
 // import { minusItem } from "./minusitem";
-import { addToCart } from "./addToCart";
 
 import { Vacuum } from "./models/Vacuum";
 import {
@@ -23,15 +21,18 @@ import {
 	r3,
 	r4,
 } from "./models/Vacuumobjects";
+localStorage.clear();
+
 
 window.onload = function () {
 	// cartClick();
 	clicker();
 	products();
 	// minusItem();
+
 };
 
 window.onclick = function () {
 	// productinfo();
-	close();
+	// close();
 };

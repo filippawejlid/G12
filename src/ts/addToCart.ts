@@ -1,40 +1,36 @@
-import { Vacuum } from "./models/Vacuum";
-import { productInfo } from "./Products";
+// import { Cart } from "./models/Order";
+// import { Order } from "./models/Cart";
+// import { Vacuum } from "./models/Vacuum";
+// import { productInfo } from "./Products";
 
-export let cartItems: Vacuum[] =
-	JSON.parse(localStorage.getItem("cartItems")) || [];
 
-localStorage.clear();
 
-export function addToCart(clicked: number) {
-	let productContainer = document.getElementById("objectContainer" + clicked);
+// export function addToCart(clicked: number) {
 
-	if (cartItems.length == 0) {
-		productInfo[clicked].identification = "objectContainer" + clicked;
-		productInfo[clicked].beenAdded = true;
-		cartItems.push(productInfo[clicked]);
+// 	let cart = new Order();
 
-		console.log(
-			"La till " +
-				productInfo[clicked].productName +
-				productInfo[clicked].beenAdded
-		);
-	} else if (productInfo[clicked].beenAdded == true) {
-		for (let i = 0; i < cartItems.length; i++) {
-			if (productContainer.id === cartItems[i].identification) {
-				cartItems[i].amount++;
+// 	let productContainer = document.getElementById("objectContainer" + clicked);
 
-				console.log("Plussa amount " + cartItems[i].amount);
-				break;
-			}
-		}
-	} else if (productInfo[clicked].beenAdded == false) {
-		productInfo[clicked].identification = "objectContainer" + clicked;
-		cartItems.push(productInfo[clicked]);
-		productInfo[clicked].beenAdded = true;
-	}
+// 	if (cartItems.length == 0) {
+// 		productInfo[clicked].identification = "objectContainer" + clicked;
+// 		productInfo[clicked].beenAdded = true;
+// 		cartItems.push(productInfo[clicked]);
 
-	for (let i = 0; i < cartItems.length; i++) {
-		localStorage.setItem("cartItems", JSON.stringify(cartItems));
-	}
-}
+
+// 	} else if (productInfo[clicked].beenAdded == true) {
+// 		for (let i = 0; i < cartItems.length; i++) {
+// 			if (productContainer.id === cartItems[i].identification) {
+// 				cartItems[i].amount++;
+
+// 				console.log("Plussa amount " + cartItems[i].amount);
+// 				break;
+// 			}
+// 		}
+// 	} else if (productInfo[clicked].beenAdded == false) {
+// 		productInfo[clicked].identification = "objectContainer" + clicked;
+// 		cartItems.push(productInfo[clicked]);
+// 		productInfo[clicked].beenAdded = true;
+// 	}
+
+
+// }

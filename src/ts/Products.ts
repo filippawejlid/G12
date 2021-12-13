@@ -1,4 +1,5 @@
-import { addToCart } from "./addToCart";
+import { Order } from "./models/Order";
+// import { addToCart } from "./addToCart"
 import { thankYou } from "./Thankyou";
 import { Vacuum } from "./models/Vacuum";
 import { itemCount } from "./itemcounter";
@@ -17,6 +18,7 @@ import {
 	r4,
 } from "./models/Vacuumobjects";
 import { productinfo } from "./Productinfo";
+import { Cart } from "./models/Cart";
 
 export let productInfo: Vacuum[] = [
 	w1,
@@ -46,6 +48,9 @@ export let robotContainer: HTMLDivElement = document.getElementById(
 
 export function products() {
 	for (let i = 0; i < productInfo.length; i++) {
+
+		let cart = new Cart();
+
 		// productcontainer div som ska ligga innanför wirelesscontainer
 		let productContainer = document.createElement("div");
 		productContainer.className = "productcontainer";
@@ -91,7 +96,7 @@ export function products() {
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
 		addToCartBtn.addEventListener("click", () => {
-			addToCart(i);
+			cart.addToCart(i);
 		}); //Här har jag lagt till eventlistener ta ej bort
 		addToCartBtn.addEventListener("click", () => {
 			thankYou();
