@@ -834,7 +834,6 @@ h1 {
 @media (min-width: 768px) {
   .imgContainer {
     width: 400px;
-    height: 400px;
   }
 }
 .imgContainer img {
