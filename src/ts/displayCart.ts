@@ -141,7 +141,7 @@ export function displayCart() {
 	}, 0);
 
 	total.innerHTML = `${sum.toString()} kr`;
-
+	console.log(sum);
 	// console.log(sum);
 	// 	pmadjust();
 }
