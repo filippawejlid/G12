@@ -91,19 +91,16 @@ export function products() {
 		let addToCartBtn: HTMLButtonElement = document.createElement(
 			"button"
 		) as HTMLButtonElement;
-		addToCartBtn.type = "button";
+		// addToCartBtn.type = "button";
 		addToCartBtn.id = "addtocart" + i;
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
 		addToCartBtn.addEventListener("click", () => {
-			cart.addToCart(i);
-		}); //Här har jag lagt till eventlistener ta ej bort
-		addToCartBtn.addEventListener("click", () => {
+			cart.addToCart(productInfo[i]);
 			thankYou();
-		});
-		addToCartBtn.addEventListener("click", () => {
 			itemCount();
-		});
+		}); //Här har jag lagt till eventlistener ta ej bort
+
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");

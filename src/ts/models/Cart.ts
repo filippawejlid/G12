@@ -15,67 +15,42 @@ export class Cart {
 
     }
 
-    addToCart (i: number) {
-
-        let productContainer = document.getElementById("objectContainer" + i);
-
+    addToCart (product: Vacuum) {
         
-        if (this.cartItems.length == 0) {
+        let found: boolean = false;
 
-            productInfo[i].beenAdded = true;
-            
-            let newItem: Vacuum = productInfo[i];
-            
-            let item: Order = new Order(newItem, 1);
-            
-            productInfo[i].identification = "objectContainer" + i;
-            item.Vacuum.identification = "objectContainer" + i;
+        for (let i = 0; i < this.cartItems.length; i++) {
 
-            this.cartItems.push(item)
+            if (this.cartItems[i].Vacuum.id == product.id) {
 
-        }
+                this.cartItems[i].Amount++;
 
-        else if (productInfo[i].beenAdded == true) {
-
-            for (let i = 0; i < this.cartItems.length; i++) {
-
-                if (productContainer.id === this.cartItems[i].Vacuum.identification) {
-
-                    this.cartItems[i].Amount++;
-    
-                    console.log("Plussa amount " + this.cartItems[i].Amount);
-                    break;
-                }
+                found = true;
+                
             }
         }
 
-        else if (productInfo[i].beenAdded == false) {
+        if (!found){
 
-            console.log("hamnar vi här?");
-            
+            let newItem: Order = new Order(product, 1)
+                        
+            this.cartItems.push(newItem);
 
-            productInfo[i].beenAdded = true;
-            
-            let newItem: Vacuum = productInfo[i];
-            
-            let item: Order = new Order(newItem, 1);
-            
-            productInfo[i].identification = "objectContainer" + i;
-            item.Vacuum.identification = "objectContainer" + i;
+            console.log(this.cartItems);
 
-            this.cartItems.push(item)
+            
         }
 
         for (let i = 0; i < this.cartItems.length; i++) {
             localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
             console.log(this.cartItems);
-            
         }
+
     }
 
     displayCart () {
-        // this.cartItems =
-        // JSON.parse(localStorage.getItem("cartItems")) || [];
+        this.cartItems =
+        JSON.parse(localStorage.getItem("cartItems")) || [];
 
         let total: HTMLSpanElement = document.getElementById(
             "totalSpan"
@@ -86,6 +61,7 @@ export class Cart {
             "displayCartModal"
         ) as HTMLDivElement;
         modal.innerHTML = " ";
+
         let sumList: number[] = [];
 
         console.log(this.cartItems);
@@ -133,7 +109,9 @@ export class Cart {
             let priceSpan: HTMLSpanElement = document.createElement("span");
 
 
-    
+
+            
+            // checkout.appendChild(productContainer);
             modal.appendChild(productContainer);
             productContainer.appendChild(imgContainer);
             productContainer.appendChild(info);
@@ -151,10 +129,10 @@ export class Cart {
     
             imgContainer.innerHTML = this.cartItems[i].Vacuum.imgsmall;
             productName.innerHTML = this.cartItems[i].Vacuum.productName;
-            amountspan.innerHTML = `Antal: ${this.cartItems[i].Vacuum.amount.toString()}`;
+            amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
             priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
     
-            sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Vacuum.amount);
+            sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
             console.log("hallå? 3");
 
         }
@@ -247,10 +225,10 @@ export class Cart {
     
             imgContainer.innerHTML = this.cartItems[i].Vacuum.imgsmall;
             productName.innerHTML = this.cartItems[i].Vacuum.productName;
-            amountspan.innerHTML = `Antal: ${this.cartItems[i].Vacuum.amount.toString()}`;
+            amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
             priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
     
-            sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Vacuum.amount);
+            sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
             console.log("hallå? 3");
 
         }
@@ -266,3 +244,4 @@ export class Cart {
         console.log(sum);
     }
 }
+// export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];

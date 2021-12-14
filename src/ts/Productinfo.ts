@@ -20,6 +20,7 @@ if (productInfoStorage != null) {
 // GETELEMENTBYID
 
 export function productinfo(i: number) {
+	
 	let cart = new Cart();
 
 	// productinfocontainer diven ska appendas till den här
@@ -91,7 +92,7 @@ export function productinfo(i: number) {
 	add.className = "addtocart";
 	add.innerHTML = "Lägg till i varukorgen";
 	add.addEventListener("click", () => {
-		cart.addToCart(i);
+		cart.addToCart(productInfo[i]);
 		thankYou();
 		itemCount();
 	}); //Här har jag lagt till eventlistener ta ej bort
@@ -112,4 +113,6 @@ export function productinfo(i: number) {
 	btnContainer.appendChild(add);
 
 	sessionStorage.setItem("productInfo[i]", JSON.stringify(productInfo[i]));
+
+
 }

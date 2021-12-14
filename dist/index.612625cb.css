@@ -574,10 +574,7 @@ h1 {
     height: 45px;
     margin: 0;
     padding-top: 15px;
-    padding-right: 15px;
-  }
-  #navet .kontakt {
-    border-right: 3px solid rgba(158, 158, 158, 0.274);
+    padding-right: 30px;
   }
   #navet .hem {
     padding-top: 15px;
@@ -908,12 +905,15 @@ h1 {
   cursor: pointer;
 }
 .counter-container {
-  border: 1px solid red;
-  border-radius: 0.1rem;
-  position: relative;
-  margin-top: 5px;
-}
-.counter-container .counter {
-  padding-left: 20px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  right: 49px;
+  top: 1.7px;
+  font-size: 0.81rem;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=index.612625cb.css.map */
