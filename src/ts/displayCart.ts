@@ -134,7 +134,7 @@ export function displayCart() {
 	// 	// sumList.push(cartItems[i].price * cartItems[i].amount);
 	// }
 
-	//Räkna ut total
+	// Räkna ut total
 
 	let sum = sumList.reduce(function (a, b) {
 		return a + b;
