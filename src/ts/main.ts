@@ -31,7 +31,7 @@ window.onload = function () {
 	// minusItem();
 };
 
-window.onclick = function () {
-	// productinfo();
-	close();
-};
+// window.onclick = function () {
+// 	// productinfo();
+// 	close();
+// };
