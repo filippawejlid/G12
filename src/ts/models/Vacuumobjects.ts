@@ -16,9 +16,7 @@ export let w1 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   1,
   "wireless",
-  1,
-  "",
-  false
+
 );
 export let w2 = new Vacuum(
   "Dyson Outsize",
@@ -36,9 +34,7 @@ export let w2 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   2,
   "wireless",
-  1,
-  "",
-  false
+
 );
 
 export let w3 = new Vacuum(
@@ -57,9 +53,7 @@ export let w3 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   3,
   "wireless",
-  1,
-  "",
-  false
+
 );
 
 export let w4 = new Vacuum(
@@ -78,9 +72,7 @@ export let w4 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   4,
   "wireless",
-  1,
-  "",
-  false
+
 );
 
 export let p1 = new Vacuum(
@@ -99,9 +91,7 @@ export let p1 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   5,
   "powerfull",
-  1,
-  "",
-  false
+
 );
 
 export let p2 = new Vacuum(
@@ -120,9 +110,7 @@ export let p2 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   6,
   "powerfull",
-  1,
-  "",
-  false
+
 );
 
 export let p3 = new Vacuum(
@@ -141,9 +129,7 @@ export let p3 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   7,
   "powerfull",
-  1,
-  "",
-  false
+
 );
 
 export let p4 = new Vacuum(
@@ -162,9 +148,7 @@ export let p4 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   8,
   "powerfull",
-  1,
-  "",
-  false
+
 );
 
 export let r1 = new Vacuum(
@@ -183,9 +167,7 @@ export let r1 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   9,
   "robot",
-  1,
-  "",
-  false
+
 );
 export let r2 = new Vacuum(
   "Dyson 360 Heurist™ robot 2",
@@ -203,9 +185,7 @@ export let r2 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   10,
   "robot",
-  1,
-  "",
-  false
+
 );
 export let r3 = new Vacuum(
   "Dyson 360 Heurist™ robot 3",
@@ -223,9 +203,7 @@ export let r3 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   11,
   "robot",
-  1,
-  "",
-  false
+
 );
 export let r4 = new Vacuum(
   "Dyson 360 Heurist™ robot 4",
@@ -243,7 +221,5 @@ export let r4 = new Vacuum(
   " Lägg till i varukorg <i class='fas fa-cart-plus'></i>",
   12,
   "robot",
-  1,
-  "",
-  false
+
 );

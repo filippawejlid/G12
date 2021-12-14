@@ -1,12 +1,13 @@
-import { checkoutCart } from "./checkoutCart";
+import { Order } from "./models/Order";
 import { form } from "./checkoutForm";
 import { Vacuum } from "./models/Vacuum";
 
 
 
 window.onload = function () {
-  
+  // let cart = new Order();
   // localStorage.clear();
-  checkoutCart();
+  // cart.checkoutCart();
+  // checkoutcart();
   form();
 }

@@ -1,6 +1,6 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
-import { cartItems } from "./addToCart";
+//import { cartItems } from "./addToCart";
 import { displayCart } from "./displayCart";
 export function minusItem(i) {
   cartItems.splice(i, 1);

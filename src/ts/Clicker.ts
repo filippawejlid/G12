@@ -1,7 +1,11 @@
-import { cartItems } from "./addToCart";
-import { displayCart } from "./displayCart";
+// import { cartItems } from "./addToCart";
+// import { displayCart } from "./displayCart";
+
+import { Cart } from "./models/Cart";
 
 export function clicker() {
+  let cart = new Cart();
+
   let modal: HTMLDivElement = document.getElementById(
     "myModal"
   ) as HTMLDivElement;
@@ -16,10 +20,6 @@ export function clicker() {
 
   let continueShopping: HTMLButtonElement = document.getElementById(
     "btnHandla"
-  ) as HTMLButtonElement;
-
-  let goToCart: HTMLButtonElement = document.getElementById(
-    "btnKassa"
   ) as HTMLButtonElement;
 
   // When the user clicks on the button, open the modal
@@ -42,8 +42,9 @@ export function clicker() {
 
   function openModal() {
     modal.style.display = "block";
-    displayCart();
-    // localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    cart.displayCart();
+	// localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
   }
   function closeModal() {
     modal.style.display = "none";

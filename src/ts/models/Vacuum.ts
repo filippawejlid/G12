@@ -14,9 +14,7 @@ export class Vacuum {
   addtocartbtn: string;
   id: number;
   category: string;
-  amount: number;
-  identification: string; //La till ta ej bort
-  beenAdded: boolean;
+
 
   constructor(
     name: string,
@@ -34,9 +32,7 @@ export class Vacuum {
     addtocartbtn: string,
     id: number,
     category: string,
-    amount: number,
-    identification: string,
-    beenAdded: boolean
+
   ) {
     this.productName = name;
     this.price = price;
@@ -53,8 +49,6 @@ export class Vacuum {
     this.addtocartbtn = addtocartbtn;
     this.id = id;
     this.category = category;
-    this.amount = amount;
-    this.identification = identification;
-    this.beenAdded = beenAdded;
+
   }
 }
