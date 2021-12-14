@@ -1,9 +1,10 @@
 // import { cartItems } from "../addToCart";
 import { minusItem } from "../minusitem";
-import { plus } from "../pmadjust";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
+import { plus } from "../pmadjust";
+import { pmadjust } from "../pmadjust";
 
 export class Cart {
 	cartItems: Order[];
@@ -77,9 +78,9 @@ export class Cart {
 			trashCan.className = "fa fa-trash";
 			trashCan.ariaHidden = "true";
 
-			trashCan.addEventListener("click", () => {
-				minusItem(this.cartItems[i]);
-			});
+			// trashCan.addEventListener("click", () => {
+			// 	minusItem();
+			// });
 
 			let trashBtn: HTMLButtonElement = document.createElement("button");
 			trashBtn.id = "trashBtn";
@@ -113,9 +114,7 @@ export class Cart {
 
 			// spanPlusMinus.innerText = "100";
 
-			let plmiCnt: HTMLDivElement = document.createElement(
-				"div"
-			) as HTMLDivElement;
+			let plmiCnt: HTMLDivElement = document.createElement("div");
 			plmiCnt.id = "plmiCnt";
 			plmiCnt.className = "plmiCnt";
 
@@ -178,6 +177,8 @@ export class Cart {
 			console.log("hallå? 3");
 		}
 
+		pmadjust();
+
 		//Räkna ut total
 
 		let sum = sumList.reduce(function (a, b) {
@@ -227,13 +228,9 @@ export class Cart {
 			trashCan.className = "fa fa-trash";
 			trashCan.ariaHidden = "true";
 
-			trashCan.addEventListener("click", () => {
-				minusItem(this.cartItems[i]);
-			});
-
-			let plus = document.createElement("div");
-			plus.className = "plus";
-			plus.innerHTML = "<i class='far fa-plus-square'></i>";
+			// trashCan.addEventListener("click", () => {
+			// 	minusItem();
+			// });
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
 
