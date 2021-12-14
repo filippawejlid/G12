@@ -206,7 +206,6 @@ body {
 }
 #productmaincontainer .productbtns > button:hover {
   box-shadow: 2px 2px 2px #2595be86;
-  border: 1px solid rgba(0, 0, 0, 0.418);
 }
 /* The Modal (background) */
 * {
@@ -882,8 +881,6 @@ h1 {
   justify-content: center;
   align-items: center;
   font-weight: bolder;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 .tyModal .fa-check {
   display: flex;
@@ -891,39 +888,62 @@ h1 {
   font-size: 1.5rem;
   margin-left: 5px;
 }
-.adjustments {
-  width: 100%;
-  display: flex;
-<<<<<<< HEAD
-  justify-content: flex-end;
-  padding: 5px;
+.imgContainer {
+  max-width: 200px;
 }
-.adjustments .fa-trash {
-  font-size: 1rem;
-=======
-  justify-content: center;
+.adjustments {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
   padding: 5px;
   align-self: center;
 }
 .adjustments .fa-trash,
 .adjustments .fa-plus-square,
 .adjustments .fa-minus-square {
-  font-size: 1.5rem;
->>>>>>> feature-branch/+-product2
+  font-size: 1.2rem;
   color: #2595be;
-  margin: 15px;
-  margin-top: 3px;
-  order: 1;
 }
-<<<<<<< HEAD
-.adjustments .fa-trash .fa-trash:hover {
-=======
 .adjustments .fa-trash .fa-trash:hover,
 .adjustments .fa-plus-square .fa-trash:hover,
 .adjustments .fa-minus-square .fa-trash:hover {
->>>>>>> feature-branch/+-product2
   cursor: pointer;
+}
+.adjustments .plus,
+.adjustments .minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid red;
+}
+.adjustments .plusBtn,
+.adjustments .minusBtn,
+.adjustments .trashBtn {
+  border: none;
+  background-color: none;
+  background: none;
+  cursor: pointer;
+  color: red;
+}
+.adjustments .plusBtn:hover,
+.adjustments .minusBtn:hover {
+  color: #36525c;
+}
+.plusMinusSpan {
+  display: flex;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  border: 5px solid red;
+  height: 44px;
+  padding: 2px;
+  width: auto;
+  font-size: 2rem;
 }
 .counter-container {
   position: absolute;

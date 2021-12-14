@@ -47,9 +47,9 @@ export let robotContainer: HTMLDivElement = document.getElementById(
 ) as HTMLDivElement;
 
 export function products() {
+	let cart = new Cart();
 	for (let i = 0; i < productInfo.length; i++) {
 
-		let cart = new Cart();
 
 		// productcontainer div som ska ligga innanför wirelesscontainer
 		let productContainer = document.createElement("div");
@@ -91,7 +91,7 @@ export function products() {
 		let addToCartBtn: HTMLButtonElement = document.createElement(
 			"button"
 		) as HTMLButtonElement;
-		// addToCartBtn.type = "button";
+		addToCartBtn.type = "button";
 		addToCartBtn.id = "addtocart" + i;
 		addToCartBtn.className = "addtocart";
 		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
