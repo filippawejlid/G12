@@ -19,6 +19,29 @@
     <title>Document</title>
   </head>
   <body>
+    <section id="navet">
+      <header class="header">
+        <img src="/src/assets/suckitlogo.png" alt="Logo Suck'it" class="logo" />
+        <div class="basketcnt">
+          <div class="counter-container" id="cCnt">
+            <!-- <span id="counter">1</span> -->
+          </div>
+          <button id="btnCart" type="button" class="btnCartFa">
+            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn">
+          <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+          <li><a href="#navet" class="hem">Hem</a></li>
+          <li><a href="#products">Produkter</a></li>
+          <li><a href="#footer" class="kontakt">Kontakt</a></li>
+        </ul>
+      </header>
+    </section>
+
     <section id="checkout">
       <section id="cart">
         <h2>Varukorg</h2>
@@ -116,7 +139,7 @@
                 required
               />
             </div>
-            <button class="btn" type="submit">Betala</button>
+            <button id="formButton" class="btn" type="submit">Betala</button>
             <a class="back" href="index.html">Tillbaka till startsida</a>
           </div>
         </form>

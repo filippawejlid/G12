@@ -6,17 +6,20 @@ export function form() {
 
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+      } else {
+        window.location.replace("http://localhost:1234/thankyou.html")     
+      }
+    }, false);
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
+    console.log("hih");
+
   });
 }
+
+//window.location.replace("landingpage.html");
+//window.location.href="http://localhost:1234/checkout.html?"; 

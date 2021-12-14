@@ -1,6 +1,6 @@
 // import { cartItems } from "../addToCart";
 import { minusItem } from "../minusitem";
-import { plus } from "../pmadjust";
+// import { plus } from "../pmadjust";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
@@ -74,7 +74,8 @@ export class Cart {
 
 			let trashCan: HTMLElement = document.createElement("i") as HTMLElement;
 			trashCan.id = "trasher";
-			trashCan.className = "fa fa-trash";
+			// trashCan.className = "fa fa-trash";
+			trashCan.className = "fa fa-trash-o";
 			trashCan.ariaHidden = "true";
 
 			trashCan.addEventListener("click", () => {
@@ -97,11 +98,12 @@ export class Cart {
 			) as HTMLButtonElement;
 			plusBtn.id = "plusBtn";
 			plusBtn.className = "plusBtn";
-			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
+			// plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
+			plusBtn.innerHTML = "<i class='far fa fa-plus'></i>";
 			// plusBtn.type = "button";
 			plusBtn.addEventListener("click", () => {
 				// LA TILL FUNKTION FÖR PLUSKNAPPEN
-				plus();
+				// plus();
 			});
 
 			let plusFa = document.createElement("i");
@@ -130,7 +132,8 @@ export class Cart {
 			) as HTMLButtonElement;
 			minusBtn.id = "minusBtn";
 			minusBtn.className = "minusBtn";
-			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
+			// minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
+			minusBtn.innerHTML = "<i class='far fa fa-minus'></i>";
 			minusBtn.type = "button";
 
 			let minusFa = document.createElement("i");

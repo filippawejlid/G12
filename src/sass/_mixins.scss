@@ -37,3 +37,9 @@
   border-bottom: 0.2px solid rgba(169, 169, 169, 0.336);
   border-top: 0.2px solid rgba(169, 169, 169, 0.336);
 }
+
+@mixin totalSum {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}

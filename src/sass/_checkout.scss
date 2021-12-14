@@ -59,69 +59,40 @@
 }
 
 #cart {
+  margin-top: 45px;
+
+  width: 80%;
+  box-shadow: $boxShadow;
   background-color: white;
+  @include flexcolcen;
 
   @include desktop {
     width: 500px;
     margin-top: 50px;
+
     margin-bottom: 50px;
   }
+  #checkoutCart {
+    width: 90%;
 
-  @include flexcolcen;
+    @include tablets {
+      width: 70%;
+    }
+    @include desktop {
+      width: 90%;
+    }
 
-  width: 80%;
-  box-shadow: $boxShadow;
-}
-.productContainer {
-  width: 100%;
-  padding: 20px;
-
-  @include flexcolcen;
-
-  // border-bottom: 1px solid darkgray;
-
-  @include tablets {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .info {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .amount {
-    width: 110px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .price {
-    width: 110px;
-    display: flex;
-    justify-content: space-between;
+    .productContainer {
+      width: 100%;
+    }
   }
 }
-
 .totalSpans {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.imgContainer {
-  @include tablets {
-    width: 400px;
-  }
-  img {
-    width: 100%;
-  }
+  @include totalSum;
 }
 
 .headingcart {
   @include cartHeading;
-  margin-top: 0;
+  margin-top: 10px;
   font-weight: 400;
 }

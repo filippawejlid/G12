@@ -28,16 +28,16 @@ export function pmadjust() {
 	qDiv.innerText = `${qAdd.toString()}`;
 }
 
-export function plus() {
-	let pBTn = document.getElementById("plusBtn");
+// export function plus() {
+// 	let pBTn = document.getElementById("plusBtn");
 
-	pBTn.addEventListener("click", function addq() {
-		let found = false;
-		for (let i = 0; cartItems.length; i++) {
-			if (cartItems[i].amount === 1) {
-				found = true;
-			}
-		}
-		console.log(found);
-	});
-}
+// 	pBTn.addEventListener("click", function addq() {
+// 		let found = false;
+// 		for (let i = 0; cartItems.length; i++) {
+// 			if (cartItems[i].amount === 1) {
+// 				found = true;
+// 			}
+// 		}
+// 		console.log(found);
+// 	});
+// }

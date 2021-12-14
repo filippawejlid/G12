@@ -76,12 +76,15 @@ h1 {
   font-size: 1rem;
 }
 
-.productimgleft {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   //: 1px solid green;
+  img {
+    width: 100%;
+  }
 }
 
 .productinforight {
