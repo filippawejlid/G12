@@ -5,18 +5,6 @@ import { thankYou } from "./thankYou";
 import { itemCount } from "./itemcounter";
 import { Cart } from "./models/Cart";
 
-let productInfoStorage = JSON.parse(sessionStorage.getItem("productInfo[i]"));
-
-if (productInfoStorage != null) {
-	console.log(productInfoStorage.ppinfoheroheader);
-	console.log(productInfoStorage.imghero);
-	console.log(productInfoStorage.h1nfopage1);
-	console.log(productInfoStorage.discriptioninfopage1);
-	console.log(productInfoStorage.imgsmall);
-	console.log(productInfoStorage.h1infopage2);
-	console.log(`${productInfoStorage.price.toString()} kr`);
-}
-
 // GETELEMENTBYID
 
 export function productinfo(i: number) {

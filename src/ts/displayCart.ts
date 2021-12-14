@@ -1,5 +1,10 @@
 // import { cartItems } from "./addToCart";
-// import { minusItem } from "./minusitem";
+// // import { minusItem } from "./minusitem";
+// import { cartItems } from "./addToCart";
+// //import { minusItem } from "./minusitem";
+// //import { addmore } from "./minusitem";
+// import { pmadjust } from "./pmadjust";
+// import { plus } from "./pmadjust";
 
 // export function displayCart() {
 // 	let total: HTMLSpanElement = document.getElementById(
@@ -83,5 +88,6 @@
 
 // 	total.innerHTML = `${sum.toString()} kr`;
 
-// 	// console.log(sum);
+	// console.log(sum);
+// 	pmadjust();
 // }
