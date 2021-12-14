@@ -57,6 +57,7 @@ export function displayCart() {
 		plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
 		// plusBtn.type = "button";
 		plusBtn.addEventListener("click", () => {
+			// LA TILL FUNKTION FÖR PLUSKNAPPEN
 			plus();
 		});
 

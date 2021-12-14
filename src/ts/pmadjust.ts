@@ -3,6 +3,7 @@ import { cartItems } from "./addToCart";
 
 export function pmadjust() {
 	// let mBtn = document.getElementById("minusBtn");
+	let mBtn = document.getElementById("minusBtn");
 
 	let qDiv = document.getElementById("plmiCnt");
 	qDiv.innerHTML = " ";

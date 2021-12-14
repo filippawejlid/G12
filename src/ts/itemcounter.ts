@@ -6,6 +6,7 @@ export function itemCount() {
 	let addedNo: number[] = [];
 
 	// spanCnt.classList.add("counter-container");
+	// let nothing = document.getElementById("span");
 
 	for (let i = 0; i < cartItems.length; i++) {
 		let spanCounter = document.createElement("span");
