@@ -1,5 +1,5 @@
 import { cartItems } from "./addToCart";
-//import { minusItem } from "./minusitem";
+import { minusItem } from "./minusitem";
 //import { addmore } from "./minusitem";
 
 export function displayCart() {
@@ -13,6 +13,7 @@ export function displayCart() {
   ) as HTMLDivElement;
   modal.innerHTML = " ";
   let sumList: number[] = [];
+  console.log("Antal", sumList);
 
   for (let i = 0; i < cartItems.length; i++) {
     //Skapa alla element som produktens info ska ligga i
@@ -29,10 +30,15 @@ export function displayCart() {
 
     let adjustments: HTMLDivElement = document.createElement("div");
     adjustments.className = "adjustments";
-    let trashCan: HTMLElement = document.createElement("i") as HTMLElement;
+    let trashCan: HTMLElement = document.createElement("div") as HTMLElement;
     trashCan.id = "trasher";
     trashCan.className = "fa fa-trash";
     trashCan.ariaHidden = "true";
+    trashCan.addEventListener("click", () => {
+      console.log("Ta bort någonting", i);
+
+      minusItem(i);
+    });
 
     // trashCan.addEventListener("click", () => {
     //   minusItem();

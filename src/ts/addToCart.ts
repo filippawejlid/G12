@@ -8,6 +8,7 @@ export let cartItems: Vacuum[] =
 
 export function addToCart(clicked: number) {
   let productContainer = document.getElementById("objectContainer" + clicked);
+  console.log(cartItems);
 
   if (cartItems.length == 0) {
     productInfo[clicked].identification = "objectContainer" + clicked;

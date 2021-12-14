@@ -2,12 +2,24 @@ import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
 import { cartItems } from "./addToCart";
 import { displayCart } from "./displayCart";
-// export function minusItem() {
-//   let trashBtn = document.getElementById("trasher");
-//   if (trashBtn.click) {
-//     cartItems.splice(i, 1);
-//     console.log("du klickade");
-//   }
+export function minusItem(i) {
+  cartItems.splice(i, 1);
+  displayCart();
+  console.log("DU klickade");
+  console.log(cartItems);
+}
+
+// let trashBtn: HTMLDivElement = document.getElementById(
+//   "trasher"
+// ) as HTMLDivElement;
+// trashBtn.addEventListener("click", (e) => {
+//   remove(e, i);
+// });
+
+// function remove(e: Event, i: number) {
+//   cartItems.splice(i, 1);
+//   console.log("Du har klickat");
+//   displayCart();
 // }
 
 // let productContainer = document.getElementById("productContainer");
