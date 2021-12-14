@@ -89,7 +89,7 @@ export class Cart {
             trashCan.ariaHidden = "true";
     
             trashCan.addEventListener("click", () => {
-                minusItem();
+                minusItem(this.cartItems[i]);
             });
     
             let plus = document.createElement("div");
@@ -150,8 +150,8 @@ export class Cart {
     
     checkoutCart () {
 
-        // this.cartItems =
-        // JSON.parse(localStorage.getItem("cartItems")) || [];
+        this.cartItems =
+        JSON.parse(localStorage.getItem("cartItems")) || [];
 
         let total: HTMLSpanElement = document.getElementById(
   	    	"totalSpanCheckout"
@@ -187,7 +187,7 @@ export class Cart {
             trashCan.ariaHidden = "true";
     
             trashCan.addEventListener("click", () => {
-                minusItem();
+                minusItem(this.cartItems[i]);
             });
     
             let plus = document.createElement("div");
