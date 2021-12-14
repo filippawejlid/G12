@@ -2,11 +2,13 @@ import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
 //import { cartItems } from "./addToCart";
 import { displayCart } from "./displayCart";
+import { Cart } from "./models/Cart";
 export function minusItem(i) {
-  cartItems.splice(i, 1);
+  let cart = new Cart();
+  cart.cartItems.splice(i, 1);
   displayCart();
   console.log("DU klickade");
-  console.log(cartItems);
+  console.log(cart.cartItems);
 }
 
 // let trashBtn: HTMLDivElement = document.getElementById(

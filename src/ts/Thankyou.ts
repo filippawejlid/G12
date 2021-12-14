@@ -33,7 +33,7 @@ export function thankYou() {
     "span"
   ) as HTMLSpanElement;
   tySpan.className = "tySpanner";
-  tySpan.innerText = "Tack för ditt köp! Din vara har lagts till i varukorgen.";
+  tySpan.innerText = "Din vara har lagts till i varukorgen.";
   tyContent.appendChild(tySpan);
 
   let theCheck = document.createElement("i");

@@ -1,5 +1,6 @@
 // import { cartItems } from "../addToCart";
 import { minusItem } from "../minusitem";
+import { plus } from "../pmadjust";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
@@ -77,7 +78,7 @@ export class Cart {
 			trashCan.ariaHidden = "true";
 
 			trashCan.addEventListener("click", () => {
-				minusItem();
+				minusItem(this.cartItems[i]);
 			});
 
 			let trashBtn: HTMLButtonElement = document.createElement("button");
@@ -227,7 +228,7 @@ export class Cart {
 			trashCan.ariaHidden = "true";
 
 			trashCan.addEventListener("click", () => {
-				minusItem();
+				minusItem(this.cartItems[i]);
 			});
 
 			let plus = document.createElement("div");
