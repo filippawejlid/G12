@@ -1,6 +1,6 @@
 import { Vacuum } from "./models/Vacuum";
 import { productInfo } from "./Products";
-import { displayCart } from "./displayCart";
+//import { displayCart } from "./displayCart";
 import { Cart, cartItems } from "./models/Cart";
 import { Order } from "./models/Order";
 export function minusItem(i: number) {

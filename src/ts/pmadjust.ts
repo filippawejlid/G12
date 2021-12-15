@@ -4,19 +4,19 @@ import { Order } from "./models/Order";
 import { productinfo } from "./Productinfo";
 
 export function plus() {
-	let pBTn = document.getElementById("plusBtn");
-	// let cartBtn = new Cart();
-	console.log(pBTn.click, "Du klickade");
+  let pBTn = document.getElementById("plusBtn");
+  // let cartBtn = new Cart();
+  console.log(pBTn.click, "Du klickade");
 
-	// pBTn.addEventListener("click", function addQ() {
-	// 	let found = false;
-	// 	for (let i = 0; cartBtn.Amount; i++) {
-	// 		if (cartBtn[i].Amount === ) {
-	// 			found = true;
-	// 		}
-	// 	}
-	// 	console.log(found);
-	// });
+  // pBTn.addEventListener("click", function addQ() {
+  // 	let found = false;
+  // 	for (let i = 0; cartBtn.Amount; i++) {
+  // 		if (cartBtn[i].Amount === ) {
+  // 			found = true;
+  // 		}
+  // 	}
+  // 	console.log(found);
+  // });
 }
 
 // export function quant(product: Vacuum) {
@@ -38,28 +38,28 @@ export function plus() {
 // }
 
 export function pmadjust() {
-	let cart = new Cart();
-	let qDiv = document.getElementById("plmiCnt");
-	qDiv.innerHTML = " ";
+  let cart = new Cart();
+  let qDiv = document.getElementById("plmiCnt");
+  qDiv.innerHTML = " ";
 
-	let qNo: number[] = [];
+  let qNo: number[] = [];
 
-	for (let i = 0; i < cart.cartItems.length; i++) {
-		let spanPlusMinus = document.createElement("span");
-		spanPlusMinus.className = "plusMinusSpan";
-		// spanPlusMinus.id = "amount" + i;
+  for (let i = 0; i < cart.cartItems.length; i++) {
+    let spanPlusMinus = document.createElement("span");
+    spanPlusMinus.className = "plusMinusSpan";
+    // spanPlusMinus.id = "amount" + i;
 
-		spanPlusMinus.style.fontSize = "large";
-		spanPlusMinus.style.fontWeight = "bolder";
+    spanPlusMinus.style.fontSize = "large";
+    spanPlusMinus.style.fontWeight = "bolder";
 
-		qDiv.appendChild(spanPlusMinus);
-		spanPlusMinus.innerHTML = `${cart.cartItems[i].Amount}`;
-		qNo.push(cart.cartItems[i].Amount);
-	}
+    qDiv.appendChild(spanPlusMinus);
+    spanPlusMinus.innerHTML = `${cart.cartItems[i].Amount}`;
+    qNo.push(cart.cartItems[i].Amount);
+  }
 
-	let qAdd = qNo.reduce(function (a, b) {
-		return a + b;
-	}, 0);
+  let qAdd = qNo.reduce(function (a, b) {
+    return a + b;
+  }, 0);
 
-	qDiv.innerHTML == `${qAdd.toString()}`;
+  qDiv.innerHTML == `${qAdd.toString()}`;
 }
