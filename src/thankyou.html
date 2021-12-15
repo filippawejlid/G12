@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sass/main.scss" />
-    <script type="module" src="ts/main.ts"></script>
+    <script type="module" src="ts/thankyou.ts"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/4bc016b404.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body>
@@ -30,6 +40,39 @@
           <li><a href="#footer" class="kontakt">Kontakt</a></li>
         </ul>
       </header>
+    </section>
+
+    <section id="thankyou">
+      <div class="thankyouContainer">
+        <h3>
+          <i class="fa fa-check" id="check" aria-hidden="true"></i>
+          Köp genomfört!
+        </h3>
+        <h2>Tack för ditt köp!</h2>
+        <div class="ordernumber">Ordernummer: 1255785448</div>
+        <div>
+          Din order har nu mottagits och är snart påväg till dig! Du kommer inom
+          kort få ett mail med bekräftelse samt orderinfo och hur du kan spåra
+          ditt paket.
+        </div>
+        <lord-icon
+          src="https://cdn.lordicon.com/uetqnvvg.json"
+          trigger="loop"
+          colors="primary:#f5f5f5,secondary:#175d77"
+          style="width: 250px; height: 250px"
+        >
+        </lord-icon>
+      </div>
+
+      <div id="order"></div>
+
+      <!-- <lord-icon
+        src="https://cdn.lordicon.com/gsqxdxog.json"
+        trigger="loop-on-hover"
+        colors="primary:#121331,secondary:#107c91"
+        style="width: 32px; height: 32px"
+      >
+      </lord-icon> -->
     </section>
   </body>
 </html>

@@ -12,7 +12,8 @@ export function form() {
         event.stopPropagation();
         form.classList.add('was-validated');
       } else {
-        window.location.replace("http://localhost:1234/thankyou.html")     
+        alert("hejehjejh")
+        window.location.replace("https://www.google.com/")     
       }
     }, false);
 

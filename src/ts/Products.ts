@@ -1,6 +1,6 @@
 import { Order } from "./models/Order";
 // import { addToCart } from "./addToCart"
-import { thankYou } from "./Thankyou";
+import { thankYou } from "./addedModal";
 import { Vacuum } from "./models/Vacuum";
 import { itemCount } from "./itemcounter";
 import {

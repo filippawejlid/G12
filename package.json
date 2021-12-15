@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "build": "parcel src/index.html src/*.html src/assets/*.jpg src/assets/*.png"
+    "build": "parcel src/index.html src/thankyou.html src/*.html src/assets/*.jpg src/assets/*.png"
   },
   "author": "",
   "license": "ISC",
