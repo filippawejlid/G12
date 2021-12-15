@@ -1,45 +1,68 @@
-/* The Modal (background) */
-.tyModal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.116); /* Fallback color */
-  // background-color: rgba(0, 0, 0, 0.1); /* Black w/ opacity */
+#thankyoubody {
+  background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920660235130142740/IMG_0735.png");
+  background-size: cover;
+  background-repeat: repeat;
+  @include tablets {
+    background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920659489290592306/IMG_0735.png");
+  }
+}
+#thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  /* Modal Content/Box */
-  .thanksContent {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    background-color: #fefefe;
-    margin: 22% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 5px;
-    width: 33%; /* Could be more or less, depending on screen size */
-  }
-  // .tyModCnt {
-  // 	// display: flex;
-  // 	// justify-content: center;
-  // 	// align-items: center;
-  // }
-  /* The Close Button */
-  .tySpanner {
+  .thankyouContainer {
+    margin-top: 100px;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-weight: bolder;
+    h3 {
+      position: relative;
+      color: #97ff7794;
+      height: 40px;
+      i {
+        z-index: 0;
+        position: absolute;
+        bottom: 16px;
+        left: -30px;
+      }
+    }
+    h2 {
+      color: white;
+    }
+    div {
+      width: 80%;
+      color: white;
+      text-align: center;
+
+      @include tablets {
+        width: 500px;
+      }
+    }
   }
-  .fa-check {
-    display: flex;
-    color: rgb(47, 189, 4);
-    font-size: 1.5rem;
-    margin-left: 5px;
+
+  .ordernumber {
+    color: white;
   }
+
+  #order {
+    background-color: white;
+    @include flexcolcen;
+    width: 90%;
+
+    @include tablets {
+      width: 600px;
+    }
+
+    .productContainer {
+      margin: 0;
+    }
+
+    margin-bottom: 20px;
+  }
+}
+#check {
+  color: #97ff7794;
+  font-size: 2rem;
 }

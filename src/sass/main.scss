@@ -1,9 +1,9 @@
 html,
 body {
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @import "./mixins";
@@ -13,8 +13,10 @@ body {
 @import "./productpages";
 @import "./footer";
 @import "./navbar";
-@import "./cart";
+@import "./modal";
+@import "./carts";
 @import "./checkout";
 @import "./thankyou";
-@import "./trashcan";
+@import "./addedModal";
+@import "./adjustments";
 @import "./countbadge";

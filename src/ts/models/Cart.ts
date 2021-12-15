@@ -1,4 +1,5 @@
 import { minusItem } from "../minusitem";
+// import { plus } from "../pmadjust";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
@@ -258,5 +259,78 @@ export class Cart {
     this.displayCart();
     itemCount();
   }
+
+	thankyouCart() {
+		this.cartItems =
+		JSON.parse(localStorage.getItem("cartItems")) || [];
+
+		let sumList: number[] = [];
+		let thankyou: HTMLDivElement = document.getElementById(
+			"order"
+		) as HTMLDivElement;
+
+		thankyou.innerHTML = " ";
+
+		
+		for (let i = 0; i < this.cartItems.length; i++) {
+			console.log("hallå? 2");
+
+			//Skapa alla element som produktens info ska ligga i
+
+			let productContainer: HTMLDivElement = document.createElement("div");
+			productContainer.className = "productContainer";
+
+			let imgContainer: HTMLDivElement = document.createElement("div");
+			imgContainer.className = "imgContainer";
+
+			let info: HTMLDivElement = document.createElement("div");
+			info.className = "info";
+
+			let emptyDiv: HTMLDivElement = document.createElement("div");
+
+			let productName: HTMLHeadingElement = document.createElement("h3");
+
+			let amountDiv: HTMLDivElement = document.createElement("div");
+			amountDiv.className = "class";
+			let amountspan: HTMLSpanElement = document.createElement("span");
+			amountspan.id = "amount" + i;
+
+			let priceDiv: HTMLDivElement = document.createElement("div");
+			priceDiv.id = "price" + i;
+			priceDiv.className = "price";
+			let priceSpan: HTMLSpanElement = document.createElement("span");
+
+			thankyou.appendChild(productContainer);
+			productContainer.appendChild(imgContainer);
+			productContainer.appendChild(info);
+			productContainer.appendChild(emptyDiv)
+
+			info.appendChild(productName);
+			info.appendChild(amountDiv);
+			info.appendChild(priceDiv);
+
+			amountDiv.appendChild(amountspan);
+
+			priceDiv.appendChild(priceSpan);
+
+			imgContainer.innerHTML = this.cartItems[i].Vacuum.imgsmall;
+			productName.innerHTML = this.cartItems[i].Vacuum.productName;
+			amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
+			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
+
+			sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
+			console.log("hallå? 3");
+		}
+
+		//Räkna ut total
+
+		let sum = sumList.reduce(function (a, b) {
+			return a + b;
+		}, 0);
+
+		// total.innerHTML = `${sum.toString()} kr`;
+
+		console.log(sum);
+	}
 }
 export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
