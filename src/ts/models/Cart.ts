@@ -289,19 +289,14 @@ export class Cart {
 		this.cartItems =
 		JSON.parse(localStorage.getItem("cartItems")) || [];
 
-		// let total: HTMLSpanElement = document.getElementById(
-		// 	"totalSpanCheckout"
-		// ) as HTMLSpanElement;
-		// total.className = "totalSpans";
-		// total.innerHTML = " ";
 		let sumList: number[] = [];
 		let thankyou: HTMLDivElement = document.getElementById(
 			"order"
 		) as HTMLDivElement;
+
 		thankyou.innerHTML = " ";
 
-		console.log("hallå? 1");
-
+		
 		for (let i = 0; i < this.cartItems.length; i++) {
 			console.log("hallå? 2");
 

@@ -1,14 +1,15 @@
+#thankyoubody {
+  background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920660235130142740/IMG_0735.png");
+  background-size: cover;
+  background-repeat: repeat;
+  @include tablets {
+    background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920659489290592306/IMG_0735.png");
+  }
+}
 #thankyou {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920660235130142740/IMG_0735.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include tablets {
-    background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920659489290592306/IMG_0735.png");
-    background-size: cover;
-  }
 
   .thankyouContainer {
     margin-top: 100px;
