@@ -1,10 +1,9 @@
 import { Cart } from "./models/Cart";
-let spanCnt = document.getElementById("cCnt");
 
 export function itemCount() {
   let cart = new Cart();
 
-  //let spanCnt = document.getElementById("cCnt");
+  let spanCnt = document.getElementById("cCnt");
   spanCnt.innerHTML = " ";
   let addedNo: number[] = [];
 
