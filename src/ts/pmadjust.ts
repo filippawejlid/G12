@@ -1,6 +1,7 @@
-import { Cart } from "./models/Cart";
+import { Cart, cartItems } from "./models/Cart";
 import { Vacuum } from "./models/Vacuum";
 import { Order } from "./models/Order";
+import { productinfo } from "./Productinfo";
 
 export function plus() {
 	let pBTn = document.getElementById("plusBtn");
@@ -18,6 +19,24 @@ export function plus() {
 	// });
 }
 
+// export function quant(product: Vacuum) {
+// 	let foundCart = new Cart();
+// 	let found: boolean = false;
+
+// 	for (let i = 0; i < this.foundCart.length; i++) {
+// 		if (foundCart.cartItems[ı].Vacuum.id == product.id) {
+// 			foundCart.cartItems[i].Amount++;
+
+// 			found = true;
+// 		}
+// 	}
+
+// 	if (!found) {
+// 		let newThing: Order = new Order(product, 1);
+// 		foundCart.cartItems.push(newThing);
+// 	}
+// }
+
 export function pmadjust() {
 	let cart = new Cart();
 	let qDiv = document.getElementById("plmiCnt");
@@ -27,18 +46,20 @@ export function pmadjust() {
 
 	for (let i = 0; i < cart.cartItems.length; i++) {
 		let spanPlusMinus = document.createElement("span");
-		spanPlusMinus.id = "plusMinusSpan";
 		spanPlusMinus.className = "plusMinusSpan";
+		// spanPlusMinus.id = "amount" + i;
+
 		spanPlusMinus.style.fontSize = "large";
 		spanPlusMinus.style.fontWeight = "bolder";
-		qNo.push(cart.cartItems[i].Amount);
+
 		qDiv.appendChild(spanPlusMinus);
-		spanPlusMinus.innerHTML = `${cart.cartItems[i].Amount.toString()}`;
+		spanPlusMinus.innerHTML = `${cart.cartItems[i].Amount}`;
+		qNo.push(cart.cartItems[i].Amount);
 	}
 
 	let qAdd = qNo.reduce(function (a, b) {
 		return a + b;
 	}, 0);
 
-	qDiv.innerHTML = `${qAdd.toString()}`;
+	qDiv.innerHTML == `${qAdd.toString()}`;
 }

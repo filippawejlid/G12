@@ -49,8 +49,6 @@ export let robotContainer: HTMLDivElement = document.getElementById(
 export function products() {
 	let cart = new Cart();
 	for (let i = 0; i < productInfo.length; i++) {
-
-
 		// productcontainer div som ska ligga innanför wirelesscontainer
 		let productContainer = document.createElement("div");
 		productContainer.className = "productcontainer";
@@ -100,7 +98,6 @@ export function products() {
 			thankYou();
 			itemCount();
 		}); //Här har jag lagt till eventlistener ta ej bort
-
 
 		//<span></span> innanför vacuuminfo
 		let vacuumInfoSpan = document.createElement("span");

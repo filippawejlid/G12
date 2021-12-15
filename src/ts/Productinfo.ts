@@ -8,7 +8,6 @@ import { Cart } from "./models/Cart";
 // GETELEMENTBYID
 
 export function productinfo(i: number) {
-	
 	let cart = new Cart();
 
 	// productinfocontainer diven ska appendas till den här
@@ -101,6 +100,4 @@ export function productinfo(i: number) {
 	btnContainer.appendChild(add);
 
 	sessionStorage.setItem("productInfo[i]", JSON.stringify(productInfo[i]));
-
-
 }

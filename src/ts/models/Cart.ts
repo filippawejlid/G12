@@ -1,4 +1,3 @@
-// import { cartItems } from "../addToCart";
 import { minusItem } from "../minusitem";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
@@ -30,14 +29,9 @@ export class Cart {
 			let newItem: Order = new Order(product, 1);
 
 			this.cartItems.push(newItem);
-
-			//console.log(this.cartItems);
 		}
 
-		//for (let i = 0; i < this.cartItems.length; i++) {
 		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
-		//console.log(this.cartItems);
-		//}
 	}
 
 	displayCart() {
@@ -55,11 +49,7 @@ export class Cart {
 
 		let sumList: number[] = [];
 
-		//console.log(this.cartItems);
-
 		for (let i = 0; i < this.cartItems.length; i++) {
-			//console.log("hallå? 2");
-
 			//Skapa alla element som produktens info ska ligga i
 
 			let productContainer: HTMLDivElement = document.createElement("div");
@@ -91,38 +81,26 @@ export class Cart {
 			});
 
 			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
+
 			let plusBtn: HTMLButtonElement = document.createElement(
 				"button"
 			) as HTMLButtonElement;
 			plusBtn.id = "plusBtn";
 			plusBtn.className = "plusBtn";
 			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
-			// plusBtn.type = "button";
+			plusBtn.type = "button";
 			plusBtn.addEventListener("click", () => {
-				// LA TILL FUNKTION FÖR PLUSKNAPPEN
 				plus();
 			});
 
-			let plusFa = document.createElement("i");
-			plusFa.className = "plus fa-plus-square";
-			// plus.innerHTML = "<i class='far fa-plus-square'></i>";
-			// plus.addEventListener("click", () => {
-			//   addmore();
-			// });
-
-			// spanPlusMinus.innerText = "100";
+			// let plusFa = document.createElement("i");
+			// plusFa.className = "plus fa-plus-square";
 
 			let plmiCnt: HTMLDivElement = document.createElement(
 				"div"
 			) as HTMLDivElement;
 			plmiCnt.id = "plmiCnt";
 			plmiCnt.className = "plmiCnt";
-
-			// let inputPlusMinus: HTMLInputElement = document.createElement("input");
-			// inputPlusMinus.id = "inpPlmi";
-			// inputPlusMinus.className = "inpPlmi";
-			// inputPlusMinus.innerHTML = "";
-			// inputPlusMinus.style.userSelect = "none";
 
 			let minusBtn: HTMLButtonElement = document.createElement(
 				"button"
@@ -132,20 +110,21 @@ export class Cart {
 			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
 			minusBtn.type = "button";
 
-			let minusFa = document.createElement("i");
-			minusFa.className = "minus fa-minus-square";
-			// minus.innerHTML = "<i class='far fa-minus-square'></i>";
+			// let minusFa = document.createElement("i");
+			// minusFa.className = "minus fa-minus-square";
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
 
 			let amountDiv: HTMLDivElement = document.createElement("div");
 			amountDiv.className = "class";
+
 			let amountspan: HTMLSpanElement = document.createElement("span");
 			amountspan.id = "amount" + i;
 
 			let priceDiv: HTMLDivElement = document.createElement("div");
 			priceDiv.id = "price" + i;
 			priceDiv.className = "price";
+
 			let priceSpan: HTMLSpanElement = document.createElement("span");
 
 			// checkout.appendChild(productContainer);
@@ -174,7 +153,7 @@ export class Cart {
 			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
 
 			sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
-			//console.log("hallå? 3");
+			pmadjust();
 		}
 
 		//Räkna ut total
@@ -203,11 +182,7 @@ export class Cart {
 		) as HTMLDivElement;
 		checkout.innerHTML = " ";
 
-		//console.log("hallå? 1");
-
 		for (let i = 0; i < this.cartItems.length; i++) {
-			//console.log("hallå? 2");
-
 			//Skapa alla element som produktens info ska ligga i
 
 			let productContainer: HTMLDivElement = document.createElement("div");
@@ -225,10 +200,6 @@ export class Cart {
 			trashCan.id = "trasher";
 			trashCan.className = "fa fa-trash";
 			trashCan.ariaHidden = "true";
-
-			// trashCan.addEventListener("click", () => {
-			// 	minusItem();
-			// });
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
 
@@ -263,7 +234,6 @@ export class Cart {
 			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
 
 			sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
-			// console.log("hallå? 3");
 		}
 
 		//Räkna ut total
@@ -286,6 +256,7 @@ export class Cart {
 		console.log(cartItems);
 
 		this.displayCart();
+		itemCount();
 	}
 }
 export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
