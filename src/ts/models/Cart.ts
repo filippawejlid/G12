@@ -5,6 +5,7 @@ import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
 import { itemCount } from "../itemcounter";
+//import { itemCount, removeSpanCnt } from "../itemcounter";
 
 export class Cart {
   cartItems: Order[];
@@ -225,9 +226,9 @@ export class Cart {
       trashCan.className = "fa fa-trash";
       trashCan.ariaHidden = "true";
 
-      trashCan.addEventListener("click", () => {
-        this.removeFromCart(i);
-      });
+      //   trashCan.addEventListener("click", () => {
+      //     this.removeFromCart(i);
+      //   });
 
       let plus = document.createElement("div");
       plus.className = "plus";
@@ -287,6 +288,9 @@ export class Cart {
     console.log("Du har tagit bort en produkt");
     console.log(cartItems);
     console.log(cartItems);
+    itemCount();
+
+    // removeSpanCnt();
 
     this.displayCart();
   }

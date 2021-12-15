@@ -1,4 +1,6 @@
-import { Cart } from "./models/Cart";
+import { Cart, cartItems } from "./models/Cart";
+
+//let spanCnt = document.getElementById("cCnt");
 
 export function itemCount() {
   let cart = new Cart();
@@ -19,6 +21,9 @@ export function itemCount() {
     addedNo.push(cart.cartItems[i].Amount);
     spanCnt.appendChild(spanCounter);
     spanCounter.innerText = `${cart.cartItems[i].Amount.toString()}`;
+    console.log(spanCounter);
+
+    console.log(cart.cartItems[i].Amount);
   }
 
   let totAdd = addedNo.reduce(function (a, b) {
@@ -27,3 +32,8 @@ export function itemCount() {
 
   spanCnt.innerText = `${totAdd.toString()}`;
 }
+
+// export function removeSpanCnt() {
+//   spanCnt.style.display = "none";
+//   console.log("Räknaren är borta");
+// }

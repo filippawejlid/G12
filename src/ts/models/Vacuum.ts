@@ -15,7 +15,6 @@ export class Vacuum {
   id: number;
   category: string;
 
-
   constructor(
     name: string,
     price: number,
@@ -31,8 +30,7 @@ export class Vacuum {
     readmorebtn: string,
     addtocartbtn: string,
     id: number,
-    category: string,
-
+    category: string
   ) {
     this.productName = name;
     this.price = price;
@@ -49,6 +47,5 @@ export class Vacuum {
     this.addtocartbtn = addtocartbtn;
     this.id = id;
     this.category = category;
-
   }
 }
