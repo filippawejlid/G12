@@ -47,6 +47,7 @@ export class Cart {
       "displayCartModal"
     ) as HTMLDivElement;
     modal.innerHTML = " ";
+    
 
     let sumList: number[] = [];
 
