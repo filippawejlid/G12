@@ -118,9 +118,6 @@ describe ("webshop test", () => {
     // });
 
 
-    //For unfinished functions
-
-
     it("it should subtract from amount", () => {
         
         cy.visit("http://localhost:1234");
@@ -133,9 +130,9 @@ describe ("webshop test", () => {
 
         cy.get("#amount0").should("have.html", "Antal: 2")
 
-        cy.get("#minusBtn0").click();
+        cy.get(".minusBtn").click();
 
-        cy.get("#amount0").should("have.html", "1")
+        cy.get("#amount0").should("have.html", "Antal: 1")
         
     });
 
@@ -149,9 +146,9 @@ describe ("webshop test", () => {
 
         cy.get("#amount0").should("have.html", "Antal: 1")
 
-        cy.get("#plusBtn").click();
+        cy.get(".plusBtn").click();
 
-        cy.get("#amount0").should("have.html", "2")
+        cy.get("#amount0").should("have.html", "Antal: 2")
         
     });
 });
