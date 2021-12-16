@@ -73,15 +73,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-<<<<<<< HEAD
-  background-color: #c5d0d41a;
-=======
   background-color: #f5f5f5;
->>>>>>> feature-branch/images
 }
 #productmaincontainer #productcontentcontainer {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 40px;
 }
@@ -92,9 +89,11 @@ body {
 }
 #productmaincontainer #choosecategorybtn {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 1rem;
+  border: 1px solid red;
+  gap: 20px;
 }
 #productmaincontainer #choosecategorybtn a {
   width: 33%;
@@ -109,8 +108,7 @@ body {
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  gap: 5px;
-  width: 100%;
+  gap: 10px;
 }
 #productmaincontainer #choosecategorybtn #btncategoryone,
 #productmaincontainer #choosecategorybtn #btncategorytwo,
@@ -123,17 +121,13 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
-  background-color: #2595be1a;
+  gap: 10px;
 }
-#productmaincontainer #choosecategorybtn :hover {
-  box-shadow: 1px 1px 1px #2595be86;
-}
-#productmaincontainer #wireless,
-#productmaincontainer #powerfull,
-#productmaincontainer #robot {
+#wireless,
+#powerfull,
+#robot {
   text-align: center;
-  margin-top: 200px;
+  margin: 100px 0px 50px 0px;
   width: 100vw;
   padding: 10px;
   width: 80%;
@@ -141,89 +135,56 @@ body {
   border-radius: 2px;
   color: white;
 }
-#productmaincontainer #wirelesscontainer,
-#productmaincontainer #powerfullcontainer,
-#productmaincontainer #robotcontainer {
+.productflexwrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  width: 100%;
 }
-#productmaincontainer .productcontainer {
+#wirelesscontainer,
+#powerfullcontainer,
+#robotcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.productcontainer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.205);
   border-radius: 5px;
   padding: 10px;
   background-color: white;
   gap: 10px;
-<<<<<<< HEAD
-  align-items: center;
-=======
-  width: 40%;
->>>>>>> feature-branch/images
+  height: 80vh;
 }
-#productmaincontainer .imgcontainer {
+.imgcontainer {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  width: 200px;
-  height: 250px;
 }
-#productmaincontainer .imgcontainer img {
-  width: 100%;
+.imgcontainer > img {
   display: flex;
   justify-content: center;
 }
-#productmaincontainer .vacuumheader {
+.vacuumheader {
   font-size: 1rem;
   align-self: baseline;
-  padding: 10px;
   color: #2595be;
-}
-#productmaincontainer .vacuuminfo {
-  display: flex;
-  padding: 10px;
-}
-#productmaincontainer .price {
-  padding: 10px;
-}
-#productmaincontainer .productbtns {
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
-  gap: 2px;
-}
-#productmaincontainer .productbtns > button {
-  padding: 8px;
-  width: 100%;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-#productmaincontainer .productbtns > button:nth-child(2) {
-  background-color: #2596be;
-  border: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#productmaincontainer .productbtns > button:nth-child(1) {
-  background-color: #2595be86;
-  border: none;
-}
-#productmaincontainer .productbtns .fa-info-circle,
-#productmaincontainer .productbtns .fa-cart-plus {
-  font-size: 0.8rem;
-  margin-left: 10px;
-}
-#productmaincontainer .productbtns > button:hover {
-  box-shadow: 2px 2px 2px #2595be86;
 }
 /* The Modal (background) */
+@media screen and (min-width: 768px) {
+  .productcontainer {
+    width: 33% !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -259,13 +220,6 @@ body {
   height: 50%;
   border-radius: 5px;
 }
-.productimghero h1 {
-  color: #2596be;
-  font-size: 1rem;
-  padding: 20px;
-  margin-top: 10%;
-  font-weight: 900;
-}
 .h1nfopage1 {
   margin-top: 10px;
   padding-left: 10px;
@@ -284,11 +238,6 @@ body {
 .container {
   display: flex;
   margin: 20px;
-}
-h1 {
-  margin-bottom: 10px;
-  color: #2596be;
-  font-size: 1rem;
 }
 .container {
   display: flex;
@@ -314,13 +263,6 @@ h1 {
   gap: 10px;
   margin-bottom: 30px;
 }
-.btncontainer button {
-  border: none;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .btncontainer .addtocart {
   background-color: #2596be;
   color: white;
@@ -328,10 +270,6 @@ h1 {
 .btncontainer .back {
   background-color: #d1e7ff;
   color: #165b74;
-}
-.btncontainer > button:hover {
-  box-shadow: 2px 2px 2px #2595be86;
-  border: 1px solid rgba(0, 0, 0, 0.418);
 }
 #footer {
   z-index: -1;
@@ -446,7 +384,6 @@ h1 {
   opacity: 0.7;
 }
 #navet {
-  z-index: 1000;
   position: fixed;
   width: 100vw;
 }
@@ -488,7 +425,6 @@ h1 {
   position: relative;
   float: left;
   cursor: pointer;
-  order: -1;
 }
 #navet .header .menu-icon .nav-icon {
   background: #2595be;
@@ -543,10 +479,10 @@ h1 {
   padding-top: 10px;
 }
 #navet .logo {
+  position: absolute;
+  right: 25%;
+  top: 5px;
   height: 40px;
-  margin-top: 5px;
-  margin-left: 12%;
-  padding-left: 10px;
 }
 #navet .basketcnt {
   display: flex;
