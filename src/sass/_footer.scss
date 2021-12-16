@@ -1,115 +1,116 @@
 #footer {
-  z-index: -1;
-  footer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	z-index: -1;
+	footer {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 
-    p {
-      color: white;
-    }
-    background-color: black;
+		p {
+			color: white;
+		}
+		background-color: black;
 
-    .footerInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 50px;
+		.footerInfo {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+			margin: 50px;
 
-      @include tablets {
-        flex-direction: row;
-        margin: 70px;
-      }
+			@include tablets {
+				flex-direction: row;
+				margin: 70px;
+			}
 
-      @include desktop {
-        margin: 100px;
-      }
+			@include desktop {
+				margin: 100px;
+			}
 
-      .about,
-      .contact,
-      .services {
-        margin: 10px;
-        a {
-          text-decoration: none;
-          color: white;
-          opacity: 0.9;
-          font-size: 1rem;
+			.about,
+			.contact,
+			.services {
+				margin: 10px;
+				a {
+					text-decoration: none;
+					color: white;
+					opacity: 0.9;
+					font-size: 1rem;
 
-          &:hover {
-            opacity: 0.7;
-          }
-        }
+					&:hover {
+						opacity: 0.7;
+					}
+				}
 
-        @include tablets {
-          width: 25%;
-        }
-      }
-    }
+				@include tablets {
+					width: 25%;
+				}
+			}
+		}
 
-    .socialmedia {
-      width: 80%;
-      display: flex;
-      justify-content: space-evenly;
-      margin: 20px;
+		.socialmedia {
+			width: 80%;
+			display: flex;
+			justify-content: space-evenly;
+			margin: 20px;
 
-      @include tablets {
-        margin-bottom: 40px;
-      }
+			@include tablets {
+				margin-bottom: 40px;
+			}
 
-      .fa {
-        padding: 5px;
-        font-size: 20px;
-        width: 30px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        opacity: 0.6;
+			.fa {
+				padding: 5px;
+				font-size: 20px;
+				width: 30px;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 5px;
+				opacity: 0.6;
 
-        &:hover {
-          opacity: 0.8;
-          transition: 0.2s;
-        }
-      }
+				&:hover {
+					opacity: 0.8;
+					transition: 0.2s;
+				}
+			}
 
-      .fa-facebook {
-        background: #3b5998;
-        color: white;
-      }
+			.fa-facebook {
+				background: #3b5998;
+				color: white;
+			}
 
-      .fa-twitter {
-        background: #55acee;
-        color: white;
-      }
+			.fa-twitter {
+				background: #55acee;
+				color: white;
+			}
 
-      .fa-instagram {
-        color: #fff;
-        background: #d6249f;
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-      }
-    }
+			.fa-instagram {
+				color: #fff;
+				background: #d6249f;
+				background: radial-gradient(
+					circle at 30% 107%,
+					#fdf497 0%,
+					#fdf497 5%,
+					#fd5949 45%,
+					#d6249f 60%,
+					#285aeb 90%
+				);
+			}
+		}
 
-    .imgContainerFooter {
-      position: absolute;
-      width: 30%;
-      bottom: 150px;
-      right: 0;
+		.imgContainerFooter {
+			position: absolute;
+			width: 30%;
+			bottom: 150px;
+			right: 0;
 
-      @include tablets {
-        width: 15%;
-        bottom: 0;
-      }
-      img {
-        width: 100%;
-        opacity: 0.7;
-      }
-    }
-  }
+			@include tablets {
+				width: 15%;
+				bottom: 0;
+			}
+			img {
+				width: 100%;
+				opacity: 0.7;
+			}
+		}
+	}
 }

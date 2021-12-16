@@ -433,6 +433,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
   margin: 50px;
 }
 @media (min-width: 768px) {
@@ -456,11 +457,8 @@ body {
 #footer footer .footerInfo .services a {
   text-decoration: none;
   color: white;
-<<<<<<< HEAD
   opacity: 0.9;
   font-size: 1rem;
-=======
->>>>>>> feature-branch/hotfixes
 }
 #footer footer .footerInfo .about a:hover,
 #footer footer .footerInfo .contact a:hover,
@@ -530,7 +528,6 @@ body {
 #navet {
   position: fixed;
   width: 100vw;
-  z-index: 1;
 }
 #navet a {
   color: #5f5f5f;
@@ -635,13 +632,8 @@ body {
   justify-content: center;
   vertical-align: center;
   font-family: "Abril Fatface", cursive;
-<<<<<<< HEAD
-  font-size: 2rem;
-  color: #424344;
-=======
   font-size: 1.7rem;
   color: #df5757;
->>>>>>> feature-branch/hotfixes
 }
 #navet .basketcnt {
   display: flex;
@@ -690,27 +682,21 @@ body {
   #navet .header li a {
     height: 45px;
     margin: 0;
-<<<<<<< HEAD
-    padding-top: 15px;
-=======
     margin-top: 10px;
->>>>>>> feature-branch/hotfixes
     padding-right: 30px;
   }
   #navet .sucklogo {
     margin-top: -5px;
     margin-left: 15px;
-<<<<<<< HEAD
-=======
     font-size: 2rem;
     padding: 0;
->>>>>>> feature-branch/hotfixes
   }
   #navet .hem {
-    padding-top: 15px;
     margin: 0;
+    margin-top: 14px;
     border-top: none;
     padding-right: 15px;
+    padding-top: 0;
   }
   #navet .btnCartFa {
     margin-left: 5px;
