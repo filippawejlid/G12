@@ -131,15 +131,8 @@ export function products() {
 }
 
 export function showImages() {
-	let header: HTMLHeadingElement = document.querySelector(
-		"header"
-	) as HTMLHeadingElement;
-
 	for (let i = 0; i < imgFrontPage.length; i++) {
 		// LOGGAN
-
-		let imgTag = document.createElement("div");
-		imgTag.innerHTML = imgFrontPage[i].logo;
 
 		// SLADDLÖS BILD
 
@@ -199,7 +192,6 @@ export function showImages() {
 		vacuumFooter.innerHTML = imgFrontPage[i].imgContainerFooter;
 
 		// appendChild
-		// header.appendChild(imgTag);
 		btnCategoryOne.appendChild(wirelessImg);
 		btnCategoryTwo.appendChild(powerfullImg);
 		btnCategoryThree.appendChild(robotImg);

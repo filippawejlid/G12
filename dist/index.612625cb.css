@@ -459,7 +459,6 @@ body {
 #footer footer .footerInfo .services a {
   text-decoration: none;
   color: white;
-  opacity: 0.9;
 }
 #footer footer .footerInfo .about a:hover,
 #footer footer .footerInfo .contact a:hover,
@@ -531,11 +530,18 @@ body {
   width: 100vw;
 }
 #navet a {
-  color: #2595be;
-  font-size: bolder;
+  color: #5f5f5f;
+  font-weight: bolder;
+}
+#navet .alogo {
+  text-decoration: none;
+  cursor: pointer;
+}
+#navet .alogo:hover {
+  text-decoration: none;
 }
 #navet a:hover {
-  color: #175d77;
+  color: #505050;
 }
 #navet .header {
   background-color: rgba(255, 255, 255, 0.897);
@@ -570,7 +576,7 @@ body {
   cursor: pointer;
 }
 #navet .header .menu-icon .nav-icon {
-  background: #2595be;
+  background: #43a5c9;
   display: block;
   height: 5px;
   width: 30px;
@@ -579,7 +585,7 @@ body {
   transition: background 0.2s ease-out;
 }
 #navet .header .menu-icon .nav-icon:before {
-  background: #2595be;
+  background: #43a5c9;
   content: "";
   display: block;
   height: 100%;
@@ -590,7 +596,7 @@ body {
   top: 10px;
 }
 #navet .header .menu-icon .nav-icon:after {
-  background: #2595be;
+  background: #43a5c9;
   content: "";
   display: block;
   height: 100%;
@@ -627,7 +633,7 @@ body {
   vertical-align: center;
   font-family: "Abril Fatface", cursive;
   font-size: 1.7rem;
-  color: #2b2c2c;
+  color: #df5757;
 }
 #navet .basketcnt {
   display: flex;
@@ -656,16 +662,19 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #2595be;
-  filter: drop-shadow(0px 0.2px 0.5px rgba(36, 65, 99, 0.514));
+  color: #43a5c9;
+  filter: drop-shadow(0px 0.2px 0.2px rgba(36, 65, 99, 0.514));
   text-decoration: none;
 }
 #navet .fa-shopping-basket:hover {
-  color: #207ea0;
+  color: #1e6883;
 }
 @media (min-width: 1060px) {
   #navet li:hover {
     text-decoration: underline;
+  }
+  #navet .header {
+    max-height: 50px;
   }
   #navet .header li {
     float: left;
@@ -673,12 +682,14 @@ body {
   #navet .header li a {
     height: 45px;
     margin: 0;
-    margin-top: 14px;
+    margin-top: 10px;
     padding-right: 30px;
   }
   #navet .sucklogo {
+    margin-top: -5px;
     margin-left: 15px;
     font-size: 2rem;
+    padding: 0;
   }
   #navet .hem {
     margin: 0;

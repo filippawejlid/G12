@@ -3,12 +3,21 @@
 	width: 100vw;
 
 	a {
-		color: #2595be;
-		font-size: bolder;
+		color: rgb(95, 95, 95);
+		font-weight: bolder;
+	}
+
+	.alogo {
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.alogo:hover {
+		text-decoration: none;
 	}
 
 	a:hover {
-		color: #175d77;
+		color: #505050;
 	}
 
 	.header {
@@ -49,7 +58,7 @@
 	}
 
 	.header .menu-icon .nav-icon {
-		background: #2595be;
+		background: #43a5c9;
 		display: block;
 		height: 5px;
 		width: 30px;
@@ -59,7 +68,7 @@
 	}
 
 	.header .menu-icon .nav-icon:before {
-		background: #2595be;
+		background: #43a5c9;
 		content: "";
 		display: block;
 		height: 100%;
@@ -71,7 +80,7 @@
 	}
 
 	.header .menu-icon .nav-icon:after {
-		background: #2595be;
+		background: #43a5c9;
 		content: "";
 		display: block;
 		height: 100%;
@@ -115,7 +124,7 @@
 		vertical-align: center;
 		font-family: $logo-font;
 		font-size: 1.7rem;
-		color: rgb(43, 44, 44);
+		color: #df5757;
 	}
 
 	.basketcnt {
@@ -136,6 +145,7 @@
 		margin-right: 20px;
 		padding: 0;
 	}
+
 	.btnCartFa:hover,
 	.btnCartFa:focus {
 		cursor: pointer;
@@ -147,17 +157,20 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		color: #2595be;
-		filter: drop-shadow(0px 0.2px 0.5px rgba(36, 65, 99, 0.514));
+		color: #43a5c9;
+		filter: drop-shadow(0px 0.2px 0.2px rgba(36, 65, 99, 0.514));
 		text-decoration: none;
 	}
 	.fa-shopping-basket:hover {
-		color: #207ea0;
+		color: #1e6883;
 	}
 
 	@include desktop {
 		li:hover {
 			text-decoration: underline;
+		}
+		.header {
+			max-height: 50px;
 		}
 		.header li {
 			float: left;
@@ -166,13 +179,15 @@
 			height: 45px;
 			margin: 0;
 			// padding-top: 15px;
-			margin-top: 14px;
+			margin-top: 10px;
 			padding-right: 30px;
 		}
 
 		.sucklogo {
+			margin-top: -5px;
 			margin-left: 15px;
 			font-size: 2rem;
+			padding: 0;
 		}
 
 		.hem {
@@ -197,4 +212,3 @@
 		}
 	}
 }
-// QUERIES
