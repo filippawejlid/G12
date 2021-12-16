@@ -1,18 +1,31 @@
 #thankyoubody {
-  background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920660235130142740/IMG_0735.png");
+  background-image: url("https://cdn.discordapp.com/attachments/727125952458522644/921121903433891850/IMG_0757.png");
   background-size: cover;
   background-repeat: repeat;
   @include tablets {
-    background-image: url("https://cdn.discordapp.com/attachments/915169414175936523/920659489290592306/IMG_0735.png");
+    background-image: url("https://cdn.discordapp.com/attachments/727125952458522644/921121212296495184/IMG_0757.png");
+  }
+
+  a {
+    text-decoration: none;
+
+    .backHome {
+      color: rgba(231, 226, 226, 0.5);
+      font-family: $logo-font;
+      width: 100%;
+      text-align: end;
+      text-decoration: none;
+    }
   }
 }
+
 #thankyou {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .thankyouContainer {
-    margin-top: 100px;
+    margin-top: 80px;
 
     display: flex;
     flex-direction: column;
