@@ -167,9 +167,6 @@ export class Cart {
   }
 
 	checkoutCart() {
-		// this.cartItems =
-		// JSON.parse(localStorage.getItem("cartItems")) || [];
-
 		let total: HTMLSpanElement = document.getElementById(
 			"totalSpanCheckout"
 		) as HTMLSpanElement;
