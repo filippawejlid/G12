@@ -121,37 +121,37 @@ describe ("webshop test", () => {
     //For unfinished functions
 
 
-    // it("it should subtract from amount", () => {
+    it("it should subtract from amount", () => {
         
-    //     cy.visit("http://localhost:1234");
+        cy.visit("http://localhost:1234");
 
-    //     cy.get("#addtocart11").click();
+        cy.get("#addtocart11").click();
         
-    //     cy.get("#addtocart11").click();
+        cy.get("#addtocart11").click();
 
-    //     cy.get("#btnCart").click();
+        cy.get("#btnCart").click();
 
-    //     cy.get("#amount0").should("have.html", "Antal: 2")
+        cy.get("#amount0").should("have.html", "Antal: 2")
 
-    //     cy.get("#subtractbutton").click();
+        cy.get("#minusBtn0").click();
 
-    //     cy.get("#amount0").should("have.html", "1")
+        cy.get("#amount0").should("have.html", "1")
         
-    // });
+    });
 
-    // it("it should add to amount", () => {
+    it("it should add to amount", () => {
         
-    //     cy.visit("http://localhost:1234");
+        cy.visit("http://localhost:1234");
 
-    //     cy.get("#addtocart11").click();
+        cy.get("#addtocart11").click();
         
-    //     cy.get("#btnCart").click();
+        cy.get("#btnCart").click();
 
-    //     cy.get("#amount0").should("have.html", "Antal: 1")
+        cy.get("#amount0").should("have.html", "Antal: 1")
 
-    //     cy.get("#addbutton").click();
+        cy.get("#plusBtn").click();
 
-    //     cy.get("#amount0").should("have.html", "2")
+        cy.get("#amount0").should("have.html", "2")
         
-    // });
-})
+    });
+});

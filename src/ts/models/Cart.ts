@@ -213,7 +213,7 @@ export class Cart {
 			let plusBtn: HTMLButtonElement = document.createElement(
 				"button"
 			) as HTMLButtonElement;
-			plusBtn.id = "plusBtn";
+			plusBtn.id = "plusBtn" + i;
 			plusBtn.className = "plusBtn";
 			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
 			plusBtn.type = "button";
@@ -224,7 +224,7 @@ export class Cart {
 			let plmiCnt: HTMLDivElement = document.createElement(
 				"div"
 			) as HTMLDivElement;
-			plmiCnt.id = "plmiCnt";
+			plmiCnt.id = "plmiCnt" + i;
 			plmiCnt.className = "theClass";
 
 			let spanpm = document.createElement("span");
@@ -234,7 +234,7 @@ export class Cart {
 			let minusBtn: HTMLButtonElement = document.createElement(
 				"button"
 			) as HTMLButtonElement;
-			minusBtn.id = "minusBtn";
+			minusBtn.id = "minusBtn" + i;
 			minusBtn.className = "minusBtn";
 			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
 			minusBtn.type = "button";
