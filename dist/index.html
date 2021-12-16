@@ -1,120 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/index.58ba51d9.js" defer=""></script>
-    <link rel="stylesheet" href="/index.612625cb.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/4bc016b404.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.612625cb.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/4bc016b404.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body id="body">
-
     <section id="navet">
-
       <header class="header">
         <span class="sucklogo">SUCK´IT</span>
-          <div class="basketcnt">
-            <div class="counter-container" id="cCnt"></div>
-              <button id="btnCart" type="button" class="btnCartFa">
-                <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
-              </button> 
-          </div>
-            <input class="menu-btn" type="checkbox" id="menu-btn">
-            <label class="menu-icon" for="menu-btn">
-              <span class="nav-icon"></span>
-            </label>
-            <ul class="menu">
-              <li><a href="#hero" class="hem">Hem</a></li>
-              <li><a href="#products">Produkter</a></li>
-              <li><a href="#footer" class="kontakt">Kontakt</a></li>
-            </ul>
-            
-          </header>
-          
-    </section>
-
-      <section id="hero" class="hero">
-        <div></div>
-        <div class="welcomeBox">
-          <div class="welcomeBoxText">
-            <h2>SUCK´IT</h2>
-            <p>Köp din dammsugare redan idag!</p>
-            <p>
-              Här på SUCK´IT optimerar vi din DYSON-damssugare
-              till att suga på den högsta nivån någonsin.
-            </p>
-            <p>
-              Bättre sug på suga med din dammsugare får du inte.
-            </p>
-              
-            
-            <a href="#products">Börja shoppa!</a>
+        <div class="basketcnt">
+          <div class="counter-container" id="cCnt"></div>
+          <button id="btnCart" type="button" class="btnCartFa">
+            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn">
+          <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+          <li><a href="#hero" class="hem">Hem</a></li>
+          <li><a href="#products">Produkter</a></li>
+          <li><a href="#footer" class="kontakt">Kontakt</a></li>
+        </ul>
+      </header>
+      <div id="myModal" class="modal">
+        <div class="modcnt">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="displayCartModal" class="theFrame">
+              <h2 class="headingcart">Varukorg</h2>
+            </div>
+            <div class="totalSpans">
+              <span>Total summa: </span>
+              <span id="totalSpan"></span>
+            </div>
+            <div class="btnsDiv">
+              <button id="btnHandla" class="btHandla">Fortsätt Handla</button>
+              <button id="btnKassa" class="btKassa"
+                ><a id="checkoutTag" href="/checkout.html">
+                  Till Kassa</a
+                ></button
+              >
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="hero" class="hero">
+      <div></div>
+      <div class="welcomeBox">
+        <div class="welcomeBoxText">
+          <h2>SUCK´IT</h2>
+          <p>Köp din dammsugare redan idag!</p>
+          <p>
+            Här på SUCK´IT optimerar vi din DYSON-damssugare till att suga på
+            den högsta nivån någonsin.
+          </p>
+          <p> Bättre sug på suga med din dammsugare får du inte. </p>
+
+          <a href="#products">Börja shoppa!</a>
+        </div>
+      </div>
     </section>
 
     <!-- <div class="overlay"></div> -->
     <section id="products">
-  
       <div id="productmaincontainer">
         <div id="productcontentcontainer">
           <h2 id="categoryheader">Vilken dammsugare är du ute efter?</h2>
-          
+
           <!-- Kategoriknappar -->
           <div id="choosecategorybtn">
-            <a href="#wireless"><button id="btncategoryone">Sladdlös
-
-            </button></a>
-            <a href="#powerfull"><button id="btncategorytwo">Kraftfull
-
-            </button></a>
-            <a href="#robot"><button id="btncategorythree">Robot
-            </button></a>
+            <a href="#wireless"
+              ><button id="btncategoryone">Sladdlös </button></a
+            >
+            <a href="#powerfull"
+              ><button id="btncategorytwo">Kraftfull </button></a
+            >
+            <a href="#robot"><button id="btncategorythree">Robot </button></a>
           </div>
           <h1 id="wireless">Sladdlösa dammsugare</h1>
-         
+
           <div class="productflexwrap">
-            
-
-
-  
-          <!-- Kategori sladdlös -->
+            <!-- Kategori sladdlös -->
             <div id="wirelesscontainer"></div>
           </div>
           <h1 id="powerfull">Kraftfulla dammsugare</h1>
-        <div class="productflexwrap">
-            
-          <!-- Kategori kraftfull -->
-          <div id="powerfullcontainer"></div>
-        </div>
+          <div class="productflexwrap">
+            <!-- Kategori kraftfull -->
+            <div id="powerfullcontainer"></div>
+          </div>
           <h1 id="robot">Robotdammsugare</h1>
-      <div class="productflexwrap">
-            
-          <!-- Kategori robot -->
-          <div id="robotcontainer"></div>
+          <div class="productflexwrap">
+            <!-- Kategori robot -->
+            <div id="robotcontainer"></div>
+          </div>
+        </div>
       </div>
-   
-  </div>
-
-
- </div> 
-
-   
     </section>
-    
 
     <section id="footer">
-
       <footer>
-
         <div class="footerInfo">
-
           <div class="about">
             <p>Vilka är vi?</p>
-            <p>Ett litet familjeföretag med fokus på dammsugare av högsta kvalitet.</p>
+            <p
+              >Ett litet familjeföretag med fokus på dammsugare av högsta
+              kvalitet.</p
+            >
             <p>Hittar du inte din dammsugare här, finns den inte.</p>
           </div>
 
@@ -127,11 +134,16 @@
 
           <div class="services">
             <p>Våra dammsugare:</p>
-            <p><a class="cha" id="wirelessfooter" href="#wireless">Sladdlösa</a> </p>
-            <p><a class="cha" id="powerfullfooter" href="#powerfull">Kraftfulla</a></p>
+            <p
+              ><a class="cha" id="wirelessfooter" href="#wireless">Sladdlösa</a>
+            </p>
+            <p
+              ><a class="cha" id="powerfullfooter" href="#powerfull"
+                >Kraftfulla</a
+              ></p
+            >
             <p><a class="cha" id="robotfooter" href="#robot">Robot</a></p>
           </div>
-
         </div>
 
         <div class="socialmedia">
@@ -143,27 +155,7 @@
         <div class="imgContainerFooter">
           <!-- <img src="assets/theonefooter.jpg" alt="Bild av tecknad dammsugare"> -->
         </div>
-
-
       </footer>
     </section>
-    <div id="myModal" class="modal">
-                <div class="modcnt">
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                      <div id="displayCartModal" class="theFrame">
-                        <h2 class="headingcart">Varukorg</h2>
-                      </div>
-                      <div class="totalSpans">
-                        <span>Total summa: </span>
-                        <span id="totalSpan"></span>
-                      </div>
-                      <div class="btnsDiv">
-                        <button id="btnHandla" class="btHandla">Fortsätt Handla</button>
-                        <button id="btnKassa" class="btKassa"><a id="checkoutTag" href="/checkout.html"> Till Kassa</a></button>
-                      </div>
-                    </div>
-                  </div> 
-            </div>
   </body>
 </html>
