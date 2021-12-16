@@ -1,4 +1,4 @@
-import { Cart } from "./models/Cart";
+import { Cart } from "../models/Cart";
 
 export function itemCount() {
   let cart = new Cart();

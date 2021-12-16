@@ -20,6 +20,3 @@ export function form() {
 
   });
 }
-
-//window.location.replace("landingpage.html");
-//window.location.href="http://localhost:1234/checkout.html?"; 

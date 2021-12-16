@@ -1,9 +1,7 @@
-// import { addToCart } from "./addToCart";
 import { productInfo } from "./Products";
-// import { cartItems } from "./addToCart";
 import { thankYou } from "./addedModal";
 import { itemCount } from "./itemcounter";
-import { Cart } from "./models/Cart";
+import { Cart } from "../models/Cart";
 
 // GETELEMENTBYID
 

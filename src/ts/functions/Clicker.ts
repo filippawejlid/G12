@@ -1,7 +1,7 @@
 // import { cartItems } from "./addToCart";
 // import { displayCart } from "./displayCart";
 
-import { Cart } from "./models/Cart";
+import { Cart } from "../models/Cart";
 
 export function clicker() {
   let cart = new Cart();

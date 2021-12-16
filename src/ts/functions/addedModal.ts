@@ -1,4 +1,3 @@
-import { clicker } from "./Clicker";
 
 export function thankYou() {
   let tyModal: HTMLDivElement = document.createElement("div") as HTMLDivElement;

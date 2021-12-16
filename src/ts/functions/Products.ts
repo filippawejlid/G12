@@ -1,7 +1,5 @@
-import { Order } from "./models/Order";
-// import { addToCart } from "./addToCart"
 import { thankYou } from "./addedModal";
-import { Vacuum } from "./models/Vacuum";
+import { Vacuum } from "../models/Vacuum";
 import { itemCount } from "./itemcounter";
 import {
 	w1,
@@ -16,9 +14,9 @@ import {
 	r2,
 	r3,
 	r4,
-} from "./models/Vacuumobjects";
+} from "../models/Vacuumobjects";
 import { productinfo } from "./Productinfo";
-import { Cart } from "./models/Cart";
+import { Cart } from "../models/Cart";
 
 export let productInfo: Vacuum[] = [
 	w1,
