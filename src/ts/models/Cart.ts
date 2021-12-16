@@ -36,7 +36,7 @@ export class Cart {
 		let total: HTMLSpanElement = document.getElementById(
 			"totalSpan"
 		) as HTMLSpanElement;
-		total.className = "totalSpans";
+		// total.className = "totalSpans";
 		total.innerHTML = " ";
 		let modal: HTMLDivElement = document.getElementById(
 			"displayCartModal"
@@ -50,6 +50,7 @@ export class Cart {
 
 			let productContainer: HTMLDivElement = document.createElement("div");
 			productContainer.className = "productContainer";
+			productContainer.id = "productContainer" + i;
 
 			let imgContainer: HTMLDivElement = document.createElement("div");
 			imgContainer.className = "imgContainer";
@@ -67,33 +68,30 @@ export class Cart {
 			trashCan.ariaHidden = "true";
 
 			let trashBtn: HTMLButtonElement = document.createElement("button");
-			trashBtn.id = "trashBtn";
 			trashBtn.className = "trashBtn";
 			trashBtn.type = "button";
 			trashBtn.innerHTML = "<i class ='fa fa-trash'></i>";
 
 			trashBtn.addEventListener("click", () => {
 				this.removeFromCart(i);
-
+				this.displayCart();
 			});
 
 			let plusBtn: HTMLButtonElement = document.createElement(
 				"button"
 			) as HTMLButtonElement;
-			plusBtn.id = "plusBtn";
 			plusBtn.className = "plusBtn";
 			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
 			plusBtn.type = "button";
 			plusBtn.addEventListener("click", () => {
 				console.log(this.cartItems[i].Amount);
         this.plus(this.cartItems[i]);
-				console.log(this.cartItems[i].Amount);
+		this.displayCart();
 			});
 
 			let plmiCnt: HTMLDivElement = document.createElement(
 				"div"
 			) as HTMLDivElement;
-			plmiCnt.id = "plmiCnt";
 			plmiCnt.className = "theClass";
 
 			let spanpm = document.createElement("span");
@@ -103,13 +101,13 @@ export class Cart {
 			let minusBtn: HTMLButtonElement = document.createElement(
 				"button"
 			) as HTMLButtonElement;
-			minusBtn.id = "minusBtn";
 			minusBtn.className = "minusBtn";
 			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
 			minusBtn.type = "button";
 			minusBtn.addEventListener("click", () => {
 				console.log("clickety clack");
         this.minus(i);
+		this.displayCart();
 			});
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
@@ -132,7 +130,6 @@ export class Cart {
 			productContainer.appendChild(info);
 			productContainer.appendChild(adjustments);
 
-			// adjustments.appendChild(trashCan);
 			adjustments.appendChild(plusBtn);
 			adjustments.appendChild(plmiCnt);
 			plmiCnt.appendChild(spanpm);
@@ -162,11 +159,14 @@ export class Cart {
 		}, 0);
 
 		total.innerHTML = `${sum.toString()} kr`;
-    itemCount();
+  	    itemCount();
 
   }
 
 	checkoutCart() {
+
+		this.cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
 		let total: HTMLSpanElement = document.getElementById(
 			"totalSpanCheckout"
 		) as HTMLSpanElement;
@@ -179,6 +179,7 @@ export class Cart {
 		checkout.innerHTML = " ";
 
 		for (let i = 0; i < this.cartItems.length; i++) {
+
 			//Skapa alla element som produktens info ska ligga i
 
 			let productContainer: HTMLDivElement = document.createElement("div");
@@ -207,6 +208,7 @@ export class Cart {
 
 			trashBtn.addEventListener("click", () => {
 				this.removeFromCart(i);
+				this.checkoutCart();
 
 			});
 
@@ -218,7 +220,8 @@ export class Cart {
 			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
 			plusBtn.type = "button";
 			plusBtn.addEventListener("click", () => {
-        this.plus(this.cartItems[i]);
+      	  		  this.plus(this.cartItems[i]);
+					  this.checkoutCart();
 			});
 
 			let plmiCnt: HTMLDivElement = document.createElement(
@@ -240,7 +243,9 @@ export class Cart {
 			minusBtn.type = "button";
 			minusBtn.addEventListener("click", () => {
 				console.log("clickety clack");
-        this.minus(i);
+           	    this.minus(i);
+				   this.checkoutCart();
+
 			});
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
@@ -292,7 +297,7 @@ export class Cart {
 
 		total.innerHTML = `${sum.toString()} kr`;
 
-		// console.log(sum);
+		console.log(sum);
 	}
 
 	thankyouCart() {
@@ -371,17 +376,15 @@ export class Cart {
 		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
 
 		console.log("Du har tagit bort en produkt");
-    this.updateCart();
+
+        // this.updateCart();
 
 	}
 
   plus (product: Order) {
-
     product.Amount++;
     localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
-    this.updateCart();
-
-
+    // this.updateCart();
   }
 
   minus (i: number) {
@@ -394,13 +397,17 @@ export class Cart {
 
       this.cartItems[i].Amount--;
       localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
-      this.updateCart();
+
+    //   this.updateCart();
     }
   }
-  updateCart() {
-    this.displayCart();
-    this.checkoutCart();
 
-  }
+
+
+//   updateCart() {
+// 	  this.checkoutCart();
+// 	  this.displayCart();
+
+//   }
 }
 export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
