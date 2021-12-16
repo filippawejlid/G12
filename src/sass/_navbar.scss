@@ -110,12 +110,12 @@
 	}
 
 	.sucklogo {
-		display: flex;
+		display: inline-block;
 		justify-content: center;
 		vertical-align: center;
 		font-family: $logo-font;
 		font-size: 2rem;
-		color: rgb(131, 152, 156);
+		color: rgb(82, 84, 85);
 	}
 
 	.basketcnt {
@@ -167,6 +167,10 @@
 			margin: 0;
 			padding-top: 15px;
 			padding-right: 30px;
+		}
+
+		.sucklogo {
+			margin-left: 15px;
 		}
 
 		.hem {
