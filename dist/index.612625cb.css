@@ -160,8 +160,7 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.205);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 3px;
   background-color: white;
   gap: 10px;
   width: 100%;
@@ -170,7 +169,6 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  width: 100%;
 }
 .imgcontainer > img {
   height: 15rem;
@@ -178,25 +176,24 @@ body {
 .vacuumheader {
   font-size: 1rem;
   padding: 10px;
+  margin: 10px;
   color: #2595be;
-  display: flex;
-  align-items: flex-start;
   font-size: 0.8rem;
   height: 2.5rem;
-  width: 100%;
+  width: 80%;
 }
 .vacuuminfo {
-  display: flex;
-  padding: 5px;
-  height: 50px;
-  width: 100%;
-  align-items: flex-start;
+  padding: 10px;
+  margin: 10px;
   height: 3rem;
+  width: 80%;
   font-size: 0.9rem;
 }
 .price {
   color: #2595be;
-  width: 100%;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
 }
 .productbtns {
   display: flex;
@@ -205,9 +202,14 @@ body {
   gap: 2px;
   height: 3rem;
 }
+.productbtns .readmore {
+  border-radius: 0px 0px 0px 3px;
+}
+.productbtns .addtocart {
+  border-radius: 0px 0px 3px 0px;
+}
 .productbtns > button {
   padding: 8px;
-  border-radius: 2px;
   cursor: pointer;
   font-size: 0.8rem;
 }
@@ -231,12 +233,12 @@ body {
   margin-left: 10px;
 }
 .productbtns > button:hover {
-  box-shadow: 2px 2px 2px #2595be86;
+  box-shadow: 2px 2px 2px #51717c86;
 }
 /* The Modal (background) */
 @media screen and (min-width: 768px) {
   .productcontainer {
-    width: 33% !important;
+    width: 45% !important;
   }
 }
 * {
@@ -711,6 +713,22 @@ body {
   background-color: white;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   justify-content: space-between;
+}
+.productContainer .price {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.productContainer .fa-trash,
+.productContainer .fa-plus-square,
+.productContainer .fa-minus-square {
+  color: #2596be;
+  text-shadow: 0px 1px rgba(66, 66, 66, 0.247);
+}
+.productContainer .spanpm {
+  font-weight: bolder;
+  color: #185970;
+  text-shadow: 0px 1px rgba(66, 66, 66, 0.096);
 }
 .productContainer .imgContainer {
   width: 50px;
