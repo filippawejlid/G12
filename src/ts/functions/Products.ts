@@ -116,13 +116,9 @@ export function products() {
 
 		productContainer.appendChild(imgContainer);
 		productContainer.appendChild(productInfoContainer);
-		// productInfoContainer.appendChild(vacuumHeader);
-		// productInfoContainer.appendChild(vacuumInfo);
-		// productInfoContainer.appendChild(price);
 		productContainer.appendChild(vacuumHeader);
 		productContainer.appendChild(vacuumInfo);
 		productContainer.appendChild(price);
-		//productInfoContainer.appendChild(productBtns);
 		productContainer.appendChild(productBtns);
 		productBtns.appendChild(readMoreBtn);
 		productBtns.appendChild(addToCartBtn);
@@ -131,9 +127,7 @@ export function products() {
 }
 
 export function showImages() {
-	let header: HTMLHeadingElement = document.querySelector(
-		"header"
-	) as HTMLHeadingElement;
+
 
 	for (let i = 0; i < imgFrontPage.length; i++) {
 		// LOGGAN
@@ -199,7 +193,6 @@ export function showImages() {
 		vacuumFooter.innerHTML = imgFrontPage[i].imgContainerFooter;
 
 		// appendChild
-		// header.appendChild(imgTag);
 		btnCategoryOne.appendChild(wirelessImg);
 		btnCategoryTwo.appendChild(powerfullImg);
 		btnCategoryThree.appendChild(robotImg);

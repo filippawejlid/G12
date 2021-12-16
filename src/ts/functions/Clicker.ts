@@ -1,6 +1,3 @@
-// import { cartItems } from "./addToCart";
-// import { displayCart } from "./displayCart";
-
 import { Cart } from "../models/Cart";
 
 export function clicker() {
@@ -22,18 +19,12 @@ export function clicker() {
     "btnHandla"
   ) as HTMLButtonElement;
 
-  // When the user clicks on the button, open the modal
   btn.addEventListener("click", openModal);
 
-  // When the user clicks on the buttons, close the modal
   span.addEventListener("click", closeModal);
 
   continueShopping.addEventListener("click", closeModal);
 
-  //   goToCart.addEventListener("click", ()=> {
-  //   });
-
-  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event: Event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -43,7 +34,6 @@ export function clicker() {
   function openModal() {
     modal.style.display = "block";
     cart.displayCart();
-	// localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
   }
   function closeModal() {

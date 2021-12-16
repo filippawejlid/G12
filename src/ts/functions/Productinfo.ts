@@ -87,7 +87,7 @@ export function productinfo(i: number) {
     cart.addToCart(productInfo[i]);
     thankYou();
     itemCount();
-  }); //Här har jag lagt till eventlistener ta ej bort
+  }); 
 
   // APPENDCHILD
   productContentContainer.appendChild(overlay);

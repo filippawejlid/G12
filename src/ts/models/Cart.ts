@@ -36,7 +36,7 @@ export class Cart {
 		let total: HTMLSpanElement = document.getElementById(
 			"totalSpan"
 		) as HTMLSpanElement;
-		// total.className = "totalSpans";
+		total.className = "totalSpans";
 		total.innerHTML = " ";
 		let modal: HTMLDivElement = document.getElementById(
 			"displayCartModal"
@@ -124,7 +124,6 @@ export class Cart {
 
 			let priceSpan: HTMLSpanElement = document.createElement("span");
 
-			// checkout.appendChild(productContainer);
 			modal.appendChild(productContainer);
 			productContainer.appendChild(imgContainer);
 			productContainer.appendChild(info);
@@ -298,23 +297,23 @@ export class Cart {
 
 		total.innerHTML = `${sum.toString()} kr`;
 
-		console.log(sum);
 	}
 
 	thankyouCart() {
 		this.cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-		let total: HTMLSpanElement = document.getElementById(
-			"totalSpanCheckout"
-		) as HTMLSpanElement;
-		total.className = "totalSpans";
-		total.innerHTML = " ";
 		let sumList: number[] = [];
 		let thankyou: HTMLDivElement = document.getElementById(
 			"order"
 		) as HTMLDivElement;
 
 		thankyou.innerHTML = " ";
+		let total: HTMLSpanElement = document.createElement(
+			"div"
+		) as HTMLSpanElement;
+		total.className = "totalSpan"
+		total.innerHTML = " ";
+		
 
 		for (let i = 0; i < this.cartItems.length; i++) {
 			console.log("hallå? 2");
@@ -337,10 +336,8 @@ export class Cart {
 			let amountDiv: HTMLDivElement = document.createElement("div");
 			amountDiv.className = "class";
 			let amountspan: HTMLSpanElement = document.createElement("span");
-			amountspan.id = "amount" + i;
 
 			let priceDiv: HTMLDivElement = document.createElement("div");
-			priceDiv.id = "price" + i;
 			priceDiv.className = "price";
 			let priceSpan: HTMLSpanElement = document.createElement("span");
 
@@ -361,29 +358,23 @@ export class Cart {
 			productName.innerHTML = this.cartItems[i].Vacuum.productName;
 			amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
 			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
+			thankyou.appendChild(total);
 
 			sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
-			console.log("hallå? 3");
 		}
 
-		//Räkna ut total
 
 		let sum = sumList.reduce(function (a, b) {
 			return a + b;
 		}, 0);
 
-		total.innerHTML = `${sum.toString()} kr`;
+		total.innerHTML = `Totalt: ${sum.toString()} kr`;
 
-		// console.log(sum);
 	}
 
 	removeFromCart(i: number) {
 		this.cartItems.splice(i, 1);
 		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
-
-		console.log("Du har tagit bort en produkt");
-
-        // this.updateCart();
 
 	}
 
@@ -403,7 +394,7 @@ export class Cart {
       this.cartItems[i].Amount--;
       localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
     }
-  }
+    }
 
 }
 export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];

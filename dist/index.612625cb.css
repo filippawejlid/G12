@@ -163,16 +163,12 @@ body {
   border-radius: 3px;
   background-color: white;
   gap: 10px;
-<<<<<<< HEAD
   width: 100%;
-=======
->>>>>>> feature-branch/lastfixes
 }
 .imgcontainer {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  width: 100%;
 }
 .imgcontainer > img {
   height: 15rem;
@@ -180,27 +176,7 @@ body {
 .vacuumheader {
   font-size: 1rem;
   padding: 10px;
-<<<<<<< HEAD
   margin: 10px;
-=======
-  color: #2595be;
-  display: flex;
-  align-items: flex-start;
-  font-size: 0.8rem;
-  height: 2.5rem;
-  width: 100%;
-}
-.vacuuminfo {
-  display: flex;
-  padding: 5px;
-  height: 50px;
-  width: 100%;
-  align-items: flex-start;
-  height: 3rem;
-  font-size: 0.9rem;
-}
-.price {
->>>>>>> feature-branch/lastfixes
   color: #2595be;
   font-size: 0.8rem;
   height: 2.5rem;
@@ -259,41 +235,6 @@ body {
 .productbtns > button:hover {
   box-shadow: 2px 2px 2px #51717c86;
 }
-.productbtns {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  gap: 2px;
-  height: 3rem;
-}
-.productbtns > button {
-  padding: 8px;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-.productbtns > button:nth-child(2) {
-  background-color: #2596be;
-  border: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.productbtns > button:nth-child(1) {
-  background-color: #2595be86;
-  border: none;
-  width: 100%;
-}
-.productbtns .fa-info-circle,
-.productbtns .fa-cart-plus {
-  font-size: 0.8rem;
-  margin-left: 10px;
-}
-.productbtns > button:hover {
-  box-shadow: 2px 2px 2px #2595be86;
-}
 /* The Modal (background) */
 @media screen and (min-width: 768px) {
   .productcontainer {
@@ -309,21 +250,31 @@ body {
 .productmaincontainer {
   position: relative;
 }
-.productmodalcontainer {
+.overlay {
   align-self: center;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 200ms ease-in-out;
+  z-index: 5;
+  width: 100%;
+  height: 1000px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.productmodalcontainer {
+  transition: 200ms ease-in-out;
   z-index: 10;
-  box-shadow: 1px 1px 0.5px #2596be;
   background-color: white;
-  height: 80%;
+  height: 70%;
   width: 80%;
   overflow: auto;
-  /* Enable scroll if needed */
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .productimghero {
   background-image: url(Dysoncyclonev10_productpage.0b231c45.png);
@@ -333,11 +284,18 @@ body {
   display: flex;
   justify-content: flex-start;
   height: 50%;
-  border-radius: 5px;
+  border-radius: 5px, 0px;
+}
+.productimghero h1 {
+  color: #2596be;
+  font-size: 1rem;
+  padding: 20px;
+  margin-top: 10%;
+  font-weight: 900;
 }
 .h1nfopage1 {
   margin-top: 10px;
-  padding-left: 10px;
+  padding: 20px;
   color: #2596be;
 }
 .discriptioninfopage1 {
@@ -345,14 +303,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
+  padding: 20px;
   color: #504e4e;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.3px;
 }
 .container {
   display: flex;
-  margin: 20px;
+}
+.container h1 {
+  margin-bottom: 10px;
+  color: #2596be;
+  font-size: 1rem;
 }
 .container {
   display: flex;
@@ -362,21 +324,29 @@ body {
 }
 .container img {
   width: 100%;
+  padding: 10px;
 }
 .productinforight {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #504e4e;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.3px;
-  padding: 5px;
+  padding: 20px;
+  width: 60%;
 }
 .btncontainer {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 5px;
+}
+.btncontainer button {
+  border: none;
+  padding: 20px;
+  border-radius: 0px, 5px;
+  width: 100%;
+  cursor: pointer;
 }
 .btncontainer .addtocart {
   background-color: #2596be;
@@ -385,6 +355,61 @@ body {
 .btncontainer .back {
   background-color: #d1e7ff;
   color: #165b74;
+}
+.btncontainer > button:hover {
+  box-shadow: 2px 2px 2px #2595be86;
+  border: 1px solid rgba(0, 0, 0, 0.418);
+}
+@media screen and (min-width: 768px) {
+  .productimghero h1 {
+    color: #2596be;
+    font-size: 2rem;
+    padding: 20px;
+    margin-top: 10%;
+    font-weight: 900 !important;
+  }
+
+  .h1nfopage1 {
+    margin-top: 10px;
+    padding-left: 100px;
+    color: #2596be;
+  }
+
+  .discriptioninfopage1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    color: #504e4e;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    width: 60%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .container img {
+    width: 100%;
+  }
+
+  .productimgleft {
+    width: 250px;
+  }
+
+  .productinforight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #504e4e;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    width: 50%;
+  }
 }
 #footer {
   z-index: -1;
@@ -781,12 +806,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.productContainer .fa-trash,
-.productContainer .fa-plus-square,
-.productContainer .fa-minus-square {
-  color: #2596be;
-  text-shadow: 0px 1px rgba(66, 66, 66, 0.075);
-}
 .productContainer .spanpm {
   font-weight: bolder;
   color: #2f3131;
@@ -996,40 +1015,31 @@ body {
 #thankyou #order .productContainer {
   margin: 0;
 }
+#thankyou .totalSpan {
+  font-weight: bold;
+}
 #check {
   color: #97ff7794;
   font-size: 2rem;
 }
-/* The Modal (background) */
 .tyModal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 10;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.116);
-  /* Fallback color */
-  /* Modal Content/Box */
-  /* The Close Button */
 }
 .tyModal .thanksContent {
   background-color: #fefefe;
   margin: 22% auto;
-  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   border-radius: 5px;
   width: 40%;
-  /* Could be more or less, depending on screen size */
 }
 .tyModal .tySpanner {
   display: flex;
