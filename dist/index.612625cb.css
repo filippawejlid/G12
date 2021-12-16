@@ -70,16 +70,20 @@ body {
 }
 #productmaincontainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+<<<<<<< HEAD
   background-color: #c5d0d41a;
+=======
+  background-color: #f5f5f5;
+>>>>>>> feature-branch/images
 }
 #productmaincontainer #productcontentcontainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px;
-  width: 90%;
+  margin: 40px;
 }
 #productmaincontainer #categoryheader {
   letter-spacing: 1px;
@@ -90,6 +94,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 1rem;
 }
 #productmaincontainer #choosecategorybtn a {
   width: 33%;
@@ -100,7 +105,6 @@ body {
 #productmaincontainer #choosecategorybtn #btncategorythree {
   padding: 20px;
   height: 100px;
-  cursor: pointer;
   border: none;
   border-radius: 5px;
   display: flex;
@@ -120,6 +124,10 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+  background-color: #2595be1a;
+}
+#productmaincontainer #choosecategorybtn :hover {
+  box-shadow: 1px 1px 1px #2595be86;
 }
 #productmaincontainer #wireless,
 #productmaincontainer #powerfull,
@@ -151,7 +159,11 @@ body {
   padding: 10px;
   background-color: white;
   gap: 10px;
+<<<<<<< HEAD
   align-items: center;
+=======
+  width: 40%;
+>>>>>>> feature-branch/images
 }
 #productmaincontainer .imgcontainer {
   display: flex;
@@ -475,6 +487,7 @@ h1 {
   position: relative;
   float: left;
   cursor: pointer;
+  order: -1;
 }
 #navet .header .menu-icon .nav-icon {
   background: #2595be;
