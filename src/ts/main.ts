@@ -1,9 +1,10 @@
-import { products } from "./functions/Products";
+import { products, showImages } from "./functions/Products";
 import { clicker } from "./functions/Clicker";
 
 localStorage.clear();
 
 window.onload = function () {
-	clicker();
-	products();
+  clicker();
+  products();
+  showImages();
 };
