@@ -532,6 +532,7 @@ h1 {
 #navet .logo {
   height: 40px;
   margin-top: 5px;
+  margin-left: 12%;
   padding-left: 10px;
 }
 #navet .basketcnt {
@@ -580,6 +581,9 @@ h1 {
     margin: 0;
     padding-top: 15px;
     padding-right: 30px;
+  }
+  #navet .logo {
+    margin-left: 0%;
   }
   #navet .hem {
     padding-top: 15px;
