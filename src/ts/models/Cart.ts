@@ -78,41 +78,6 @@ export class Cart {
 			});
 
 			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
-
-			let plusBtn: HTMLButtonElement = document.createElement(
-				"button"
-			) as HTMLButtonElement;
-			plusBtn.id = "plusBtn";
-			plusBtn.className = "plusBtn";
-			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
-			plusBtn.type = "button";
-			plusBtn.addEventListener("click", () => {
-				plus();
-			});
-
-			// let plusFa = document.createElement("i");
-			// plusFa.className = "plus fa-plus-square";
-
-			let adjustments: HTMLDivElement = document.createElement("div");
-			adjustments.className = "adjustments";
-			adjustments.id = "adjustmentsId";
-
-			let trashCan: HTMLElement = document.createElement("i") as HTMLElement;
-			trashCan.id = "trasher";
-			trashCan.className = "fa fa-trash";
-			trashCan.ariaHidden = "true";
-
-			let trashBtn: HTMLButtonElement = document.createElement("button");
-			trashBtn.id = "trashBtn";
-			trashBtn.className = "trashBtn";
-			trashBtn.type = "button";
-			trashBtn.innerHTML = "<i class ='fa fa-trash'></i>";
-
-			trashBtn.addEventListener("click", () => {
-				this.removeFromCart(i);
-			});
-
-			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
 			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
 
 			let plusBtn: HTMLButtonElement = document.createElement(
@@ -156,17 +121,6 @@ export class Cart {
 			// MINUS FÖR ATT TA BORT PRODUKTER
 			// MINUS FÖR ATT TA BORT PRODUKTER
 
-			let minusBtn: HTMLButtonElement = document.createElement(
-				"button"
-			) as HTMLButtonElement;
-			minusBtn.id = "minusBtn";
-			minusBtn.className = "minusBtn";
-			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
-			minusBtn.type = "button";
-
-			// let minusFa = document.createElement("i");
-			// minusFa.className = "minus fa-minus-square";
-
 			let productName: HTMLHeadingElement = document.createElement("h3");
 
 			let amountDiv: HTMLDivElement = document.createElement("div");
@@ -190,27 +144,17 @@ export class Cart {
 			// adjustments.appendChild(trashCan);
 			adjustments.appendChild(plusBtn);
 			adjustments.appendChild(plmiCnt);
+			plmiCnt.appendChild(spanpm);
 			adjustments.appendChild(minusBtn);
 			adjustments.appendChild(trashBtn);
 
 			info.appendChild(productName);
 			info.appendChild(amountDiv);
 			info.appendChild(priceDiv);
-			// adjustments.appendChild(trashCan);
-			adjustments.appendChild(plusBtn);
-			adjustments.appendChild(plmiCnt);
-			plmiCnt.appendChild(spanpm);
-			adjustments.appendChild(minusBtn);
-			adjustments.appendChild(trashBtn);
 
 			amountDiv.appendChild(amountspan);
 
 			priceDiv.appendChild(priceSpan);
-
-			imgContainer.innerHTML = this.cartItems[i].Vacuum.imgsmall;
-			productName.innerHTML = this.cartItems[i].Vacuum.productName;
-			amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
-			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
 
 			spanpm.innerHTML = `${this.cartItems[i].Amount.toString()}`;
 
@@ -311,18 +255,6 @@ export class Cart {
 		// console.log(sum);
 	}
 
-	removeFromCart(i: number) {
-		this.cartItems.splice(i, 1);
-		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
-
-		console.log("Du har tagit bort en produkt");
-		console.log(cartItems);
-		console.log(cartItems);
-
-		this.displayCart();
-		itemCount();
-	}
-
 	thankyouCart() {
 		this.cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -399,8 +331,7 @@ export class Cart {
 		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
 
 		console.log("Du har tagit bort en produkt");
-
-		console.log(sum);
+		itemCount();
 	}
 }
 export let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
