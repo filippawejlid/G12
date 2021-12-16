@@ -1,58 +1,74 @@
 .hero {
-	height: 100vh;
-	background-image: url("../assets/heroo.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  height: 100vh;
+  //background-image: url("../assets/heroo.jpg");
+  background-image: url("../assets/Upright_CarbonFibre_Tech_1000x560.ashx");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-	.welcomeBox {
-		border-radius: 10px;
-		width: 90%;
-		background-color: rgba(255, 255, 255, 0.767);
-		padding: 20px;
+  .welcomeBox {
+    border-radius: 10px;
+    width: 90%;
+    //background-color: rgba(255, 255, 255, 0.767);
+    //background-color: rgba(0, 0, 0, 0.507);
+    background: linear-gradient(
+      180deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.164) 70.71%
+    );
+    padding: 20px;
 
-		@include tablets {
-			width: 70%;
-			display: flex;
-			justify-content: center;
-		}
+    @include tablets {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
 
-		@include desktop {
-			width: 40%;
-		}
+    @include desktop {
+      width: 40%;
+    }
 
-		.welcomeBoxText {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+    .welcomeBoxText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
 
-			@include tablets {
-				width: 80%;
-			}
+      @include tablets {
+        width: 80%;
+      }
 
-			h2 {
-				margin: 0;
-			}
-			p {
-				text-align: center;
-			}
-			a {
-				color: black;
-				text-decoration: none;
-				cursor: pointer;
+      h2 {
+        margin: 0;
+        color: WHITE;
+      }
+      p {
+        //text-align: center;
+        color: white;
+      }
+      a {
+        //color: black;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #2595be;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
 
-				&:hover {
-					font-weight: bolder;
-				}
-			}
-		}
-	}
+        &:hover {
+          font-weight: bolder;
+          box-shadow: 2px 2px 2px #2595be86;
+        }
+      }
+    }
+  }
 
-	.fa {
-		color: white;
-		cursor: pointer;
-	}
+  .fa {
+    color: white;
+    cursor: pointer;
+  }
 }
