@@ -331,6 +331,7 @@ body {
   z-index: -1;
 }
 #footer footer {
+  padding: 1px;
   position: relative;
   display: flex;
   align-items: center;
@@ -540,7 +541,7 @@ body {
   vertical-align: center;
   font-family: "Abril Fatface", cursive;
   font-size: 2rem;
-  color: #525455;
+  color: #424344;
 }
 #navet .basketcnt {
   display: flex;
@@ -621,6 +622,7 @@ body {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: 5s ease-in-out;
 }
 .modal .modal-content {
   background-color: white;
@@ -723,11 +725,11 @@ body {
 .productContainer .fa-plus-square,
 .productContainer .fa-minus-square {
   color: #2596be;
-  text-shadow: 0px 1px rgba(66, 66, 66, 0.247);
+  text-shadow: 0px 1px rgba(66, 66, 66, 0.075);
 }
 .productContainer .spanpm {
   font-weight: bolder;
-  color: #185970;
+  color: #2f3131;
   text-shadow: 0px 1px rgba(66, 66, 66, 0.096);
 }
 .productContainer .imgContainer {
