@@ -51,7 +51,6 @@
 		background-color: none;
 		background: none;
 		cursor: pointer;
-		color: red;
 	}
 
 	.plusBtn:hover,
@@ -60,16 +59,14 @@
 	}
 }
 
-.plusMinusSpan {
+.spanpm {
 	display: flex;
 	user-select: none;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 2rem;
-	border: 5px solid red;
 	height: 44px;
 	padding: 2px;
-	width: auto;
-	font-size: 2rem;
+	width: 30px;
+	border: 1px solid red;
 }

@@ -1,10 +1,7 @@
-import { minusItem } from "../minusitem";
 import { productInfo } from "../Products";
 import { Order } from "./Order";
 import { Vacuum } from "./Vacuum";
 import { itemCount } from "../itemcounter";
-import { plus } from "../pmadjust";
-import { pmadjust } from "../pmadjust";
 
 export class Cart {
 	cartItems: Order[];
@@ -81,6 +78,7 @@ export class Cart {
 			});
 
 			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
+			// PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
 
 			let plusBtn: HTMLButtonElement = document.createElement(
 				"button"
@@ -90,17 +88,24 @@ export class Cart {
 			plusBtn.innerHTML = "<i class='far fa-plus-square'></i>";
 			plusBtn.type = "button";
 			plusBtn.addEventListener("click", () => {
-				plus();
+				console.log("clickety clack");
 			});
 
-			// let plusFa = document.createElement("i");
-			// plusFa.className = "plus fa-plus-square";
+			//PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
+			//PLUS FÖR ATT LÄGGA TILL FLER PRODUKTER
 
 			let plmiCnt: HTMLDivElement = document.createElement(
 				"div"
 			) as HTMLDivElement;
 			plmiCnt.id = "plmiCnt";
-			plmiCnt.className = "plmiCnt";
+			plmiCnt.className = "theClass";
+
+			let spanpm = document.createElement("span");
+			spanpm.className = "spanpm";
+			spanpm.id = "quantity" + i;
+
+			// MINUS FÖR ATT TA BORT PRODUKTER
+			// MINUS FÖR ATT TA BORT PRODUKTER
 
 			let minusBtn: HTMLButtonElement = document.createElement(
 				"button"
@@ -109,9 +114,12 @@ export class Cart {
 			minusBtn.className = "minusBtn";
 			minusBtn.innerHTML = "<i class='far fa-minus-square'></i>";
 			minusBtn.type = "button";
+			minusBtn.addEventListener("click", () => {
+				console.log("clickety clack");
+			});
 
-			// let minusFa = document.createElement("i");
-			// minusFa.className = "minus fa-minus-square";
+			// MINUS FÖR ATT TA BORT PRODUKTER
+			// MINUS FÖR ATT TA BORT PRODUKTER
 
 			let productName: HTMLHeadingElement = document.createElement("h3");
 
@@ -136,6 +144,7 @@ export class Cart {
 			// adjustments.appendChild(trashCan);
 			adjustments.appendChild(plusBtn);
 			adjustments.appendChild(plmiCnt);
+			plmiCnt.appendChild(spanpm);
 			adjustments.appendChild(minusBtn);
 			adjustments.appendChild(trashBtn);
 
@@ -147,13 +156,14 @@ export class Cart {
 
 			priceDiv.appendChild(priceSpan);
 
+			spanpm.innerHTML = `${this.cartItems[i].Amount.toString()}`;
+
 			imgContainer.innerHTML = this.cartItems[i].Vacuum.imgsmall;
 			productName.innerHTML = this.cartItems[i].Vacuum.productName;
 			amountspan.innerHTML = `Antal: ${this.cartItems[i].Amount.toString()}`;
 			priceSpan.innerHTML = `${this.cartItems[i].Vacuum.price.toString()} kr`;
 
 			sumList.push(this.cartItems[i].Vacuum.price * this.cartItems[i].Amount);
-			pmadjust();
 		}
 
 		//Räkna ut total
@@ -252,8 +262,6 @@ export class Cart {
 		localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
 
 		console.log("Du har tagit bort en produkt");
-		console.log(cartItems);
-		console.log(cartItems);
 
 		this.displayCart();
 		itemCount();
