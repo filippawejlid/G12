@@ -112,10 +112,11 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.205);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  //padding: 10px;
   background-color: white;
   gap: 10px;
+  width: 100%;
   //border: 3px solid purple;
 }
 
@@ -124,41 +125,38 @@
   justify-content: center;
   border-radius: 10px;
   //border: 3px solid rgb(136, 231, 203);
-  width: 100%;
 
   > img {
     height: 15rem;
-    // border: 1px solid purple;
+    //border: 1px solid purple;
   }
 }
 
 .vacuumheader {
   font-size: 1rem;
   padding: 10px;
+  margin: 10px;
   color: #2595be;
-  display: flex;
-  align-items: flex-start;
-  //border: 1px solid red;
+  //align-self: flex-start;
   font-size: 0.8rem;
   height: 2.5rem;
-  width: 100%;
+  width: 80%;
 }
 .vacuuminfo {
-  display: flex;
-  padding: 5px;
-  height: 50px;
-  width: 100%;
-  align-items: flex-start;
+  padding: 10px;
+  margin: 10px;
   height: 3rem;
-
+  width: 80%;
   font-size: 0.9rem;
-  //border: 1px solid green;
+  //align-self: flex-start;
+  // border: 1px solid green;
 }
 
 .price {
   color: #2595be;
-  //border: 1px solid blue;
-  width: 100%;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
 }
 
 .productbtns {
@@ -170,8 +168,7 @@
 
   > button {
     padding: 8px;
-    //width: 100%;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 0.8rem;
   }
@@ -199,7 +196,7 @@
   }
 
   > button:hover {
-    box-shadow: 2px 2px 2px #2595be86;
+    box-shadow: 2px 2px 2px #51717c86;
     // border: 1px solid rgba(0, 0, 0, 0.418);
   }
 }
@@ -208,6 +205,6 @@
 
 @media screen and (min-width: 768px) {
   .productcontainer {
-    width: 33% !important;
+    width: 45% !important;
   }
 }
