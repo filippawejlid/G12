@@ -1,197 +1,198 @@
 #navet {
-	position: fixed;
-	width: 100vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
 
-	a {
-		color: #2595be;
-		font-size: bolder;
-	}
+  a {
+    color: #2595be;
+    font-size: bolder;
+  }
 
-	a:hover {
-		color: #175d77;
-	}
+  a:hover {
+    color: #175d77;
+  }
 
-	.header {
-		background-color: rgba(255, 255, 255, 0.897);
-		position: absolute;
-		width: 100%;
-		z-index: 3;
-		box-shadow: 0px 0px 1px 0px rgba(68, 68, 68, 0.897);
-	}
+  .header {
+    background-color: rgba(255, 255, 255, 0.897);
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0px 0px 1px 0px rgba(68, 68, 68, 0.897);
+  }
 
-	.header ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		overflow: hidden;
-	}
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
 
-	.header ul a {
-		display: flex;
-		margin-bottom: 15px;
-		text-decoration: none;
-		justify-content: center;
-		text-align: center;
-		font-weight: 600;
-	}
+  .header ul a {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+  }
 
-	.header .menu {
-		clear: both;
-		max-height: 0;
-		transition: max-height 0.2s ease-out;
-	}
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
 
-	.header .menu-icon {
-		padding: 20px 20px;
-		position: relative;
-		float: left;
-		cursor: pointer;
-	}
+  .header .menu-icon {
+    padding: 20px 20px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+  }
 
-	.header .menu-icon .nav-icon {
-		background: #2595be;
-		display: block;
-		height: 5px;
-		width: 30px;
-		position: relative;
-		border-radius: 10px;
-		transition: background 0.2s ease-out;
-	}
+  .header .menu-icon .nav-icon {
+    background: #2595be;
+    display: block;
+    height: 5px;
+    width: 30px;
+    position: relative;
+    border-radius: 10px;
+    transition: background 0.2s ease-out;
+  }
 
-	.header .menu-icon .nav-icon:before {
-		background: #2595be;
-		content: "";
-		display: block;
-		height: 100%;
-		width: 100%;
-		border-radius: 10px;
-		position: absolute;
-		transition: all 0.2s ease-out;
-		top: 10px;
-	}
+  .header .menu-icon .nav-icon:before {
+    background: #2595be;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: 10px;
+  }
 
-	.header .menu-icon .nav-icon:after {
-		background: #2595be;
-		content: "";
-		display: block;
-		height: 100%;
-		width: 100%;
-		border-radius: 10px;
-		position: absolute;
-		transition: all 0.2s ease-out;
-		top: -10px;
-	}
+  .header .menu-icon .nav-icon:after {
+    background: #2595be;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: -10px;
+  }
 
-	.header .menu-btn {
-		display: none;
-	}
+  .header .menu-btn {
+    display: none;
+  }
 
-	.header .menu-btn:checked ~ .menu {
-		max-height: 240px;
-	}
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
 
-	.header .menu-btn:checked ~ .menu-icon .nav-icon {
-		background: transparent;
-	}
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
 
-	.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-		transform: rotate(-45deg);
-		top: 0;
-	}
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
 
-	.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-		transform: rotate(45deg);
-		top: 0;
-	}
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
 
-	.hem {
-		border-top: 1px solid rgba(158, 158, 158, 0.274);
-		padding-top: 10px;
-	}
+  .hem {
+    border-top: 1px solid rgba(158, 158, 158, 0.274);
+    padding-top: 10px;
+  }
 
-	.sucklogo {
-		display: inline-block;
-		justify-content: center;
-		vertical-align: center;
-		font-family: $logo-font;
-		font-size: 2rem;
-		color: rgb(66, 67, 68);
-	}
+  .sucklogo {
+    display: inline-block;
+    justify-content: center;
+    vertical-align: center;
+    font-family: $logo-font;
+    font-size: 2rem;
+    color: rgb(66, 67, 68);
+  }
 
-	.basketcnt {
-		display: flex;
-		float: right;
-		height: 45px;
-		text-align: center;
-		align-items: center;
-	}
+  .basketcnt {
+    display: flex;
+    float: right;
+    height: 45px;
+    text-align: center;
+    align-items: center;
+  }
 
-	.btnCartFa {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 45px;
-		background-color: rgba(255, 255, 255, 0);
-		border: none;
-		margin-right: 20px;
-		padding: 0;
-	}
-	.btnCartFa:hover,
-	.btnCartFa:focus {
-		cursor: pointer;
-		text-decoration: none;
-		border: none;
-	}
+  .btnCartFa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-right: 20px;
+    padding: 0;
+  }
+  .btnCartFa:hover,
+  .btnCartFa:focus {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+  }
 
-	.fa-shopping-basket {
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		color: #2595be;
-		filter: drop-shadow(0px 0.2px 0.5px rgba(36, 65, 99, 0.514));
-		text-decoration: none;
-	}
-	.fa-shopping-basket:hover {
-		color: #207ea0;
-	}
+  .fa-shopping-basket {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #2595be;
+    filter: drop-shadow(0px 0.2px 0.5px rgba(36, 65, 99, 0.514));
+    text-decoration: none;
+  }
+  .fa-shopping-basket:hover {
+    color: #207ea0;
+  }
 
-	@include desktop {
-		li:hover {
-			text-decoration: underline;
-		}
-		.header li {
-			float: left;
-		}
-		.header li a {
-			height: 45px;
-			margin: 0;
-			padding-top: 15px;
-			padding-right: 30px;
-		}
+  @include desktop {
+    li:hover {
+      text-decoration: underline;
+    }
+    .header li {
+      float: left;
+    }
+    .header li a {
+      height: 45px;
+      margin: 0;
+      padding-top: 15px;
+      padding-right: 30px;
+    }
 
-		.sucklogo {
-			margin-left: 15px;
-		}
+    .sucklogo {
+      margin-left: 15px;
+    }
 
-		.hem {
-			padding-top: 15px;
-			margin: 0;
-			border-top: none;
-			padding-right: 15px;
-		}
+    .hem {
+      padding-top: 15px;
+      margin: 0;
+      border-top: none;
+      padding-right: 15px;
+    }
 
-		.btnCartFa {
-			margin-left: 5px; //45px innan
-		}
+    .btnCartFa {
+      margin-left: 5px; //45px innan
+    }
 
-		.header .menu {
-			clear: none;
-			float: right;
-			max-height: none;
-		}
-		.header .menu-icon {
-			display: none;
-		}
-	}
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
 }
 // QUERIES
