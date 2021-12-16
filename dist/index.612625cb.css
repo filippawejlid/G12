@@ -101,6 +101,9 @@ body {
   width: 33%;
   text-decoration: none;
 }
+#productmaincontainer #choosecategorybtn button:hover {
+  box-shadow: 1px 1px 1px #2595be86;
+}
 #productmaincontainer #choosecategorybtn a > #btncategoryone,
 #productmaincontainer #choosecategorybtn #btncategorytwo,
 #productmaincontainer #choosecategorybtn #btncategorythree {
@@ -178,7 +181,6 @@ body {
 .vacuumheader {
   font-size: 1rem;
   padding: 10px;
-  margin: 10px;
   color: #2595be;
   font-size: 0.8rem;
   height: 2.5rem;
@@ -186,7 +188,6 @@ body {
 }
 .vacuuminfo {
   padding: 10px;
-  margin: 10px;
   height: 3rem;
   width: 80%;
   font-size: 0.9rem;
@@ -195,7 +196,6 @@ body {
   color: #2595be;
   width: 80%;
   padding: 10px;
-  margin: 10px;
 }
 .productbtns {
   display: flex;
@@ -337,13 +337,10 @@ body {
   letter-spacing: 0.3px;
   padding: 20px;
   width: 60%;
-<<<<<<< HEAD
-=======
 }
 .productinforight .price {
   padding: 0;
   margin: 0;
->>>>>>> 52eb7e87eff27840214dc740fd5c3de1edf2a858
 }
 .btncontainer {
   display: flex;
@@ -367,7 +364,6 @@ body {
 }
 .btncontainer > button:hover {
   box-shadow: 2px 2px 2px #2595be86;
-  border: 1px solid rgba(0, 0, 0, 0.418);
 }
 @media screen and (min-width: 768px) {
   .productimghero h1 {
@@ -424,7 +420,6 @@ body {
   z-index: -1;
 }
 #footer footer {
-  padding: 1px;
   position: relative;
   display: flex;
   align-items: center;
@@ -462,6 +457,7 @@ body {
   text-decoration: none;
   color: white;
   opacity: 0.9;
+  font-size: 1rem;
 }
 #footer footer .footerInfo .about a:hover,
 #footer footer .footerInfo .contact a:hover,
@@ -629,8 +625,8 @@ body {
   justify-content: center;
   vertical-align: center;
   font-family: "Abril Fatface", cursive;
-  font-size: 1.7rem;
-  color: #2b2c2c;
+  font-size: 2rem;
+  color: #424344;
 }
 #navet .basketcnt {
   display: flex;
@@ -676,19 +672,17 @@ body {
   #navet .header li a {
     height: 45px;
     margin: 0;
-    margin-top: 14px;
+    padding-top: 15px;
     padding-right: 30px;
   }
   #navet .sucklogo {
     margin-left: 15px;
-    font-size: 2rem;
   }
   #navet .hem {
+    padding-top: 15px;
     margin: 0;
-    margin-top: 14px;
     border-top: none;
     padding-right: 15px;
-    padding-top: 0;
   }
   #navet .btnCartFa {
     margin-left: 5px;
@@ -1076,12 +1070,13 @@ body {
 .adjustments .plusBtn,
 .adjustments .minusBtn,
 .adjustments .trashBtn {
+  font-size: 0.8rem;
   padding: 3px;
   border: none;
   background-color: none;
   background: none;
   cursor: pointer;
-  color: black;
+  color: rgba(3, 3, 3, 0.747);
 }
 .adjustments .plusBtn:hover,
 .adjustments .minusBtn:hover,

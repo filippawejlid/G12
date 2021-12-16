@@ -16,12 +16,13 @@
   .plusBtn,
   .minusBtn,
   .trashBtn {
+    font-size: 0.8rem;
     padding: 3px;
     border: none;
     background-color: none;
     background: none;
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: rgba(3, 3, 3, 0.747);
 
     &:hover {
       color: #36525c;
