@@ -1,6 +1,7 @@
 #navet {
 	position: fixed;
 	width: 100vw;
+
 	a {
 		color: #2595be;
 		font-size: bolder;
@@ -108,11 +109,13 @@
 		padding-top: 10px;
 	}
 
-	.logo {
-		position: absolute;
-		right: 25%;
-		top: 5px;
-		height: 40px;
+	.sucklogo {
+		display: flex;
+		justify-content: center;
+		vertical-align: center;
+		font-family: $logo-font;
+		font-size: 2rem;
+		color: rgb(131, 152, 156);
 	}
 
 	.basketcnt {
@@ -165,14 +168,6 @@
 			padding-top: 15px;
 			padding-right: 30px;
 		}
-
-		.logo {
-			margin-left: 0%;
-		}
-
-		// .kontakt {
-		// 	margin-right: 30px;
-		// }
 
 		.hem {
 			padding-top: 15px;
