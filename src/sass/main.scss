@@ -4,6 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 @import "./mixins";
