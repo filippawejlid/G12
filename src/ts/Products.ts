@@ -118,10 +118,14 @@ export function products() {
 
     productContainer.appendChild(imgContainer);
     productContainer.appendChild(productInfoContainer);
-    productInfoContainer.appendChild(vacuumHeader);
-    productInfoContainer.appendChild(vacuumInfo);
-    productInfoContainer.appendChild(price);
-    productInfoContainer.appendChild(productBtns);
+    // productInfoContainer.appendChild(vacuumHeader);
+    // productInfoContainer.appendChild(vacuumInfo);
+    // productInfoContainer.appendChild(price);
+    productContainer.appendChild(vacuumHeader);
+    productContainer.appendChild(vacuumInfo);
+    productContainer.appendChild(price);
+    //productInfoContainer.appendChild(productBtns);
+    productContainer.appendChild(productBtns);
     productBtns.appendChild(readMoreBtn);
     productBtns.appendChild(addToCartBtn);
     vacuumInfo.appendChild(vacuumInfoSpan);
