@@ -14,7 +14,7 @@ body {
 }
 .hero {
   height: 100vh;
-  background-image: url("heroo.2fd2d547.jpg");
+  background-image: url("Upright_CarbonFibre_Tech_1000x560.090705a2.ashx");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -25,7 +25,7 @@ body {
 .hero .welcomeBox {
   border-radius: 10px;
   width: 90%;
-  background-color: rgba(255, 255, 255, 0.767);
+  background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.164) 70.71%);
   padding: 20px;
 }
 @media (min-width: 768px) {
@@ -44,6 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .hero .welcomeBox .welcomeBoxText {
@@ -52,17 +53,23 @@ body {
 }
 .hero .welcomeBox .welcomeBoxText h2 {
   margin: 0;
+  color: WHITE;
 }
 .hero .welcomeBox .welcomeBoxText p {
-  text-align: center;
+  color: white;
 }
 .hero .welcomeBox .welcomeBoxText a {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
+  background-color: #2595be;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 .hero .welcomeBox .welcomeBoxText a:hover {
   font-weight: bolder;
+  box-shadow: 2px 2px 2px #2595be86;
 }
 .hero .fa {
   color: white;
@@ -128,6 +135,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  background-color: #2595be86;
 }
 #wireless,
 #powerfull,
