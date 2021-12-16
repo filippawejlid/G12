@@ -165,12 +165,16 @@ body {
   border-radius: 3px;
   background-color: white;
   gap: 10px;
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> feature-branch/lastfixes
 }
 .imgcontainer {
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  width: 100%;
 }
 .imgcontainer > img {
   height: 15rem;
@@ -178,7 +182,27 @@ body {
 .vacuumheader {
   font-size: 1rem;
   padding: 10px;
+<<<<<<< HEAD
   margin: 10px;
+=======
+  color: #2595be;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  height: 2.5rem;
+  width: 100%;
+}
+.vacuuminfo {
+  display: flex;
+  padding: 5px;
+  height: 50px;
+  width: 100%;
+  align-items: flex-start;
+  height: 3rem;
+  font-size: 0.9rem;
+}
+.price {
+>>>>>>> feature-branch/lastfixes
   color: #2595be;
   font-size: 0.8rem;
   height: 2.5rem;
@@ -236,6 +260,41 @@ body {
 }
 .productbtns > button:hover {
   box-shadow: 2px 2px 2px #51717c86;
+}
+.productbtns {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 2px;
+  height: 3rem;
+}
+.productbtns > button {
+  padding: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.productbtns > button:nth-child(2) {
+  background-color: #2596be;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.productbtns > button:nth-child(1) {
+  background-color: #2595be86;
+  border: none;
+  width: 100%;
+}
+.productbtns .fa-info-circle,
+.productbtns .fa-cart-plus {
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.productbtns > button:hover {
+  box-shadow: 2px 2px 2px #2595be86;
 }
 /* The Modal (background) */
 @media screen and (min-width: 768px) {
@@ -529,6 +588,7 @@ body {
 #navet {
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 #navet a {
   color: #2595be;
