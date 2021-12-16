@@ -114,8 +114,8 @@
 		justify-content: center;
 		vertical-align: center;
 		font-family: $logo-font;
-		font-size: 2rem;
-		color: rgb(66, 67, 68);
+		font-size: 1.7rem;
+		color: rgb(43, 44, 44);
 	}
 
 	.basketcnt {
@@ -165,19 +165,22 @@
 		.header li a {
 			height: 45px;
 			margin: 0;
-			padding-top: 15px;
+			// padding-top: 15px;
+			margin-top: 14px;
 			padding-right: 30px;
 		}
 
 		.sucklogo {
 			margin-left: 15px;
+			font-size: 2rem;
 		}
 
 		.hem {
-			padding-top: 15px;
 			margin: 0;
+			margin-top: 14px;
 			border-top: none;
 			padding-right: 15px;
+			padding-top: 0;
 		}
 
 		.btnCartFa {

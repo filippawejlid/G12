@@ -1,58 +1,58 @@
 .hero {
-  height: 100vh;
-  background-image: url("../assets/heroo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	height: 100vh;
+	background-image: url("../assets/heroo.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  .welcomeBox {
-    border-radius: 10px;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.767);
-    padding: 20px;
+	.welcomeBox {
+		border-radius: 10px;
+		width: 90%;
+		background-color: rgba(255, 255, 255, 0.767);
+		padding: 20px;
 
-    @include tablets {
-      width: 70%;
-      display: flex;
-      justify-content: center;
-    }
+		@include tablets {
+			width: 70%;
+			display: flex;
+			justify-content: center;
+		}
 
-    @include desktop {
-      width: 40%;
-    }
+		@include desktop {
+			width: 40%;
+		}
 
-    .welcomeBoxText {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+		.welcomeBoxText {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-      @include tablets {
-        width: 80%;
-      }
+			@include tablets {
+				width: 80%;
+			}
 
-      h2 {
-        margin: 0;
-      }
-      p {
-        text-align: center;
-      }
-      a {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
+			h2 {
+				margin: 0;
+			}
+			p {
+				text-align: center;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
 
-        &:hover {
-          font-weight: bolder;
-        }
-      }
-    }
-  }
+				&:hover {
+					font-weight: bolder;
+				}
+			}
+		}
+	}
 
-  .fa {
-    color: white;
-    cursor: pointer;
-  }
+	.fa {
+		color: white;
+		cursor: pointer;
+	}
 }
