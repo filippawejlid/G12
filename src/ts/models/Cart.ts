@@ -158,7 +158,7 @@ export class Cart {
 		}, 0);
 
 		total.innerHTML = `${sum.toString()} kr`;
-		// itemCount();
+		itemCount();
 	}
 
 	checkoutCart() {

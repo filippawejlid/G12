@@ -1,5 +1,6 @@
 #footer {
 	z-index: -1;
+
 	footer {
 		position: relative;
 		display: flex;
@@ -7,7 +8,22 @@
 		flex-direction: column;
 
 		p {
+			// font-family: $footer-font;
 			color: white;
+			line-height: 1.5;
+		}
+
+		.paccept,
+		.pvilka,
+		.pkontakt {
+			color: #2596be;
+			font-weight: bolder;
+		}
+
+		.fa-cc-paypal,
+		.fa-cc-visa,
+		.fa-cc-mastercard {
+			font-size: 2rem;
 		}
 		background-color: #242323;
 
@@ -24,7 +40,7 @@
 			}
 
 			@include desktop {
-				margin: 100px;
+				margin: 20px;
 			}
 
 			.about,
