@@ -1,42 +1,47 @@
 import { Cart } from "../models/Cart";
 
 export function clicker() {
-  let cart = new Cart();
+	let cart = new Cart();
 
-  let modal: HTMLDivElement = document.getElementById(
-    "myModal"
-  ) as HTMLDivElement;
+	let modal: HTMLDivElement = document.getElementById(
+		"myModal"
+	) as HTMLDivElement;
 
-  let btn: HTMLButtonElement = document.getElementById(
-    "btnCart"
-  ) as HTMLButtonElement;
+	let btn: HTMLButtonElement = document.getElementById(
+		"btnCart"
+	) as HTMLButtonElement;
 
-  let span: HTMLSpanElement = document.getElementsByClassName(
-    "close"
-  )[0] as HTMLSpanElement;
+	let btnTwo: HTMLButtonElement = document.getElementById(
+		"btnCart2"
+	) as HTMLButtonElement;
 
-  let continueShopping: HTMLButtonElement = document.getElementById(
-    "btnHandla"
-  ) as HTMLButtonElement;
+	let span: HTMLSpanElement = document.getElementsByClassName(
+		"close"
+	)[0] as HTMLSpanElement;
 
-  btn.addEventListener("click", openModal);
+	let continueShopping: HTMLButtonElement = document.getElementById(
+		"btnHandla"
+	) as HTMLButtonElement;
 
-  span.addEventListener("click", closeModal);
+	btn.addEventListener("click", openModal);
 
-  continueShopping.addEventListener("click", closeModal);
+	btnTwo.addEventListener("click", openModal);
 
-  window.onclick = function (event: Event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
+	span.addEventListener("click", closeModal);
 
-  function openModal() {
-    modal.style.display = "block";
-    cart.displayCart();
+	continueShopping.addEventListener("click", closeModal);
 
-  }
-  function closeModal() {
-    modal.style.display = "none";
-  }
+	window.onclick = function (event: Event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	};
+
+	function openModal() {
+		modal.style.display = "block";
+		cart.displayCart();
+	}
+	function closeModal() {
+		modal.style.display = "none";
+	}
 }

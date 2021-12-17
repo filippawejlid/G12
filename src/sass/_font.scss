@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
 
 $primary-font: "Montserrat", sans-serif;
-$logo-font: "Abril Fatface", cursive;
+$logo-font1: "Moo Lah Lah", cursive;
+$logo-font2: "Fredoka One", cursive;
+$logo-font3: "Gruppo", cursive;
+$logo-font4: "Rubik Mono One", sans-serif;
+$logo-font5: "Michroma", sans-serif;
+$logo-font6: "Days One", sans-serif;
 
 * {
 	font-family: $primary-font;

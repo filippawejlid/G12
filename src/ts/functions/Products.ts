@@ -196,6 +196,6 @@ export function showImages() {
 		wirelessFooter.appendChild(wirelessFooterImg);
 		powerfullFooter.appendChild(powerfullfooterImg);
 		robotFooter.appendChild(robotfooterImg);
-		imgContainerFooter.appendChild(vacuumFooter);
+		// imgContainerFooter.appendChild(vacuumFooter);
 	}
 }
