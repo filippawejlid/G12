@@ -96,27 +96,6 @@ describe ("webshop test", () => {
 
     });
 
-    // it("it should not submit form", () => {
-            
-    //     cy.visit("http://localhost:1234");
-
-    //     cy.get("#btnCart").click();
-
-    //     cy.get("#checkoutTag").click();
-
-    //     cy.get("#validationTooltip01").type("a")
-    //     cy.get("#validationTooltip02").type("a")
-    //     cy.get("#validationTooltip0").type("a@f")
-    //     cy.get("#validationTooltip03").type("2222 2222 2222 2222")
-    //     cy.get("#validationTooltip04").type("f")
-    //     cy.get("#validationTooltip05").type("February 2023")
-    //     cy.get("#validationTooltip05").type("222")
-    
-    //     cy.get("#formButton").click();
-    
-    //     cy.get("#thankyou").should("not.be.empty")
-    // });
-
 
     it("it should subtract from amount", () => {
         
@@ -151,4 +130,6 @@ describe ("webshop test", () => {
         cy.get("#amount0").should("have.html", "Antal: 2")
         
     });
+
+
 });
