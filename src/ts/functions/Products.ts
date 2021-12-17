@@ -159,9 +159,6 @@ export function showImages() {
 		let robotImg = document.createElement("div");
 		robotImg.innerHTML = imgFrontPage[i].robotimg;
 
-		let vacuumFooter = document.createElement("div");
-		vacuumFooter.innerHTML = imgFrontPage[i].imgContainerFooter;
-
 		// appendChild
 		btnCategoryOne.appendChild(wirelessImg);
 		btnCategoryTwo.appendChild(powerfullImg);

@@ -1,209 +1,210 @@
 #navet {
-  nav {
-    display: none;
-  }
+	nav {
+		display: none;
+	}
 
-  header {
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    z-index: 5;
-  }
+	header {
+		position: fixed;
+		align-items: center;
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+		z-index: 5;
+	}
 
-  ul {
-    list-style: none;
-  }
+	ul {
+		list-style: none;
+	}
 
-  ul a {
-    color: white;
-  }
+	ul a {
+		color: white;
+	}
 
-  ul li {
-    padding: 4px;
-    margin-left: 10px;
-  }
+	ul li {
+		padding: 4px;
+		margin-left: 10px;
+	}
 
-  header a {
-    text-decoration: none;
-    font-weight: bolder;
-  }
+	header a {
+		text-decoration: none;
+		font-weight: bolder;
+	}
 
-  header {
-    padding: 0 15px;
-    background-color: #242323;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.205);
-  }
+	header {
+		padding: 0 15px;
+		background-color: #242323;
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.205);
+	}
 
-  #brand {
-    color: rgb(190, 14, 14);
-    font-weight: bolder;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    // filter: drop-shadow(0px 0px 10px rgba(216, 226, 226, 0.349));
-    // text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.329);
-  }
+	#brand {
+		color: rgb(190, 14, 14);
+		font-weight: bolder;
+		font-size: 30px;
+		display: flex;
+		align-items: center;
+		// filter: drop-shadow(0px 0px 10px rgba(216, 226, 226, 0.349));
+		// text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.329);
+	}
 
-  .textlogo {
-    color: #2595be;
-    font-family: $logo-font6;
-  }
+	.textlogo {
+		color: #2595be;
+		font-family: $logo-font6;
+	}
 
-  #brand:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
+	#brand:hover {
+		transform: scale(1.1);
+		transition: 0.3s;
+	}
 
-  #brand a {
-    color: #fefffe;
-  }
+	#brand a {
+		color: #fefffe;
+	}
 
-  ul li:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
+	ul li:hover {
+		transform: scale(1.1);
+		transition: 0.3s;
+	}
 
-  .btnCartFa2:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
+	.btnCartFa2:hover {
+		transform: scale(1.1);
+		transition: 0.3s;
+	}
 
-  .btnCartFa {
-    position: relative;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+	// .btnCartFa {
+	// 	position: relative;
+	// 	background: none;
+	// 	border: none;
+	// 	color: white;
+	// 	cursor: pointer;
+	// }
 
-  .btnCartFa2 {
-    display: block;
-    position: relative;
-    background: none;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+	// .btnCartFa2 {
+	// 	display: block;
+	// 	position: relative;
+	// 	background: none;
+	// 	border-radius: 50%;
+	// 	border: none;
+	// 	color: rgb(248, 0, 0);
+	// 	cursor: pointer;
+	// }
 
-  .counter-container {
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    display: block;
-    top: 3px;
-    left: 6px;
-    font-size: 0.81rem;
-    font-weight: bolder;
-  }
+	.counter-container {
+		position: absolute;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		display: block;
+		top: 3px;
+		left: 6px;
+		font-size: 0.81rem;
+		font-weight: bolder;
+	}
 
-  #hamburger-icon {
-    margin: auto 0;
-    display: block;
-    cursor: pointer;
-  }
+	#hamburger-icon {
+		margin: auto 0;
+		display: block;
+		cursor: pointer;
+	}
 
-  #hamburger-icon div {
-    width: 32px;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
+	#hamburger-icon div {
+		width: 32px;
+		height: 4px;
+		background-color: white;
+		border-radius: 2px;
+		margin: 5px 0;
+		transition: 0.4s;
+	}
 
-  .open .bar1 {
-    // -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
-  }
+	.open .bar1 {
+		// -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+		transform: rotate(-45deg) translate(-6px, 6px);
+	}
 
-  .open .bar2 {
-    opacity: 0;
-  }
+	.open .bar2 {
+		opacity: 0;
+	}
 
-  .open .bar3 {
-    // -webkit-transform: rotate(45deg) translate(-6px, -8px);
-    transform: rotate(45deg) translate(-6px, -8px);
-  }
+	.open .bar3 {
+		// -webkit-transform: rotate(45deg) translate(-6px, -8px);
+		transform: rotate(45deg) translate(-6px, -8px);
+	}
 
-  .open .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #242323b2;
-    height: auto;
-    border-top: 0.5px solid rgba(116, 115, 115, 0.575);
-  }
+	.open .mobile-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		background-color: #242323b2;
+		height: auto;
+		border-top: 0.5px solid rgba(116, 115, 115, 0.575);
+	}
 
-  .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    height: calc(100vh - 50px);
-    width: 100%;
-  }
+	.mobile-menu {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		height: calc(100vh - 50px);
+		width: 100%;
+	}
 
-  .mobile-menu li {
-    margin-bottom: 5px;
-  }
+	.mobile-menu li {
+		margin-bottom: 5px;
+	}
 
-  @include desktop {
-    nav {
-      display: flex;
-    }
+	@include desktop {
+		nav {
+			display: flex;
+		}
 
-    ul {
-      list-style: none;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
+		ul {
+			list-style: none;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
 
-    ul a {
-      color: white;
-    }
+		ul a {
+			color: white;
+		}
 
-    ul li {
-      padding: 4px;
-      margin-left: 10px;
-    }
+		ul li {
+			padding: 4px;
+			margin-left: 10px;
+		}
 
-    .btnCartFa {
-      position: relative;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
+		.btnCartFa {
+			position: relative;
+			background: none;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
 
-    .btnCartFa2 {
-      display: none;
-    }
+		.btnCartFa2 {
+			display: none;
+		}
 
-    .counter-container {
-      left: auto;
-      right: 6px;
-    }
+		.counter-container {
+			left: auto;
+			right: 6px;
+		}
 
-    #hamburger-icon {
-      display: none;
-    }
-  }
+		#hamburger-icon {
+			display: none;
+		}
+	}
 }
 
 #btnCart2 {
-  @include desktop {
-    display: none;
-  }
+	@include desktop {
+		display: none;
+	}
 }

@@ -566,6 +566,7 @@ body {
 }
 #navet header {
   position: fixed;
+  align-items: center;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -618,22 +619,6 @@ body {
 #navet .btnCartFa2:hover {
   transform: scale(1.1);
   transition: 0.3s;
-}
-#navet .btnCartFa {
-  position: relative;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-#navet .btnCartFa2 {
-  display: block;
-  position: relative;
-  background: none;
-  border-radius: 50%;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 #navet .counter-container {
   position: absolute;
@@ -708,16 +693,6 @@ body {
   #navet ul li {
     padding: 4px;
     margin-left: 10px;
-  }
-  #navet .btnCartFa {
-    position: relative;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  #navet .btnCartFa2 {
-    display: none;
   }
   #navet .counter-container {
     left: auto;
