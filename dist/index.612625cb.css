@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Gruppo&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Michroma&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Days+One&display=swap";
 html,
 body {
   margin: 0 auto;
@@ -14,7 +19,7 @@ body {
 }
 .hero {
   height: 100vh;
-  background-image: url("heroo.2fd2d547.jpg");
+  background-image: url("Upright_CarbonFibre_Tech_1000x560.090705a2.ashx");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -25,7 +30,7 @@ body {
 .hero .welcomeBox {
   border-radius: 10px;
   width: 90%;
-  background-color: rgba(255, 255, 255, 0.767);
+  background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.164) 70.71%);
   padding: 20px;
 }
 @media (min-width: 768px) {
@@ -44,6 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .hero .welcomeBox .welcomeBoxText {
@@ -52,17 +58,23 @@ body {
 }
 .hero .welcomeBox .welcomeBoxText h2 {
   margin: 0;
+  color: WHITE;
 }
 .hero .welcomeBox .welcomeBoxText p {
-  text-align: center;
+  color: white;
 }
 .hero .welcomeBox .welcomeBoxText a {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
+  background-color: #2595be;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 .hero .welcomeBox .welcomeBoxText a:hover {
   font-weight: bolder;
+  box-shadow: 2px 2px 2px #2595be86;
 }
 .hero .fa {
   color: white;
@@ -128,6 +140,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  background-color: #2595be86;
 }
 #wireless,
 #powerfull,
@@ -424,7 +437,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: #242323;
 }
 #footer footer p {
   color: white;
@@ -525,188 +538,167 @@ body {
   width: 100%;
   opacity: 0.7;
 }
-#navet {
-  position: fixed;
-  width: 100vw;
-}
-#navet a {
-  color: #5f5f5f;
-  font-weight: bolder;
-}
-#navet .alogo {
-  text-decoration: none;
-  cursor: pointer;
-}
-#navet .alogo:hover {
-  text-decoration: none;
-}
-#navet a:hover {
-  color: #505050;
-}
-#navet .header {
-  background-color: rgba(255, 255, 255, 0.897);
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-  box-shadow: 0px 0px 1px 0px rgba(68, 68, 68, 0.897);
-}
-#navet .header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-#navet .header ul a {
-  display: flex;
-  margin-bottom: 15px;
-  text-decoration: none;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-}
-#navet .header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-#navet .header .menu-icon {
-  padding: 20px 20px;
-  position: relative;
-  float: left;
-  cursor: pointer;
-}
-#navet .header .menu-icon .nav-icon {
-  background: #43a5c9;
-  display: block;
-  height: 5px;
-  width: 30px;
-  position: relative;
-  border-radius: 10px;
-  transition: background 0.2s ease-out;
-}
-#navet .header .menu-icon .nav-icon:before {
-  background: #43a5c9;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 10px;
-}
-#navet .header .menu-icon .nav-icon:after {
-  background: #43a5c9;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -10px;
-}
-#navet .header .menu-btn {
+#navet nav {
   display: none;
 }
-#navet .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+#navet header {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
-#navet .header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
+#navet ul {
+  list-style: none;
 }
-#navet .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
+#navet ul a {
+  color: white;
 }
-#navet .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
+#navet ul li {
+  padding: 4px;
+  margin-left: 10px;
 }
-#navet .hem {
-  border-top: 1px solid rgba(158, 158, 158, 0.274);
-  padding-top: 10px;
+#navet header a {
+  text-decoration: none;
+  font-weight: bolder;
 }
-#navet .sucklogo {
-  display: inline-block;
-  justify-content: center;
-  vertical-align: center;
-  font-family: "Abril Fatface", cursive;
-  font-size: 1.7rem;
-  color: #df5757;
-}
-#navet .basketcnt {
+#navet header {
+  padding: 0 15px;
+  background-color: #242323;
+  height: 50px;
   display: flex;
-  float: right;
-  height: 45px;
-  text-align: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.205);
+}
+#navet #brand {
+  color: #be0e0e;
+  font-weight: bolder;
+  font-size: 30px;
+  display: flex;
   align-items: center;
+}
+#navet .logo {
+  font-family: "Days One", sans-serif;
+}
+#navet #brand:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+#navet #brand a {
+  color: #fefffe;
+}
+#navet ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+#navet .btnCartFa2:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 #navet .btnCartFa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45px;
-  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  background: none;
   border: none;
-  margin-right: 20px;
-  padding: 0;
-}
-#navet .btnCartFa:hover,
-#navet .btnCartFa:focus {
+  color: white;
   cursor: pointer;
-  text-decoration: none;
-  border: none;
 }
-#navet .fa-shopping-basket {
-  display: flex;
+#navet .btnCartFa2 {
+  display: block;
+  position: relative;
+  background: none;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#navet .counter-container {
+  position: absolute;
   justify-content: center;
   text-align: center;
-  color: #43a5c9;
-  filter: drop-shadow(0px 0.2px 0.2px rgba(36, 65, 99, 0.514));
-  text-decoration: none;
+  align-items: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+  top: 3px;
+  left: 6px;
+  font-size: 0.81rem;
+  font-weight: bolder;
 }
-#navet .fa-shopping-basket:hover {
-  color: #1e6883;
+#navet #hamburger-icon {
+  margin: auto 0;
+  display: block;
+  cursor: pointer;
+}
+#navet #hamburger-icon div {
+  width: 32px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+#navet .open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+#navet .open .bar2 {
+  opacity: 0;
+}
+#navet .open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+#navet .open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #242323b2;
+  height: auto;
+  border-top: 0.5px solid rgba(116, 115, 115, 0.575);
+}
+#navet .mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+#navet .mobile-menu li {
+  margin-bottom: 5px;
 }
 @media (min-width: 1060px) {
-  #navet li:hover {
-    text-decoration: underline;
+  #navet nav {
+    display: flex;
   }
-  #navet .header {
-    max-height: 50px;
+  #navet ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
-  #navet .header li {
-    float: left;
+  #navet ul a {
+    color: white;
   }
-  #navet .header li a {
-    height: 45px;
-    margin: 0;
-    margin-top: 10px;
-    padding-right: 30px;
-  }
-  #navet .sucklogo {
-    margin-top: -5px;
-    margin-left: 15px;
-    font-size: 2rem;
-    padding: 0;
-  }
-  #navet .hem {
-    margin: 0;
-    margin-top: 14px;
-    border-top: none;
-    padding-right: 15px;
-    padding-top: 0;
+  #navet ul li {
+    padding: 4px;
+    margin-left: 10px;
   }
   #navet .btnCartFa {
-    margin-left: 5px;
+    position: relative;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
-  #navet .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
+  #navet .btnCartFa2 {
+    display: none;
   }
-  #navet .header .menu-icon {
+  #navet .counter-container {
+    left: auto;
+    right: 6px;
+  }
+  #navet #hamburger-icon {
     display: none;
   }
 }
@@ -1096,17 +1088,5 @@ body {
 .adjustments .minusBtn:hover,
 .adjustments .trashBtn:hover {
   color: #36525c;
-}
-.counter-container {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  height: 18px;
-  width: 18px;
-  right: 49px;
-  top: 1.7px;
-  font-size: 0.81rem;
-  font-weight: bolder;
 }
 /*# sourceMappingURL=index.612625cb.css.map */
