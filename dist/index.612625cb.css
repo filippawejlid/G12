@@ -634,9 +634,6 @@ body {
   color: white;
   cursor: pointer;
 }
-#navet .btnCartFa2:first-child {
-  cursor: pointer;
-}
 #navet .counter-container {
   position: absolute;
   justify-content: center;
