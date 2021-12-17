@@ -1,0 +1,84 @@
+#thankyoubody {
+  background-image: url("https://cdn.discordapp.com/attachments/727125952458522644/921121903433891850/IMG_0757.png");
+  background-size: cover;
+  background-repeat: repeat;
+  @include tablets {
+    background-image: url("https://cdn.discordapp.com/attachments/727125952458522644/921121212296495184/IMG_0757.png");
+  }
+
+  a {
+    text-decoration: none;
+
+    .backHome {
+      color: rgba(231, 226, 226, 0.5);
+      font-family: $logo-font5;
+      width: 100%;
+      text-align: end;
+      text-decoration: none;
+    }
+  }
+}
+
+#thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .thankyouContainer {
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      position: relative;
+      color: #97ff7794;
+      height: 40px;
+      i {
+        z-index: 0;
+        position: absolute;
+        bottom: 16px;
+        left: -30px;
+      }
+    }
+    h2 {
+      color: white;
+    }
+    div {
+      width: 80%;
+      color: white;
+      text-align: center;
+
+      @include tablets {
+        width: 500px;
+      }
+    }
+  }
+
+  .ordernumber {
+    color: white;
+  }
+
+  #order {
+    background-color: white;
+    @include flexcolcen;
+    width: 90%;
+
+    @include tablets {
+      width: 600px;
+    }
+
+    .productContainer {
+      margin: 0;
+    }
+
+    margin-bottom: 20px;
+  }
+  .totalSpan {
+    font-weight: bold;
+  }
+}
+#check {
+  color: #97ff7794;
+  font-size: 2rem;
+}

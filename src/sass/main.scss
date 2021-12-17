@@ -1,0 +1,24 @@
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@import "./mixins";
+@import "./font";
+@import "./landingpage";
+@import "./products";
+@import "./productpages";
+@import "./footer";
+@import "./navbar";
+@import "./modal";
+@import "./carts";
+@import "./checkout";
+@import "./thankyou";
+@import "./addedModal";
+@import "./adjustments";
+@import "./countbadge";

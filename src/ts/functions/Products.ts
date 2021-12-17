@@ -1,0 +1,167 @@
+import { thankYou } from "./addedModal";
+import { Vacuum, Img } from "../models/Vacuum";
+import { itemCount } from "./itemcounter";
+import {
+	w1,
+	w2,
+	w3,
+	w4,
+	p1,
+	p2,
+	p3,
+	p4,
+	r1,
+	r2,
+	r3,
+	r4,
+	img,
+} from "../models/Vacuumobjects";
+import { productinfo } from "./Productinfo";
+import { Cart } from "../models/Cart";
+
+export let productInfo: Vacuum[] = [
+	w1,
+	w2,
+	w3,
+	w4,
+	p1,
+	p2,
+	p3,
+	p4,
+	r1,
+	r2,
+	r3,
+	r4,
+];
+
+export let imgFrontPage: Img[] = [img];
+
+export let wirelessContainer: HTMLDivElement = document.getElementById(
+	"wirelesscontainer"
+) as HTMLDivElement;
+
+export let powerfullContainer: HTMLDivElement = document.getElementById(
+	"powerfullcontainer"
+) as HTMLDivElement;
+export let robotContainer: HTMLDivElement = document.getElementById(
+	"robotcontainer"
+) as HTMLDivElement;
+
+export function products() {
+	let cart = new Cart();
+
+	for (let i = 0; i < productInfo.length; i++) {
+		// productcontainer div som ska ligga innanför wirelesscontainer
+		let productContainer = document.createElement("div");
+		productContainer.className = "productcontainer";
+		productContainer.id = "objectContainer" + i; //Här har jag lagt till id ta ej bort
+
+		// imgcontainer div som ska ligga innanför productContainer
+		let imgContainer = document.createElement("div");
+		imgContainer.className = "imgcontainer";
+		imgContainer.innerHTML = productInfo[i].imgsmall;
+
+		// div som ska ha vacuumheader, vacuuminfo, productbtns
+		let productInfoContainer = document.createElement("div");
+		productInfoContainer.className = "productInfoContainer";
+
+		// html för vacuumheader, vacuuminfo, price, productbtns
+		let vacuumHeader = document.createElement("h2");
+		vacuumHeader.className = "vacuumheader";
+		vacuumHeader.innerHTML = productInfo[i].discriptionlandpageh2;
+
+		let vacuumInfo = document.createElement("div");
+		vacuumInfo.className = "vacuuminfo";
+		vacuumInfo.innerHTML = productInfo[i].discriptionlandpagespan;
+
+		let price = document.createElement("h2");
+		price.className = "price";
+		price.innerHTML = `${productInfo[i].price.toString()} kr`;
+
+		let productBtns = document.createElement("div");
+		productBtns.className = "productbtns";
+
+		let readMoreBtn = document.createElement("button");
+		readMoreBtn.className = "readmore";
+		readMoreBtn.innerHTML = productInfo[i].readmorebtn;
+		readMoreBtn.addEventListener("click", () => {
+			productinfo(i);
+		});
+
+		let addToCartBtn: HTMLButtonElement = document.createElement(
+			"button"
+		) as HTMLButtonElement;
+		addToCartBtn.type = "button";
+		addToCartBtn.id = "addtocart" + i;
+		addToCartBtn.className = "addtocart";
+		addToCartBtn.innerHTML = productInfo[i].addtocartbtn;
+		addToCartBtn.addEventListener("click", () => {
+			cart.addToCart(productInfo[i]);
+			thankYou();
+			itemCount();
+		}); //Här har jag lagt till eventlistener ta ej bort
+
+		let vacuumInfoSpan = document.createElement("span");
+
+		if (productInfo[i].category == "wireless") {
+			wirelessContainer.appendChild(productContainer);
+		} else if (productInfo[i].category == "powerfull") {
+			powerfullContainer.appendChild(productContainer);
+		} else if (productInfo[i].category == "robot") {
+			robotContainer.appendChild(productContainer);
+		}
+
+		// appendChild
+
+		productContainer.appendChild(imgContainer);
+		productContainer.appendChild(productInfoContainer);
+		productContainer.appendChild(vacuumHeader);
+		productContainer.appendChild(vacuumInfo);
+		productContainer.appendChild(price);
+		productContainer.appendChild(productBtns);
+		productBtns.appendChild(readMoreBtn);
+		productBtns.appendChild(addToCartBtn);
+		vacuumInfo.appendChild(vacuumInfoSpan);
+	}
+}
+
+export function showImages() {
+	for (let i = 0; i < imgFrontPage.length; i++) {
+		// LOGGAN
+
+		let imgTag = document.createElement("div");
+		imgTag.innerHTML = imgFrontPage[i].logo;
+
+		// SLADDLÖS BILD
+
+		let btnCategoryOne: HTMLButtonElement = document.getElementById(
+			"btncategoryone"
+		) as HTMLButtonElement;
+
+		let wirelessImg = document.createElement("div");
+		wirelessImg.innerHTML = imgFrontPage[i].wirelessimg;
+
+		// KRAFTFULL BILD
+
+		let btnCategoryTwo: HTMLButtonElement = document.getElementById(
+			"btncategorytwo"
+		) as HTMLButtonElement;
+
+		let powerfullImg = document.createElement("div");
+		powerfullImg.innerHTML = imgFrontPage[i].powerfullimg;
+
+		// ROBOT BILD
+
+		let btnCategoryThree: HTMLButtonElement = document.getElementById(
+			"btncategorythree"
+		) as HTMLButtonElement;
+
+		let robotImg = document.createElement("div");
+		robotImg.innerHTML = imgFrontPage[i].robotimg;
+
+		// appendChild
+		btnCategoryOne.appendChild(wirelessImg);
+		btnCategoryTwo.appendChild(powerfullImg);
+		btnCategoryThree.appendChild(robotImg);
+	}
+}
