@@ -5,6 +5,7 @@
 @import "https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Michroma&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Days+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap";
 html,
 body {
   margin: 0 auto;
@@ -26,6 +27,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.hero .hiddenturd {
+  display: flex;
+}
+.hero .hiddenturd .theturd {
+  width: 5px;
+}
+.hero .hiddenturd .theturd:hover {
+  width: 600px;
 }
 .hero .welcomeBox {
   border-radius: 10px;
@@ -88,7 +98,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #e9f1f760;
 }
 #productmaincontainer #productcontentcontainer {
   display: flex;
@@ -140,7 +150,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  background-color: #2595be86;
+  background-color: #cccdce86;
+  box-shadow: 0px 1px 2px rgba(41, 41, 41, 0.589);
 }
 #wireless,
 #powerfull,
@@ -441,6 +452,18 @@ body {
 }
 #footer footer p {
   color: white;
+  line-height: 1.5;
+}
+#footer footer .paccept,
+#footer footer .pvilka,
+#footer footer .pkontakt {
+  color: #2596be;
+  font-weight: bolder;
+}
+#footer footer .fa-cc-paypal,
+#footer footer .fa-cc-visa,
+#footer footer .fa-cc-mastercard {
+  font-size: 2rem;
 }
 #footer footer .footerInfo {
   display: flex;
@@ -457,7 +480,7 @@ body {
 }
 @media (min-width: 1060px) {
   #footer footer .footerInfo {
-    margin: 100px;
+    margin: 20px;
   }
 }
 #footer footer .footerInfo .about,
@@ -576,7 +599,8 @@ body {
   display: flex;
   align-items: center;
 }
-#navet .logo {
+#navet .textlogo {
+  color: #2595be;
   font-family: "Days One", sans-serif;
 }
 #navet #brand:hover {
