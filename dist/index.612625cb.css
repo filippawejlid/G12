@@ -610,14 +610,17 @@ body {
   color: white;
   cursor: pointer;
 }
+#navet .btnCartFa2:first-child {
+  cursor: pointer;
+}
 #navet .counter-container {
   position: absolute;
   justify-content: center;
   text-align: center;
   align-items: center;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   display: block;
   top: 3px;
   left: 6px;

@@ -130,6 +130,4 @@ describe ("webshop test", () => {
         cy.get("#amount0").should("have.html", "Antal: 2")
         
     });
-
-
 });
