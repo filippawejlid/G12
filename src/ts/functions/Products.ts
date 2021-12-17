@@ -138,15 +138,8 @@ export function showImages() {
 			"btncategoryone"
 		) as HTMLButtonElement;
 
-		let wirelessFooter: HTMLAnchorElement = document.getElementById(
-			"wirelessfooter"
-		) as HTMLAnchorElement;
-
 		let wirelessImg = document.createElement("div");
 		wirelessImg.innerHTML = imgFrontPage[i].wirelessimg;
-
-		let wirelessFooterImg = document.createElement("div");
-		wirelessFooterImg.innerHTML = imgFrontPage[i].wirelessimg;
 
 		// KRAFTFULL BILD
 
@@ -154,15 +147,8 @@ export function showImages() {
 			"btncategorytwo"
 		) as HTMLButtonElement;
 
-		let powerfullFooter: HTMLAnchorElement = document.getElementById(
-			"powerfullfooter"
-		) as HTMLAnchorElement;
-
 		let powerfullImg = document.createElement("div");
 		powerfullImg.innerHTML = imgFrontPage[i].powerfullimg;
-
-		let powerfullfooterImg = document.createElement("div");
-		powerfullfooterImg.innerHTML = imgFrontPage[i].powerfullimg;
 
 		// ROBOT BILD
 
@@ -170,21 +156,8 @@ export function showImages() {
 			"btncategorythree"
 		) as HTMLButtonElement;
 
-		let robotFooter: HTMLAnchorElement = document.getElementById(
-			"robotfooter"
-		) as HTMLAnchorElement;
-
 		let robotImg = document.createElement("div");
 		robotImg.innerHTML = imgFrontPage[i].robotimg;
-
-		let robotfooterImg = document.createElement("div");
-		robotfooterImg.innerHTML = imgFrontPage[i].robotimg;
-
-		//Dammsugare i footer
-
-		let imgContainerFooter: HTMLDivElement = document.querySelector(
-			".imgContainerFooter"
-		) as HTMLDivElement;
 
 		let vacuumFooter = document.createElement("div");
 		vacuumFooter.innerHTML = imgFrontPage[i].imgContainerFooter;
@@ -193,9 +166,5 @@ export function showImages() {
 		btnCategoryOne.appendChild(wirelessImg);
 		btnCategoryTwo.appendChild(powerfullImg);
 		btnCategoryThree.appendChild(robotImg);
-		wirelessFooter.appendChild(wirelessFooterImg);
-		powerfullFooter.appendChild(powerfullfooterImg);
-		robotFooter.appendChild(robotfooterImg);
-		// imgContainerFooter.appendChild(vacuumFooter);
 	}
 }
