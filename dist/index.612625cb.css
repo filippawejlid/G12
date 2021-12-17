@@ -727,6 +727,11 @@ body {
     display: none;
   }
 }
+@media (min-width: 1060px) {
+  #btnCart2 {
+    display: none;
+  }
+}
 .modal {
   display: none;
   position: fixed;
